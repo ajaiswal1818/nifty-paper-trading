@@ -18,5 +18,12 @@
   "exit_slippage": 0.985,
   "max_positions": 2,
   "spread_width_pts": 150,
-  "eod_exit": true
+  "eod_exit": true,
+  "tunable_bounds": {
+    "stop": [0.25, 0.45],
+    "target": [1.30, 1.80],
+    "target_spread": [1.25, 1.60],
+    "trail": [1.15, 1.40],
+    "gap_chase": [0.005, 0.015]
+  }
 }

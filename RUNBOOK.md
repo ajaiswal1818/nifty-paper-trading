@@ -33,6 +33,10 @@ All state lives in `~/Projects/nifty-paper-trading/` (request this folder via di
 6. Per active strategy: score sentiment per its `STRATEGY.md` signal table (use `pending_plan` from last night's run plus fresh GIFT Nifty and overnight US data).
 7. If the score triggers an entry and the strategy's constraints allow: enter per its rules (strike selection, spread vs naked, sizing cap, expiry choice all come from `STRATEGY.md`/`params.json`). Entry price = model value × entry_slippage + fee per leg. Update cash, open_positions, trade_log.csv, increment next_trade_id.
 8. Record the sentiment score and each signal's value in the trade_log reason field.
+9. **Data capture:** write the day's score into each active strategy's `state.json` as `"morning_score_today": {"date": "YYYY-MM-DD", "score": n}` — even on no-trade days. This is the hindsight-free record the weekly research loop depends on.
+
+## Evening run only (18:00 IST), after the every-run steps
+9. **Data capture:** append one row to `engine/data/sessions_2026.csv`: date, today's open, previous close, today's close, VIX close, previous VIX close, and the morning score recorded in `morning_score_today` (0 if the morning run was skipped). Never edit past rows. Add new weekly expiries to `engine/data/expiries.csv` as they become known.
 
 ## Night run only (22:00 IST)
 6. Search US market open/afternoon status and global news. Per active strategy, write a short `pending_plan` into its `state.json`: {"bias": bullish/bearish/neutral, "score_draft": n, "key_news": [...], "written_at": ...}. No trades.
@@ -56,4 +60,7 @@ Keep it short. The user mainly wants the P&L numbers.
 (`short_strike` non-null means a debit spread; premium fields are the net structure value.)
 
 ## Adding a strategy (for future sessions)
-Create `strategies/<new-id>/` with STRATEGY.md, params.json, state.json (same schema, own virtual capital), empty trade_log.csv/equity_curve.csv with headers, and add an entry to registry.json. Backtest it first with `engine/backtest.py` against `engine/data/`.
+Create `strategies/<new-id>/` with STRATEGY.md, params.json, state.json (same schema, own virtual capital), empty trade_log.csv/equity_curve.csv with headers, and add an entry to registry.json. Backtest it first with `engine/backtest.py` against `engine/data/`. Registry statuses: `active` (runs trade it), `candidate` (proposed by the research loop, never run until a human flips it to active), `paused`, `retired`.
+
+## Self-adjustment (strict)
+Daily runs NEVER change strategy rules or parameters. The weekly research run (RESEARCH_RUNBOOK.md) may only PROPOSE changes; a human accepts them in a normal session, which then edits params.json and appends a dated row to DECISIONS.md. One change at a time.
