@@ -8,8 +8,9 @@
 set -u
 cd "$(dirname "$0")/.." || exit 1
 
-# never fight a live git operation
+# never fight a live git operation (a Cowork session may be committing)
 [ -f .git/index.lock ] && exit 0
+[ -f .git/HEAD.lock ] && exit 0
 
 git add -A
 if ! git diff --cached --quiet; then
