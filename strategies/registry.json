@@ -1,0 +1,37 @@
+{
+  "strategies": [
+    {
+      "id": "v3-news-directional",
+      "name": "NIFTY news-driven directional options v3",
+      "status": "active",
+      "mode": "paper",
+      "started": "2026-07-15",
+      "capital_start": 100000,
+      "run_schedule_ist": ["08:45", "18:00", "22:00"],
+      "files": {
+        "rules": "STRATEGY.md",
+        "params": "params.json",
+        "state": "state.json",
+        "trade_log": "trade_log.csv",
+        "equity_curve": "equity_curve.csv"
+      }
+    },
+    {
+      "id": "v3i-intraday",
+      "name": "NIFTY news-driven directional v3i (same-day exit)",
+      "status": "active",
+      "mode": "paper",
+      "started": "2026-07-15",
+      "capital_start": 100000,
+      "run_schedule_ist": ["08:45", "18:00", "22:00"],
+      "files": {
+        "rules": "STRATEGY.md",
+        "params": "params.json",
+        "state": "state.json",
+        "trade_log": "trade_log.csv",
+        "equity_curve": "equity_curve.csv"
+      }
+    }
+  ],
+  "notes": "All strategies are PAPER ONLY. status: active | paused | retired. Each strategy lives in strategies/<id>/ with the files listed above."
+}

@@ -1,0 +1,22 @@
+{
+  "version": "v3i",
+  "entry": 2,
+  "flip": 3,
+  "spread_vix": 16.0,
+  "stop": 0.35,
+  "target": 1.50,
+  "target_spread": 1.40,
+  "trail": 1.25,
+  "gap_chase": 0.009,
+  "highvix_entry": 4,
+  "no_opposite": true,
+  "cooldown": false,
+  "size_cap": 0.20,
+  "lot_size": 75,
+  "fee_per_leg": 100.0,
+  "entry_slippage": 1.015,
+  "exit_slippage": 0.985,
+  "max_positions": 2,
+  "spread_width_pts": 150,
+  "eod_exit": true
+}

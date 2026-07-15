@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Paper trading dashboard</title>
+<style>
+ body{font:14px/1.5 -apple-system,'Segoe UI',sans-serif;background:#f4f4ef;color:#1a1a17;margin:0;padding:24px}
+ h1{font-size:20px;margin:0 0 2px} h2{font-size:16px;margin:0;display:inline} h3{font-size:13px;margin:18px 0 6px;text-transform:uppercase;letter-spacing:.04em;color:#6b6b64}
+ .muted{color:#8a8a83;font-size:12px}
+ .card{background:#fff;border:1px solid #e4e4dd;border-radius:10px;padding:18px 20px;margin-top:16px;max-width:920px}
+ .shead{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+ .badge{display:inline-block;font-size:11px;padding:1px 8px;border-radius:99px;margin-left:6px;border:1px solid #ccc;vertical-align:2px}
+ .badge.active{background:#e7f5ec;border-color:#9fd4b2;color:#0a7d38}
+ .badge.paused{background:#fdf3e0;border-color:#e6c98a;color:#9a6b00}
+ .badge.retired{background:#f0f0ec;color:#8a8a83}
+ .badge.mode{background:#eef3fb;border-color:#b9cdEE;color:#2b5aa5}
+ .thenumber{text-align:right;font-size:26px;font-weight:700}
+ .thenumber small{display:block;font-size:13px;font-weight:600}
+ .pos{color:#0a7d38} .neg{color:#c0392b}
+ .stats{display:flex;gap:22px;flex-wrap:wrap;margin:12px 0 14px}
+ .stats div{min-width:90px} .stats b{display:block;font-size:15px} .stats span{font-size:11px;color:#8a8a83}
+ .twrap{overflow-x:auto} table{border-collapse:collapse;width:100%;font-size:12.5px}
+ th,td{text-align:left;padding:5px 10px 5px 0;border-bottom:1px solid #eeeee8;white-space:nowrap}
+ th{color:#8a8a83;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.03em}
+ .plan{background:#fafaf5;border:1px solid #ecece4;border-radius:8px;padding:10px 14px;font-size:12.5px;margin-top:14px}
+ .plan ul{margin:6px 0 0 16px;padding:0}
+ header .warn{color:#9a6b00;font-size:12px}
+</style></head><body>
+<header>
+ <h1>Paper trading dashboard</h1>
+ <div class='muted'>NIFTY 24114.95 · VIX 13.46 · PCR 1.23 · FII -3062.3 Cr · as of 2026-07-15 11:55 IST</div>
+ <div class='warn'>Paper trading only. All fills simulated. Generated 2026-07-15 13:18 by dashboard/build_dashboard.py.</div>
+</header>
+
+<section class='card'>
+  <div class='shead'>
+    <div>
+      <h2>NIFTY news-driven directional options v3</h2>
+      <span class='badge active'>active</span>
+      <span class='badge mode'>paper</span>
+      <span class='muted'>since 2026-07-15</span>
+    </div>
+    <div class='thenumber pos'>₹100,000<small>+₹0 (+0.0%)</small></div>
+  </div>
+  <div class='stats'>
+    <div><b>₹100,000</b><span>cash</span></div>
+    <div><b>₹0</b><span>realized P&L</span></div>
+    <div><b>₹0</b><span>unrealized P&L</span></div>
+    <div><b>0</b><span>open positions</span></div>
+    <div><b>0</b><span>closed trades</span></div>
+    <div><b>2026-07-15T11:05</b><span>last run</span></div>
+  </div>
+  <svg viewBox='0 0 860 240' role='img' style='width:100%;height:auto'><line x1='46' y1='210.0' x2='848' y2='210.0' stroke='#e8e8e3' stroke-width='1'/><text x='40' y='214.0' font-size='10' fill='#8a8a83' text-anchor='end'>100k</text><line x1='46' y1='162.0' x2='848' y2='162.0' stroke='#e8e8e3' stroke-width='1'/><text x='40' y='166.0' font-size='10' fill='#8a8a83' text-anchor='end'>100k</text><line x1='46' y1='114.0' x2='848' y2='114.0' stroke='#e8e8e3' stroke-width='1'/><text x='40' y='118.0' font-size='10' fill='#8a8a83' text-anchor='end'>100k</text><line x1='46' y1='66.0' x2='848' y2='66.0' stroke='#e8e8e3' stroke-width='1'/><text x='40' y='70.0' font-size='10' fill='#8a8a83' text-anchor='end'>100k</text><line x1='46' y1='18.0' x2='848' y2='18.0' stroke='#e8e8e3' stroke-width='1'/><text x='40' y='22.0' font-size='10' fill='#8a8a83' text-anchor='end'>100k</text><line x1='46' y1='114.0' x2='848' y2='114.0' stroke='#b0b0a8' stroke-dasharray='4 4' stroke-width='1'/><polyline points='46.0,114.0 246.5,114.0 447.0,114.0 647.5,114.0 848.0,114.0' fill='none' stroke='#0a7d38' stroke-width='2'/><circle cx='848.0' cy='114.0' r='3.5' fill='#0a7d38'/><text x='46.0' y='232' font-size='10' fill='#8a8a83' text-anchor='middle'>2026-07-14 19:45</text><text x='447.0' y='232' font-size='10' fill='#8a8a83' text-anchor='middle'>2026-07-14 22:00</text><text x='848.0' y='232' font-size='10' fill='#8a8a83' text-anchor='middle'>2026-07-15 11:05</text></svg>
+  <h3>Open positions</h3>
+  <p class='muted'>No open positions.</p>
+  
+  <h3>Trade log</h3>
+  <p class='muted'>No trades yet. The first live morning run makes the first entry decision.</p>
+</section>
+<section class='card'>
+  <div class='shead'>
+    <div>
+      <h2>NIFTY news-driven directional v3i (same-day exit)</h2>
+      <span class='badge active'>active</span>
+      <span class='badge mode'>paper</span>
+      <span class='muted'>since 2026-07-15</span>
+    </div>
+    <div class='thenumber pos'>₹100,000<small>+₹0 (+0.0%)</small></div>
+  </div>
+  <div class='stats'>
+    <div><b>₹100,000</b><span>cash</span></div>
+    <div><b>₹0</b><span>realized P&L</span></div>
+    <div><b>₹0</b><span>unrealized P&L</span></div>
+    <div><b>0</b><span>open positions</span></div>
+    <div><b>0</b><span>closed trades</span></div>
+    <div><b>2026-07-15T12:20</b><span>last run</span></div>
+  </div>
+  <p class='muted'>Not enough equity points yet to chart.</p>
+  <h3>Open positions</h3>
+  <p class='muted'>No open positions.</p>
+  
+  <h3>Trade log</h3>
+  <p class='muted'>No trades yet. The first live morning run makes the first entry decision.</p>
+</section>
+</body></html>

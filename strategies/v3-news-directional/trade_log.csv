@@ -1,0 +1,1 @@
+trade_id,action,datetime_ist,instrument,strike,expiry,option_type,lots,lot_size,premium,total_value,friction_cost,reason,sentiment_score,nifty_spot,india_vix,realized_pnl

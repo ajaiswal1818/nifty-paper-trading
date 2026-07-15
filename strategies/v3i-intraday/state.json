@@ -1,0 +1,25 @@
+{
+  "sim_name": "NIFTY news-driven directional v3i (same-day exit)",
+  "currency": "INR",
+  "starting_capital": 100000,
+  "cash": 100000,
+  "total_equity": 100000,
+  "realized_pnl": 0,
+  "unrealized_pnl": 0,
+  "open_positions": [],
+  "last_run": "2026-07-15T12:20:00+05:30",
+  "last_run_type": "initial setup (no run yet; first entry decision is next morning run)",
+  "next_trade_id": 1,
+  "market_snapshot": {
+    "nifty_spot": 24114.95,
+    "nifty_open": 24068.0,
+    "nifty_prev_close": 24052.05,
+    "india_vix": 13.46,
+    "pcr": 1.23,
+    "fii_net_cash_cr": -3062.3,
+    "dii_net_cash_cr": 2171.7,
+    "as_of": "2026-07-15 11:55 IST"
+  },
+  "pending_plan": null,
+  "notes": "Book created 2026-07-15 ~12:20 IST, after today's (off-schedule) morning cycle had already run for v3 with score 0 = no entry; the same score applies to v3i, so no backfilled trade. First live decision: next morning run. Same-day exit variant: 18:00 run force-closes all positions at the close."
+}

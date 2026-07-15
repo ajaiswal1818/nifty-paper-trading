@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+engine/monitor.log
+engine/monitor.log.1
+engine/monitor.launchd.log
+engine/gitsync.launchd.log
+.monitor.lock
+.DS_Store

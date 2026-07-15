@@ -1,0 +1,25 @@
+{
+  "sim_name": "NIFTY news-driven directional v3",
+  "currency": "INR",
+  "starting_capital": 100000,
+  "cash": 100000,
+  "total_equity": 100000,
+  "realized_pnl": 0,
+  "unrealized_pnl": 0,
+  "open_positions": [],
+  "last_run": "2026-07-15T11:05:00+05:30",
+  "last_run_type": "morning (off-schedule catch-up at 11:05 IST; 08:45 schedule did not fire on run machine)",
+  "next_trade_id": 1,
+  "market_snapshot": {
+    "nifty_spot": 24114.95,
+    "nifty_open": 24068.0,
+    "nifty_prev_close": 24052.05,
+    "india_vix": 13.46,
+    "pcr": 1.23,
+    "fii_net_cash_cr": -3062.3,
+    "dii_net_cash_cr": 2171.7,
+    "as_of": "2026-07-15 11:55 IST"
+  },
+  "pending_plan": null,
+  "notes": "Off-schedule morning run 15 Jul 11:05 IST (scheduled 08:45 run never fired; schedules live on the other Mac and were absent/broken - check there). Scored: GIFT slightly red within +/-0.3% = 0; S&P 500 +0.38% within +/-0.5% = 0; FII -3,062 Cr = -1; news mixed (overnight US-Iran/Brent>$87 bearishness partly reversed intraday by US dropping Hormuz 20% fee proposal, cooler US CPI 3.5%) = 0; PCR 1.23 = +1. Score 0 vs threshold 2 (VIX prev 13.80 <= 16) -> NO ENTRY. Night plan draft -2 consumed and overridden by fresh data. No positions to reprice; equity flat at 1,00,000. Data note: niftytrader 'prev close 24,211' field was stale (Jul 13); used recorded Jul 14 close 24,052.05, corroborated by Business Standard live. Next weekly expiry Tue 2026-07-21. Next run: 18:00 IST evening mark-to-market."
+}
