@@ -170,6 +170,19 @@ def main():
         log(root, "skip: lock held (scheduled run or another monitor pass active)")
         return
     try:
+        # daily heartbeat: one log line on the first market-hours pass of each day,
+        # so "is the monitor alive?" is answerable from engine/monitor.log
+        hb = os.path.join(root, "engine", ".monitor.heartbeat")
+        today = now.date().isoformat()
+        try:
+            prev = open(hb).read().strip()
+        except OSError:
+            prev = ""
+        if prev != today:
+            with open(hb, "w") as f:
+                f.write(today)
+            log(root, f"heartbeat: monitor alive, first market-hours pass of {today}")
+
         with open(os.path.join(root, "strategies", "registry.json")) as f:
             reg = json.load(f)
         active = [s for s in reg["strategies"] if s.get("status") == "active"]
