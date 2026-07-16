@@ -7,22 +7,20 @@
   "realized_pnl": 0,
   "unrealized_pnl": 0,
   "open_positions": [],
-  "last_run": "2026-07-16T09:00:00+05:30",
-  "last_run_type": "morning",
+  "last_run": "2026-07-16T18:07:00+05:30",
+  "last_run_type": "evening",
   "next_trade_id": 1,
   "market_snapshot": {
-    "nifty_spot": 24078.5,
+    "nifty_spot": 24072.75,
     "nifty_prev_close": 24078.5,
-    "india_vix": 13.27,
-    "gift_nifty": 24089.5,
-    "sp500_overnight_pct": 0.38,
-    "pcr": 0.7769,
-    "fii_net_cash_cr": -740,
-    "dii_net_cash_cr": 2928,
-    "as_of": "2026-07-16 09:00 IST (pre-open; spot/VIX are 15 Jul close, FII/DII are 15 Jul, PCR from 15 Jul EOD)"
+    "india_vix": 12.92,
+    "pcr": null,
+    "fii_net_cash_cr": -736,
+    "dii_net_cash_cr": 705,
+    "as_of": "2026-07-16 18:07 IST (16 Jul close; FII/DII are 15 Jul figures, PCR for 16 Jul EOD not yet published)"
   },
   "pending_plan": null,
-  "notes": "Morning run 16 Jul 08:57-09:00 IST. Score -1: GIFT ~24,089.5 vs prev close 24,078.5 = +0.05% (0); S&P Wed +0.38% (0); FII 15 Jul ~-740 Cr within +/-1,000 (0); news mixed - cool US PPI (-0.3% Jun) & Apple record high vs Iran blockade/elevated Brent/weak rupee/Kospi -7% chip rout (0); PCR 0.777 < 0.8 (-1). |score| 1 < entry threshold 2 (VIX 13.27 <= 16): NO TRADE. No open positions, nothing to reprice or exit. Night draft was +1; flipped to -1 mainly on PCR falling from 1.23 to 0.777.",
+  "notes": "Evening run 16 Jul 18:07 IST. NIFTY closed 24,072.75 (-5.75, -0.02%) after opening ~24,142 and fading; VIX 12.92 (-2.6%). No open positions (morning score -1, no trade), so nothing to mark, no exits, no EOD close needed. Equity unchanged at 100,000. Appended 2026-07-16 row to sessions_2026.csv (open 24142.10, score -1).",
   "morning_score_today": {
     "date": "2026-07-16",
     "score": -1
