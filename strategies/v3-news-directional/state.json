@@ -7,30 +7,24 @@
   "realized_pnl": 0,
   "unrealized_pnl": 0,
   "open_positions": [],
-  "last_run": "2026-07-15T14:25:00+05:30",
-  "last_run_type": "night-offschedule (scheduler fired ~14:08 IST instead of 22:00; NSE still open, US Wed session not yet open)",
+  "last_run": "2026-07-16T09:00:00+05:30",
+  "last_run_type": "morning",
   "next_trade_id": 1,
   "market_snapshot": {
-    "nifty_spot": 24184.95,
-    "nifty_open": 24085.85,
-    "nifty_prev_close": 24052.05,
-    "india_vix": 13.75,
-    "pcr": 1.23,
-    "fii_net_cash_cr": -739.69,
-    "dii_net_cash_cr": 2927.71,
-    "as_of": "2026-07-15 14:05 IST (intraday, market open; FII/DII are 14 Jul figures; PCR from 11:55 IST)"
+    "nifty_spot": 24078.5,
+    "nifty_prev_close": 24078.5,
+    "india_vix": 13.27,
+    "gift_nifty": 24089.5,
+    "sp500_overnight_pct": 0.38,
+    "pcr": 0.7769,
+    "fii_net_cash_cr": -740,
+    "dii_net_cash_cr": 2928,
+    "as_of": "2026-07-16 09:00 IST (pre-open; spot/VIX are 15 Jul close, FII/DII are 15 Jul, PCR from 15 Jul EOD)"
   },
-  "pending_plan": {
-    "bias": "neutral",
-    "score_draft": 1,
-    "key_news": [
-      "US Tue close: S&P 500 +0.38% (7,543.59), Nasdaq +0.9% on cooler June CPI (3.5% y/y); June PPI due Wed 18:00 IST",
-      "Kevin Warsh confirmed as Fed chair (54-45), takes over from Powell Friday; dollar index slipped below 101",
-      "US reimposed naval blockade on Iranian ports + fresh airstrikes after Hormuz attacks; Brent elevated ~$85-87 though Trump dropped the 20% Hormuz transit fee",
-      "India intraday Wed: Nifty +0.55% ~24,185, banks/financials lead, IT drags (IBM weak results); India-UK trade deal seen positive",
-      "FII 14 Jul -739.69 Cr (far smaller selling than 13 Jul's -3,062), DII +2,927.71 Cr; China Q2 GDP weakest since 2022"
-    ],
-    "written_at": "2026-07-15T14:25:00+05:30"
-  },
-  "notes": "Night cycle run OFF-SCHEDULE at ~14:08 IST (scheduled 22:00; evening cycle also fired early at 14:05 - check scheduler timezone on this machine). Draft score +1: S&P Tue +0.38% within +/-0.5% = 0; FII 14 Jul -739.69 Cr within +/-1,000 = 0; news mixed (Iran blockade/elevated Brent bearish vs cool CPI, strong DII, India-UK deal bullish) = 0; PCR 1.23 (11:55 IST reading) = +1. Below entry threshold 2 as of now; 08:45 morning run re-scores with GIFT Nifty, actual US Wed close (PPI reaction), fresh PCR/FII. Data caveats: spot 24,184.95 / VIX 13.75 are ~14:05 IST intraday values, NOT the close; stale 'US record highs on hot PPI' headlines in search were ignored (US Wed session had not opened). Correction vs morning snapshot: FII -3,062 Cr was 13 Jul data; 14 Jul actual was -739.69 Cr. No positions; equity flat at 1,00,000. A true 22:00 night run on another machine will see today's night row and skip."
+  "pending_plan": null,
+  "notes": "Morning run 16 Jul 08:57-09:00 IST. Score -1: GIFT ~24,089.5 vs prev close 24,078.5 = +0.05% (0); S&P Wed +0.38% (0); FII 15 Jul ~-740 Cr within +/-1,000 (0); news mixed - cool US PPI (-0.3% Jun) & Apple record high vs Iran blockade/elevated Brent/weak rupee/Kospi -7% chip rout (0); PCR 0.777 < 0.8 (-1). |score| 1 < entry threshold 2 (VIX 13.27 <= 16): NO TRADE. No open positions, nothing to reprice or exit. Night draft was +1; flipped to -1 mainly on PCR falling from 1.23 to 0.777.",
+  "morning_score_today": {
+    "date": "2026-07-16",
+    "score": -1
+  }
 }
