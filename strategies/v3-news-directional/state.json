@@ -7,20 +7,30 @@
   "realized_pnl": 0,
   "unrealized_pnl": 0,
   "open_positions": [],
-  "last_run": "2026-07-16T18:07:00+05:30",
-  "last_run_type": "evening",
+  "last_run": "2026-07-16T22:10:00+05:30",
+  "last_run_type": "night",
   "next_trade_id": 1,
   "market_snapshot": {
     "nifty_spot": 24072.75,
     "nifty_prev_close": 24078.5,
-    "india_vix": 12.92,
-    "pcr": null,
+    "india_vix": 12.88,
+    "pcr": 0.7769,
     "fii_net_cash_cr": -736,
     "dii_net_cash_cr": 705,
-    "as_of": "2026-07-16 18:07 IST (16 Jul close; FII/DII are 15 Jul figures, PCR for 16 Jul EOD not yet published)"
+    "as_of": "2026-07-16 22:10 IST (16 Jul close; VIX close 12.88, PCR 0.7769 for 16 Jul; FII/DII are 15 Jul figures, 16 Jul not yet published)"
   },
-  "pending_plan": null,
-  "notes": "Evening run 16 Jul 18:07 IST. NIFTY closed 24,072.75 (-5.75, -0.02%) after opening ~24,142 and fading; VIX 12.92 (-2.6%). No open positions (morning score -1, no trade), so nothing to mark, no exits, no EOD close needed. Equity unchanged at 100,000. Appended 2026-07-16 row to sessions_2026.csv (open 24142.10, score -1).",
+  "pending_plan": {
+    "bias": "bearish",
+    "score_draft": -1,
+    "key_news": [
+      "US mixed Thu afternoon: S&P 500 -0.37%, Nasdaq -0.76% on second day of chip selloff (TSMC -4% despite +77% earnings, AI-valuation jitters); Dow +0.2%, UnitedHealth +7% on beat",
+      "Crude near $85 on Middle East / US-Iran tension, lifting bond yields; inflation prints easing",
+      "NIFTY closed 24,072.75 (-0.02%) after fading an ~24,142 open; VIX 12.88 (-2.9%)",
+      "PCR 0.7769 (<0.8, bearish signal); FII -736 Cr vs DII +705 Cr (15 Jul, within neutral band)"
+    ],
+    "written_at": "2026-07-16T22:10:00+05:30"
+  },
+  "notes": "Night run 16 Jul 22:10 IST. US afternoon mixed (S&P -0.37%, Nasdaq -0.76% on chip selloff; Dow +0.2%); crude ~$85 on Mideast tension. Draft score -1 (PCR 0.7769 bearish; S&P, FII, news all within neutral bands) — below entry threshold 2; morning run re-scores with GIFT Nifty and US close. No positions, no trades (night runs never trade). Equity flat at 100,000.",
   "morning_score_today": {
     "date": "2026-07-16",
     "score": -1
