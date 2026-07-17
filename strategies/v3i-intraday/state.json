@@ -3,9 +3,9 @@
   "currency": "INR",
   "starting_capital": 100000,
   "cash": 91151.25,
-  "total_equity": 99771.0,
+  "total_equity": 97089.0,
   "realized_pnl": 0,
-  "unrealized_pnl": -229.0,
+  "unrealized_pnl": -2811.0,
   "open_positions": [
     {
       "trade_id": 1,
@@ -18,7 +18,7 @@
       "entry_premium": 116.65,
       "entry_cost_total": 8848.75,
       "entry_date": "2026-07-17",
-      "current_premium": 114.93,
+      "current_premium": 79.17,
       "sentiment_at_entry": -2
     }
   ],
@@ -49,5 +49,6 @@
   "morning_score_today": {
     "date": "2026-07-17",
     "score": -2
-  }
+  },
+  "last_monitor": "2026-07-17T09:16:59+05:30"
 }
