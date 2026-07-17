@@ -7,30 +7,31 @@
   "realized_pnl": -3560.96,
   "unrealized_pnl": 0,
   "open_positions": [],
-  "last_run": "2026-07-17T18:06:00+05:30",
-  "last_run_type": "evening",
+  "last_run": "2026-07-17T22:10:26+05:30",
+  "last_run_type": "night",
   "next_trade_id": 2,
   "market_snapshot": {
     "nifty_spot": 24334.3,
     "nifty_prev_close": 24072.75,
-    "india_vix": 12.87,
+    "india_vix": 13.24,
     "pcr": 0.7769,
-    "fii_net_cash_cr": -736,
-    "dii_net_cash_cr": 2367,
-    "as_of": "2026-07-17 18:06 IST (close 24334.30 +1.09%; VIX 12.87 = best available session value, exact close not published in accessible sources; PCR/FII/DII still 16 Jul - 17 Jul provisional not out yet)"
+    "fii_net_cash_cr": -376.4,
+    "dii_net_cash_cr": 1017.9,
+    "as_of": "2026-07-17 22:10 IST night run (close 24334.30 +1.09%; VIX close 13.24 +2.73% per Business Standard, supersedes 12.87 session value logged at evening run; FII/DII 17 Jul cash provisional; PCR still 16 Jul)"
   },
   "pending_plan": {
     "bias": "bearish",
     "score_draft": -1,
     "key_news": [
-      "US mixed Thu afternoon: S&P 500 -0.37%, Nasdaq -0.76% on second day of chip selloff (TSMC -4% despite +77% earnings, AI-valuation jitters); Dow +0.2%, UnitedHealth +7% on beat",
-      "Crude near $85 on Middle East / US-Iran tension, lifting bond yields; inflation prints easing",
-      "NIFTY closed 24,072.75 (-0.02%) after fading an ~24,142 open; VIX 12.88 (-2.9%)",
-      "PCR 0.7769 (<0.8, bearish signal); FII -736 Cr vs DII +705 Cr (15 Jul, within neutral band)"
+      "US Fri afternoon: S&P 500 -1.15%, Nasdaq -1.81%, Dow -0.98%; chip selloff deepens (SOX -3%, in bear market), Nikkei -4%, Netflix -11% on weak sales forecast",
+      "Oil +2% above $80 as Middle East conflict intensifies",
+      "India Fri: NIFTY closed 24,334.30 (+1.09%), Sensex +~1,000 on IT/financial buying (Tech Mahindra, Jio Financial beats); India VIX +2.73% to 13.24",
+      "FII cash -376 Cr / DII +1,018 Cr (17 Jul, neutral band); PCR stale at 0.7769 (16 Jul); RIL Q1 results due post-close = Monday swing factor",
+      "Score basis: US S&P -1; FII 0; news mixed (global risk-off vs strong domestic earnings) 0; PCR not counted (stale); GIFT checked Monday morning"
     ],
-    "written_at": "2026-07-16T22:10:00+05:30"
+    "written_at": "2026-07-17T22:10:26+05:30"
   },
-  "notes": "Evening run 17 Jul. Flat all day since 09:22: monitor stopped out the 24050 PUT at -35% (realized -3560.96) as NIFTY gapped up and rallied to close 24334.30 (+1.09%), opposite the -2 morning score. No open positions to mark; no EOD action needed.",
+  "notes": "Night run 17 Jul. Flat, no positions to mark. Pending plan for Monday 20 Jul: mild bearish (draft -1) on US chip-led selloff and Middle East oil spike, tempered by strong domestic earnings; RIL results the wildcard. No trades on night runs.",
   "morning_score_today": {
     "date": "2026-07-17",
     "score": -2
