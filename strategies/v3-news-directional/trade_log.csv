@@ -1,1 +1,2 @@
 trade_id,action,datetime_ist,instrument,strike,expiry,option_type,lots,lot_size,premium,total_value,friction_cost,reason,sentiment_score,nifty_spot,india_vix,realized_pnl
+1,BUY,2026-07-17 09:15,NIFTY 24050 PE 21-Jul-2026,24050,2026-07-21,put,1,75,116.65,8848.75,229.0,"score -2: GIFT 24066 vs prev close 24072.75 -0.03% (0); S&P500 -0.51% (-1); FII -736Cr 16Jul (0); news mixed - chip selloff/Alphabet AI delay, crude ~$85 Mideast tension (0); PCR 0.7769 <0.8 (-1). VIX 12.88<=16: naked ATM put, next weekly 2026-07-21, gap -0.03% passes gap-chase",-2,24066.0,12.88,0

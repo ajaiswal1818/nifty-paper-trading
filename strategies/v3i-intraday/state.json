@@ -2,22 +2,37 @@
   "sim_name": "NIFTY news-driven directional v3i (same-day exit)",
   "currency": "INR",
   "starting_capital": 100000,
-  "cash": 100000,
-  "total_equity": 100000,
+  "cash": 91151.25,
+  "total_equity": 99771.0,
   "realized_pnl": 0,
-  "unrealized_pnl": 0,
-  "open_positions": [],
-  "last_run": "2026-07-16T22:10:00+05:30",
-  "last_run_type": "night",
-  "next_trade_id": 1,
+  "unrealized_pnl": -229.0,
+  "open_positions": [
+    {
+      "trade_id": 1,
+      "option_type": "put",
+      "strike": 24050,
+      "short_strike": null,
+      "expiry": "2026-07-21",
+      "lots": 1,
+      "lot_size": 75,
+      "entry_premium": 116.65,
+      "entry_cost_total": 8848.75,
+      "entry_date": "2026-07-17",
+      "current_premium": 114.93,
+      "sentiment_at_entry": -2
+    }
+  ],
+  "last_run": "2026-07-17T08:55:00+05:30",
+  "last_run_type": "morning",
+  "next_trade_id": 2,
   "market_snapshot": {
-    "nifty_spot": 24072.75,
-    "nifty_prev_close": 24078.5,
+    "nifty_spot": 24066.0,
+    "nifty_prev_close": 24072.75,
     "india_vix": 12.88,
     "pcr": 0.7769,
     "fii_net_cash_cr": -736,
-    "dii_net_cash_cr": 705,
-    "as_of": "2026-07-16 22:10 IST (16 Jul close; VIX close 12.88, PCR 0.7769 for 16 Jul; FII/DII are 15 Jul figures, 16 Jul not yet published)"
+    "dii_net_cash_cr": 2367,
+    "as_of": "2026-07-17 08:55 IST (pre-open; spot=modeled open from GIFT Nifty 24066; VIX/PCR are 16 Jul close; FII -736Cr / DII +2367Cr are 16 Jul)"
   },
   "pending_plan": {
     "bias": "bearish",
@@ -30,9 +45,9 @@
     ],
     "written_at": "2026-07-16T22:10:00+05:30"
   },
-  "notes": "Night run 16 Jul 22:10 IST. US afternoon mixed (S&P -0.37%, Nasdaq -0.76% on chip selloff; Dow +0.2%); crude ~$85 on Mideast tension. Draft score -1 (PCR 0.7769 bearish; S&P, FII, news all within neutral bands) — below entry threshold 2; morning run re-scores with GIFT Nifty and US close. No positions (v3i never holds overnight), no trades. Equity flat at 100,000.",
+  "notes": "Morning run 17 Jul. Score -2 (S&P -0.51%, PCR 0.7769; GIFT/FII/news neutral) -> BUY 24050 PUT exp 21 Jul, 1 lot @ 116.65 (model 114.93 +1.5% +100 fee). Cost 8848.75; held to EOD exit by monitor (v3i).",
   "morning_score_today": {
-    "date": "2026-07-16",
-    "score": -1
+    "date": "2026-07-17",
+    "score": -2
   }
 }
