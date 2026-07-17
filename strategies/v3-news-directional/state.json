@@ -2,26 +2,11 @@
   "sim_name": "NIFTY news-driven directional v3",
   "currency": "INR",
   "starting_capital": 100000,
-  "cash": 91151.25,
-  "total_equity": 97089.0,
-  "realized_pnl": 0,
-  "unrealized_pnl": -2811.0,
-  "open_positions": [
-    {
-      "trade_id": 1,
-      "option_type": "put",
-      "strike": 24050,
-      "short_strike": null,
-      "expiry": "2026-07-21",
-      "lots": 1,
-      "lot_size": 75,
-      "entry_premium": 116.65,
-      "entry_cost_total": 8848.75,
-      "entry_date": "2026-07-17",
-      "current_premium": 79.17,
-      "sentiment_at_entry": -2
-    }
-  ],
+  "cash": 96439.04,
+  "total_equity": 96439.04,
+  "realized_pnl": -3560.96,
+  "unrealized_pnl": 0,
+  "open_positions": [],
   "last_run": "2026-07-17T08:55:00+05:30",
   "last_run_type": "morning",
   "next_trade_id": 2,
@@ -50,5 +35,5 @@
     "date": "2026-07-17",
     "score": -2
   },
-  "last_monitor": "2026-07-17T09:16:59+05:30"
+  "last_monitor": "2026-07-17T09:22:00+05:30"
 }
