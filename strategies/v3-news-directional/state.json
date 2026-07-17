@@ -7,17 +7,17 @@
   "realized_pnl": -3560.96,
   "unrealized_pnl": 0,
   "open_positions": [],
-  "last_run": "2026-07-17T08:55:00+05:30",
-  "last_run_type": "morning",
+  "last_run": "2026-07-17T18:06:00+05:30",
+  "last_run_type": "evening",
   "next_trade_id": 2,
   "market_snapshot": {
-    "nifty_spot": 24066.0,
+    "nifty_spot": 24334.3,
     "nifty_prev_close": 24072.75,
-    "india_vix": 12.88,
+    "india_vix": 12.87,
     "pcr": 0.7769,
     "fii_net_cash_cr": -736,
     "dii_net_cash_cr": 2367,
-    "as_of": "2026-07-17 08:55 IST (pre-open; spot=modeled open from GIFT Nifty 24066; VIX/PCR are 16 Jul close; FII -736Cr / DII +2367Cr are 16 Jul)"
+    "as_of": "2026-07-17 18:06 IST (close 24334.30 +1.09%; VIX 12.87 = best available session value, exact close not published in accessible sources; PCR/FII/DII still 16 Jul - 17 Jul provisional not out yet)"
   },
   "pending_plan": {
     "bias": "bearish",
@@ -30,7 +30,7 @@
     ],
     "written_at": "2026-07-16T22:10:00+05:30"
   },
-  "notes": "Morning run 17 Jul. Score -2 (S&P -0.51%, PCR 0.7769; GIFT/FII/news neutral) -> BUY 24050 PUT exp 21 Jul, 1 lot @ 116.65 (model 114.93 +1.5% +100 fee). Cost 8848.75; exits per stop/target/trail.",
+  "notes": "Evening run 17 Jul. Flat all day since 09:22: monitor stopped out the 24050 PUT at -35% (realized -3560.96) as NIFTY gapped up and rallied to close 24334.30 (+1.09%), opposite the -2 morning score. No open positions to mark; no EOD action needed.",
   "morning_score_today": {
     "date": "2026-07-17",
     "score": -2
