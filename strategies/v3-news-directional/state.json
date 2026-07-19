@@ -7,7 +7,7 @@
   "realized_pnl": -3560.96,
   "unrealized_pnl": 0,
   "open_positions": [],
-  "last_run": "2026-07-18T00:50:00+05:30",
+  "last_run": "2026-07-19T14:52:00+05:30",
   "last_run_type": "weekend-skip",
   "next_trade_id": 2,
   "market_snapshot": {
@@ -31,7 +31,7 @@
     ],
     "written_at": "2026-07-17T22:10:26+05:30"
   },
-  "notes": "Weekend 2026-07-18 (Saturday): NSE closed; morning and evening cycles both skipped per runbook. No repricing, no trades, no EOD exits needed (book flat). Pending plan for Monday 20 Jul left intact.",
+  "notes": "Weekend 2026-07-19 (Sunday): NSE closed; morning cycle skipped per runbook. No repricing, no trades, book flat. Pending plan for Monday 20 Jul left intact.",
   "morning_score_today": {
     "date": "2026-07-17",
     "score": -2
