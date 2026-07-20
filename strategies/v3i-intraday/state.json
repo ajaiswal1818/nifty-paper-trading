@@ -2,39 +2,39 @@
   "sim_name": "NIFTY news-driven directional v3i (same-day exit)",
   "currency": "INR",
   "starting_capital": 100000,
-  "cash": 96439.04,
-  "total_equity": 96439.04,
-  "realized_pnl": -3560.96,
+  "cash": 94114.29,
+  "total_equity": 94114.29,
+  "realized_pnl": -5885.71,
   "unrealized_pnl": 0,
   "open_positions": [],
-  "last_run": "2026-07-19T18:00:00+05:30",
-  "last_run_type": "weekend-skip",
-  "next_trade_id": 2,
+  "last_run": "2026-07-20T18:10:04+05:30",
+  "last_run_type": "evening",
+  "next_trade_id": 3,
   "market_snapshot": {
-    "nifty_spot": 24334.3,
-    "nifty_prev_close": 24072.75,
-    "india_vix": 13.24,
-    "pcr": 0.7769,
+    "nifty_spot": 24237.45,
+    "nifty_prev_close": 24334.3,
+    "india_vix": 12.985,
+    "pcr": 1.03,
     "fii_net_cash_cr": -376.4,
     "dii_net_cash_cr": 1017.9,
-    "as_of": "2026-07-17 22:10 IST night run (close 24334.30 +1.09%; VIX close 13.24 +2.73% per Business Standard, supersedes 12.87 session value logged at evening run; FII/DII 17 Jul cash provisional; PCR still 16 Jul)"
+    "as_of": "2026-07-20 evening run (18:10 IST). Marked to day's close via platform Yahoo feed (monitor 15:21 pass): spot 24237.45 (Nifty -0.39% vs prev 24334.30), VIX 12.985. niftytrader.in page still served Fri 17-Jul data at fetch time; used canonical monitor feed. Session rangebound 24099-24367."
   },
   "pending_plan": {
     "bias": "bearish",
     "score_draft": -1,
     "key_news": [
+      "CONSUMED by 20-Jul morning entry (score -2, bought 24200 PE 28-Jul). Original 17-Jul night plan below; next night run overwrites.",
       "US Fri afternoon: S&P 500 -1.15%, Nasdaq -1.81%, Dow -0.98%; chip selloff deepens (SOX -3%, in bear market), Nikkei -4%, Netflix -11% on weak sales forecast",
       "Oil +2% above $80 as Middle East conflict intensifies",
       "India Fri: NIFTY closed 24,334.30 (+1.09%), Sensex +~1,000 on IT/financial buying (Tech Mahindra, Jio Financial beats); India VIX +2.73% to 13.24",
-      "FII cash -376 Cr / DII +1,018 Cr (17 Jul, neutral band); PCR stale at 0.7769 (16 Jul); RIL Q1 results due post-close = Monday swing factor",
-      "Score basis: US S&P -1; FII 0; news mixed (global risk-off vs strong domestic earnings) 0; PCR not counted (stale); GIFT checked Monday morning"
+      "FII cash -376 Cr / DII +1,018 Cr (17 Jul, neutral band); PCR stale at 0.7769 (16 Jul); RIL Q1 results due post-close = Monday swing factor"
     ],
     "written_at": "2026-07-17T22:10:26+05:30"
   },
-  "notes": "Weekend 2026-07-19 (Sunday): NSE closed; morning and evening cycles both skipped per runbook. No repricing, no trades, no EOD exits needed (book flat). Pending plan for Monday 20 Jul left intact.",
+  "notes": "20-Jul (Mon) EVENING run (18:10 IST). Book already flat: monitor force-closed 24200 PE at 15:21 (reason 'eod exit (intraday mode)', pnl -2324.75) per eod_exit policy, so no evening force-close needed. No open positions to mark. realized -5885.71, equity 94114.29.",
   "morning_score_today": {
-    "date": "2026-07-17",
+    "date": "2026-07-20",
     "score": -2
   },
-  "last_monitor": "2026-07-17T09:22:00+05:30"
+  "last_monitor": "2026-07-20T15:21:16+05:30"
 }
