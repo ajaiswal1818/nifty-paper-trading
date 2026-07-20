@@ -3,9 +3,9 @@
   "currency": "INR",
   "starting_capital": 100000,
   "cash": 82785.04,
-  "total_equity": 94383.79,
+  "total_equity": 94994.29,
   "realized_pnl": -3560.96,
-  "unrealized_pnl": -2055.25,
+  "unrealized_pnl": -1344.75,
   "open_positions": [
     {
       "trade_id": 2,
@@ -18,35 +18,35 @@
       "entry_premium": 180.72,
       "entry_cost_total": 13654.0,
       "entry_date": "2026-07-20T09:15:00+05:30",
-      "current_premium": 154.65,
+      "current_premium": 162.79,
       "sentiment_at_entry": -2
     }
   ],
-  "last_run": "2026-07-20T18:10:04+05:30",
-  "last_run_type": "evening",
+  "last_run": "2026-07-20T22:10:17+05:30",
+  "last_run_type": "night",
   "next_trade_id": 3,
   "market_snapshot": {
     "nifty_spot": 24237.45,
     "nifty_prev_close": 24334.3,
-    "india_vix": 12.985,
+    "india_vix": 13.56,
     "pcr": 1.03,
     "fii_net_cash_cr": -376.4,
     "dii_net_cash_cr": 1017.9,
-    "as_of": "2026-07-20 evening run (18:10 IST). Marked to day's close via platform Yahoo feed (monitor 15:21 pass): spot 24237.45 (Nifty -0.39% vs prev 24334.30), VIX 12.985. niftytrader.in page still served Fri 17-Jul data at fetch time; used canonical monitor feed. Session rangebound 24099-24367."
+    "as_of": "2026-07-20 NIGHT run (22:10 IST). Repriced open 24200 PE to confirmed session close: spot ~24237 (Nifty -0.39% vs prev 24334.30; sources report close 24216-24238), VIX confirmed 13.56 (+3.27%, up from evening monitor's early 12.985 mark). Indian market closed; no trades on night runs."
   },
   "pending_plan": {
-    "bias": "bearish",
-    "score_draft": -1,
+    "bias": "neutral",
+    "score_draft": 1,
     "key_news": [
-      "CONSUMED by 20-Jul morning entry (score -2, bought 24200 PE 28-Jul). Original 17-Jul night plan below; next night run overwrites.",
-      "US Fri afternoon: S&P 500 -1.15%, Nasdaq -1.81%, Dow -0.98%; chip selloff deepens (SOX -3%, in bear market), Nikkei -4%, Netflix -11% on weak sales forecast",
-      "Oil +2% above $80 as Middle East conflict intensifies",
-      "India Fri: NIFTY closed 24,334.30 (+1.09%), Sensex +~1,000 on IT/financial buying (Tech Mahindra, Jio Financial beats); India VIX +2.73% to 13.24",
-      "FII cash -376 Cr / DII +1,018 Cr (17 Jul, neutral band); PCR stale at 0.7769 (16 Jul); RIL Q1 results due post-close = Monday swing factor"
+      "US Mon 20-Jul midday: S&P 500 +0.63%, Nasdaq +1.02%, Dow +0.23%, Russell -0.42%; chip stocks rebounding ahead of Big Tech earnings this week (SOX still ~-20% off late-June peak) => US signal +1",
+      "US-Iran tit-for-tat attacks over the weekend; oil eased after touching ~$90 (Brent ~$78-85). Strait of Hormuz supply risk remains the key macro overhang",
+      "India Mon close: NIFTY ~24,237 (-0.39% vs 24,334.30), VIX 13.56 (+3.27%); financials dragged the tape (HDFC Bank & Axis Bank ~-4% on Q1 results)",
+      "Technicals constructive: bullish weekly candle, higher-bottom daily; 24,000 & 24,200 pivots trend-deciding; upside targets 24,500-24,800 if held",
+      "Tue 21-Jul is weekly-expiry day => any entry uses 28-Jul weekly. Draft score +1 (US +1; news/PCR 1.03/FII neutral), below entry threshold 2. GIFT Nifty + fresh FII/DII to be confirmed at morning run"
     ],
-    "written_at": "2026-07-17T22:10:26+05:30"
+    "written_at": "2026-07-20T22:10:17+05:30"
   },
-  "notes": "20-Jul (Mon) EVENING run (18:10 IST). Marked open 24200 PE 28-Jul to day's close: model value 154.65 (spot 24237.45, VIX 12.985, 8d). Entry model 178.05 -> stop 115.73 / target 267.07 / trail-arm 222.56: none hit (mark 154.65 sits between). Time stop N/A (expiry 28-Jul, not tomorrow). No reversal signal on evening run. HELD overnight, 1 lot. unrealized -2055.25, equity 94383.79. Monitor healthy (0 quote failures).",
+  "notes": "20-Jul (Mon) NIGHT run (22:10 IST). No trades on night runs. Repriced open 24200 PE 28-Jul to confirmed close: model 162.79 (spot 24237.45, VIX 13.56, 8d) vs evening mark 154.65 (VIX 12.985) -> unrealized -1344.75, equity 94994.29. Entry model 178.05 => stop 115.73 / target 267.07 / trail-arm 222.56: none hit (mark sits between); no reversal (draft +1 is mild-bullish, |score|<3, does not flip the open PUT). Position HELD, 1 lot. Pre-scored tomorrow: bias neutral (mild-bullish tilt), draft +1, no entry trigger. Note VIX bumped vs evening because confirmed close 13.56 > monitor's early 12.985 pass.",
   "morning_score_today": {
     "date": "2026-07-20",
     "score": -2

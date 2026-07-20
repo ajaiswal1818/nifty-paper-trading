@@ -7,31 +7,31 @@
   "realized_pnl": -5885.71,
   "unrealized_pnl": 0,
   "open_positions": [],
-  "last_run": "2026-07-20T18:10:04+05:30",
-  "last_run_type": "evening",
+  "last_run": "2026-07-20T22:10:17+05:30",
+  "last_run_type": "night",
   "next_trade_id": 3,
   "market_snapshot": {
     "nifty_spot": 24237.45,
     "nifty_prev_close": 24334.3,
-    "india_vix": 12.985,
+    "india_vix": 13.56,
     "pcr": 1.03,
     "fii_net_cash_cr": -376.4,
     "dii_net_cash_cr": 1017.9,
-    "as_of": "2026-07-20 evening run (18:10 IST). Marked to day's close via platform Yahoo feed (monitor 15:21 pass): spot 24237.45 (Nifty -0.39% vs prev 24334.30), VIX 12.985. niftytrader.in page still served Fri 17-Jul data at fetch time; used canonical monitor feed. Session rangebound 24099-24367."
+    "as_of": "2026-07-20 NIGHT run (22:10 IST). Confirmed session close: spot ~24237 (Nifty -0.39% vs prev 24334.30; sources report 24216-24238), VIX confirmed 13.56 (+3.27%). Book flat, nothing to reprice. Indian market closed; no trades on night runs."
   },
   "pending_plan": {
-    "bias": "bearish",
-    "score_draft": -1,
+    "bias": "neutral",
+    "score_draft": 1,
     "key_news": [
-      "CONSUMED by 20-Jul morning entry (score -2, bought 24200 PE 28-Jul). Original 17-Jul night plan below; next night run overwrites.",
-      "US Fri afternoon: S&P 500 -1.15%, Nasdaq -1.81%, Dow -0.98%; chip selloff deepens (SOX -3%, in bear market), Nikkei -4%, Netflix -11% on weak sales forecast",
-      "Oil +2% above $80 as Middle East conflict intensifies",
-      "India Fri: NIFTY closed 24,334.30 (+1.09%), Sensex +~1,000 on IT/financial buying (Tech Mahindra, Jio Financial beats); India VIX +2.73% to 13.24",
-      "FII cash -376 Cr / DII +1,018 Cr (17 Jul, neutral band); PCR stale at 0.7769 (16 Jul); RIL Q1 results due post-close = Monday swing factor"
+      "US Mon 20-Jul midday: S&P 500 +0.63%, Nasdaq +1.02%, Dow +0.23%, Russell -0.42%; chip stocks rebounding ahead of Big Tech earnings this week (SOX still ~-20% off late-June peak) => US signal +1",
+      "US-Iran tit-for-tat attacks over the weekend; oil eased after touching ~$90 (Brent ~$78-85). Strait of Hormuz supply risk remains the key macro overhang",
+      "India Mon close: NIFTY ~24,237 (-0.39% vs 24,334.30), VIX 13.56 (+3.27%); financials dragged the tape (HDFC Bank & Axis Bank ~-4% on Q1 results)",
+      "Technicals constructive: bullish weekly candle, higher-bottom daily; 24,000 & 24,200 pivots trend-deciding; upside targets 24,500-24,800 if held",
+      "Tue 21-Jul is weekly-expiry day => any entry uses 28-Jul weekly. Draft score +1 (US +1; news/PCR 1.03/FII neutral), below entry threshold 2. Book is flat, so a triggering morning score could open same-day (intraday exit). GIFT Nifty + fresh FII/DII to be confirmed at morning run"
     ],
-    "written_at": "2026-07-17T22:10:26+05:30"
+    "written_at": "2026-07-20T22:10:17+05:30"
   },
-  "notes": "20-Jul (Mon) EVENING run (18:10 IST). Book already flat: monitor force-closed 24200 PE at 15:21 (reason 'eod exit (intraday mode)', pnl -2324.75) per eod_exit policy, so no evening force-close needed. No open positions to mark. realized -5885.71, equity 94114.29.",
+  "notes": "20-Jul (Mon) NIGHT run (22:10 IST). No trades on night runs. Book flat (monitor eod-closed 24200 PE at 15:21, pnl -2324.75), nothing to reprice: realized -5885.71, equity 94114.29. Pre-scored tomorrow: bias neutral (mild-bullish tilt), draft +1 => below entry threshold 2, no trigger. Confirmed close VIX 13.56.",
   "morning_score_today": {
     "date": "2026-07-20",
     "score": -2
