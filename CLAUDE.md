@@ -12,8 +12,9 @@ scheduled runs do) and `DECISIONS.md` (dated history of every rule change and wh
   tunables (params.json), portfolio (state.json), trade_log.csv, equity_curve.csv.
   Active now: `v3-news-directional` (holds overnight) and `v3i-intraday` (same-day exit),
   a live A/B on the same signals.
-- `engine/` — pricing.py (Black-Scholes), backtest.py (reusable), monitor.py (launchd
-  intraday exit daemon), git_sync.sh + plists.
+- `engine/` — pricing.py (Black-Scholes), backtest.py (reusable), monitor.py (intraday
+  exit daemon), monitor_cloud.sh (git-synced wrapper for the always-on VM), git_sync.sh + plists.
+  The monitor runs on an Oracle Cloud free VM (SETUP_ORACLE_VM.md), not the Mac.
 - `dashboard/build_dashboard.py` → dashboard.html (regenerated each run).
 - `research/` — frozen backtests and weekly `proposals/`.
 

@@ -1,0 +1,6 @@
+# Intraday monitor on the always-on VM. Timezone assumed Asia/Kolkata
+# (set with: sudo timedatectl set-timezone Asia/Kolkata).
+# Every 5 min, 09:00-15:59 IST, Mon-Fri. monitor.py self-guards the exact
+# 09:15-15:35 window and skips weekends/holidays and stale quotes.
+# Install with: crontab engine/monitor.cron   (edit the path to match your clone)
+*/5 9-15 * * 1-5 /home/ubuntu/nifty-paper-trading/engine/monitor_cloud.sh

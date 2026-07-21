@@ -6,8 +6,15 @@ One-person platform for designing, backtesting, and paper-running trading strate
 ## How it runs
 Claude executes `RUNBOOK.md` on scheduled runs (08:45 / 18:00 / 22:00 IST): fetches live
 market data, then updates every strategy marked `active` in `strategies/registry.json`.
-Between runs, `engine/monitor.py` (launchd, 5-min polls, Yahoo ^NSEI/^INDIAVIX) executes
-mechanical intraday exits. Judgment lives in the scheduled runs; arithmetic lives in the daemon.
+Between runs, `engine/monitor.py` (5-min polls, Yahoo ^NSEI/^INDIAVIX) executes mechanical
+intraday exits. Judgment lives in the scheduled runs; arithmetic lives in the daemon.
+
+**Where the monitor runs:** on an always-on Oracle Cloud free VM (see SETUP_ORACLE_VM.md),
+so exits are checked even when the Mac is off. The VM is the SOLE monitor: it pulls the Mac's
+state, runs `engine/monitor_cloud.sh` each 5 min, and pushes back only when a trade fires. The
+Mac's local launchd monitor is unloaded to avoid double-exits. If the Mac is off at 08:45 IST
+no new entry is made that day (safe), but any open position stays protected by the VM. For a
+Mac-only fallback, `com.nifty.monitor.plist` still exists; never run it and the VM at once.
 
 Monitor install (one time, on the run Mac):
 `cp ~/Projects/nifty-paper-trading/engine/com.nifty.monitor.plist ~/Library/LaunchAgents/ && launchctl load ~/Library/LaunchAgents/com.nifty.monitor.plist`
