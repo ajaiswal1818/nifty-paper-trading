@@ -2,37 +2,22 @@
   "sim_name": "NIFTY news-driven directional v3i (same-day exit)",
   "currency": "INR",
   "starting_capital": 100000,
-  "cash": 81809.54,
-  "total_equity": 93834.29,
-  "realized_pnl": -5885.71,
-  "unrealized_pnl": -280.0,
-  "open_positions": [
-    {
-      "trade_id": 3,
-      "option_type": "put",
-      "strike": 24200,
-      "short_strike": null,
-      "expiry": "2026-07-28",
-      "lots": 1,
-      "lot_size": 75,
-      "entry_premium": 162.73,
-      "entry_cost_total": 12304.75,
-      "entry_date": "2026-07-21T09:15:00+05:30",
-      "current_premium": 160.33,
-      "sentiment_at_entry": -2
-    }
-  ],
-  "last_run": "2026-07-21T08:45:00+05:30",
-  "last_run_type": "morning",
+  "cash": 93693.54,
+  "total_equity": 93693.54,
+  "realized_pnl": -6306.46,
+  "unrealized_pnl": 0.0,
+  "open_positions": [],
+  "last_run": "2026-07-21T18:34:00+05:30",
+  "last_run_type": "evening",
   "next_trade_id": 4,
   "market_snapshot": {
-    "nifty_spot": 24200.0,
-    "nifty_prev_close": 24238.5,
-    "india_vix": 12.9,
+    "nifty_spot": 24187.7,
+    "nifty_prev_close": 24237.45,
+    "india_vix": 12.6,
     "pcr": 1.03,
-    "fii_net_cash_cr": -376.4,
-    "dii_net_cash_cr": 1017.9,
-    "as_of": "2026-07-21 MORNING run (08:45 IST). Tue = weekly expiry day. Open ~24200 (pre-open 24216 -0.09%; GIFT ~24153 vs prev close 24238.50 = -0.35%). VIX ~12.9 (low band). S&P500 Mon 20-Jul closed -0.28% (gave back intraday gains). US-Iran strikes continue, Brent ~$88. NSE open, trading day."
+    "fii_net_cash_cr": -1121.0,
+    "dii_net_cash_cr": 1312.0,
+    "as_of": "2026-07-21 EVENING run (18:34 IST, post-close). NIFTY closed 24187.70 (-50.80/-0.21%), India VIX 12.60 (-2.92%). Sensex -238.41 to 77470.11. HDFC Bank -2.07%, SBI -1.48%, RIL -1.40% dragged; mid/smallcaps outperformed. Brent ~$89.75. FII continued net selling; today's provisional cash figures not yet published (most recent confirmed 20-Jul: FII -1121cr, DII +1312cr; PCR 1.03 carried from morning/expiry-day). NSE trading day."
   },
   "pending_plan": {
     "bias": "neutral",
@@ -46,10 +31,10 @@
     ],
     "written_at": "2026-07-20T22:10:17+05:30"
   },
-  "notes": "21-Jul (Tue, weekly expiry) MORNING run (08:45 IST). Book was flat. Morning score -2 (GIFT -0.35% =-1; S&P500 -0.28% =0; FII -376Cr =0; PCR 1.03 =0; news negative US-Iran/Brent risk-off =-1) => PUT triggers (threshold 2, VIX 12.9<=16 naked ATM). 21-Jul is expiry today -> used next weekly 28-Jul. Gap -0.16% < 0.9% passes gap-chase. Entered trade 3: BUY 24200 PE 28-Jul @ model 160.33, entry_prem 162.73 (x1.015), cost 12304.75. cash 81809.54, equity 93834.29. Intraday-mode: monitor will EOD-close today.",
+  "notes": "21-Jul (Tue) EVENING run (18:34 IST). Intraday monitor's last pass was 14:26 IST and it missed the 15:20 EOD window (no eod-exit line in monitor.log today), so the evening run acted as the fallback EOD executor. Force-closed trade 3 (24200 PE 28-Jul) at the close: model 162.22, proceeds 11884.11 (162.22 x0.985 x75 -100), realized -420.64 on the trade (entry model 160.33 -> exit 162.22 = +1.9pts, but round-trip slippage+fees turned it negative). cash 93693.65, realized_pnl -6306.35, book flat. reason 'eod exit'.",
   "morning_score_today": {
     "date": "2026-07-21",
     "score": -2
   },
-  "last_monitor": "2026-07-20T15:21:16+05:30"
+  "last_monitor": "2026-07-21T14:26:57+05:30"
 }
