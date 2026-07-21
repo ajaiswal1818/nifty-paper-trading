@@ -2,22 +2,37 @@
   "sim_name": "NIFTY news-driven directional v3i (same-day exit)",
   "currency": "INR",
   "starting_capital": 100000,
-  "cash": 94114.29,
-  "total_equity": 94114.29,
+  "cash": 81809.54,
+  "total_equity": 93834.29,
   "realized_pnl": -5885.71,
-  "unrealized_pnl": 0,
-  "open_positions": [],
-  "last_run": "2026-07-20T22:10:17+05:30",
-  "last_run_type": "night",
-  "next_trade_id": 3,
+  "unrealized_pnl": -280.0,
+  "open_positions": [
+    {
+      "trade_id": 3,
+      "option_type": "put",
+      "strike": 24200,
+      "short_strike": null,
+      "expiry": "2026-07-28",
+      "lots": 1,
+      "lot_size": 75,
+      "entry_premium": 162.73,
+      "entry_cost_total": 12304.75,
+      "entry_date": "2026-07-21T09:15:00+05:30",
+      "current_premium": 160.33,
+      "sentiment_at_entry": -2
+    }
+  ],
+  "last_run": "2026-07-21T08:45:00+05:30",
+  "last_run_type": "morning",
+  "next_trade_id": 4,
   "market_snapshot": {
-    "nifty_spot": 24237.45,
-    "nifty_prev_close": 24334.3,
-    "india_vix": 13.56,
+    "nifty_spot": 24200.0,
+    "nifty_prev_close": 24238.5,
+    "india_vix": 12.9,
     "pcr": 1.03,
     "fii_net_cash_cr": -376.4,
     "dii_net_cash_cr": 1017.9,
-    "as_of": "2026-07-20 NIGHT run (22:10 IST). Confirmed session close: spot ~24237 (Nifty -0.39% vs prev 24334.30; sources report 24216-24238), VIX confirmed 13.56 (+3.27%). Book flat, nothing to reprice. Indian market closed; no trades on night runs."
+    "as_of": "2026-07-21 MORNING run (08:45 IST). Tue = weekly expiry day. Open ~24200 (pre-open 24216 -0.09%; GIFT ~24153 vs prev close 24238.50 = -0.35%). VIX ~12.9 (low band). S&P500 Mon 20-Jul closed -0.28% (gave back intraday gains). US-Iran strikes continue, Brent ~$88. NSE open, trading day."
   },
   "pending_plan": {
     "bias": "neutral",
@@ -31,9 +46,9 @@
     ],
     "written_at": "2026-07-20T22:10:17+05:30"
   },
-  "notes": "20-Jul (Mon) NIGHT run (22:10 IST). No trades on night runs. Book flat (monitor eod-closed 24200 PE at 15:21, pnl -2324.75), nothing to reprice: realized -5885.71, equity 94114.29. Pre-scored tomorrow: bias neutral (mild-bullish tilt), draft +1 => below entry threshold 2, no trigger. Confirmed close VIX 13.56.",
+  "notes": "21-Jul (Tue, weekly expiry) MORNING run (08:45 IST). Book was flat. Morning score -2 (GIFT -0.35% =-1; S&P500 -0.28% =0; FII -376Cr =0; PCR 1.03 =0; news negative US-Iran/Brent risk-off =-1) => PUT triggers (threshold 2, VIX 12.9<=16 naked ATM). 21-Jul is expiry today -> used next weekly 28-Jul. Gap -0.16% < 0.9% passes gap-chase. Entered trade 3: BUY 24200 PE 28-Jul @ model 160.33, entry_prem 162.73 (x1.015), cost 12304.75. cash 81809.54, equity 93834.29. Intraday-mode: monitor will EOD-close today.",
   "morning_score_today": {
-    "date": "2026-07-20",
+    "date": "2026-07-21",
     "score": -2
   },
   "last_monitor": "2026-07-20T15:21:16+05:30"

@@ -3,9 +3,9 @@
   "currency": "INR",
   "starting_capital": 100000,
   "cash": 82785.04,
-  "total_equity": 93666.04,
+  "total_equity": 94809.79,
   "realized_pnl": -3560.96,
-  "unrealized_pnl": -2673.0,
+  "unrealized_pnl": -1529.25,
   "open_positions": [
     {
       "trade_id": 2,
@@ -18,21 +18,21 @@
       "entry_premium": 180.72,
       "entry_cost_total": 13654.0,
       "entry_date": "2026-07-20T09:15:00+05:30",
-      "current_premium": 145.08,
+      "current_premium": 160.33,
       "sentiment_at_entry": -2
     }
   ],
-  "last_run": "2026-07-20T22:10:17+05:30",
-  "last_run_type": "night",
+  "last_run": "2026-07-21T08:45:00+05:30",
+  "last_run_type": "morning",
   "next_trade_id": 3,
   "market_snapshot": {
-    "nifty_spot": 24237.45,
-    "nifty_prev_close": 24334.3,
-    "india_vix": 13.56,
+    "nifty_spot": 24200.0,
+    "nifty_prev_close": 24238.5,
+    "india_vix": 12.9,
     "pcr": 1.03,
     "fii_net_cash_cr": -376.4,
     "dii_net_cash_cr": 1017.9,
-    "as_of": "2026-07-20 NIGHT run (22:10 IST). Repriced open 24200 PE to confirmed session close: spot ~24237 (Nifty -0.39% vs prev 24334.30; sources report close 24216-24238), VIX confirmed 13.56 (+3.27%, up from evening monitor's early 12.985 mark). Indian market closed; no trades on night runs."
+    "as_of": "2026-07-21 MORNING run (08:45 IST). Tue = weekly expiry day. Open ~24200 (pre-open 24216 -0.09%; GIFT ~24153 vs prev close 24238.50 = -0.35%). VIX ~12.9 (low band). S&P500 Mon 20-Jul closed -0.28% (gave back intraday gains). US-Iran strikes continue, Brent ~$88. NSE open, trading day."
   },
   "pending_plan": {
     "bias": "neutral",
@@ -46,9 +46,9 @@
     ],
     "written_at": "2026-07-20T22:10:17+05:30"
   },
-  "notes": "20-Jul (Mon) NIGHT run (22:10 IST). No trades on night runs. Repriced open 24200 PE 28-Jul to confirmed close: model 162.79 (spot 24237.45, VIX 13.56, 8d) vs evening mark 154.65 (VIX 12.985) -> unrealized -1344.75, equity 94994.29. Entry model 178.05 => stop 115.73 / target 267.07 / trail-arm 222.56: none hit (mark sits between); no reversal (draft +1 is mild-bullish, |score|<3, does not flip the open PUT). Position HELD, 1 lot. Pre-scored tomorrow: bias neutral (mild-bullish tilt), draft +1, no entry trigger. Note VIX bumped vs evening because confirmed close 13.56 > monitor's early 12.985 pass.",
+  "notes": "21-Jul (Tue, weekly expiry) MORNING run (08:45 IST). Morning score -2 (GIFT ~24153 vs prev close 24238.50 -0.35% =-1; S&P500 Mon close -0.28% =0; FII -376Cr =0; PCR 1.03 =0; news negative: US-Iran strikes continue, Brent ~$88, 2nd gap-down risk-off =-1). Score -2 => PUT signal, threshold 2 met. But rule 9: a same-direction PUT (24200 PE 28-Jul) is already open => NO new entry (no stacking). Repriced open 24200 PE: model 160.33 (spot 24200, VIX 12.9, 7d) vs night 162.79 -> unrealized -1529.25, equity 94809.79. Exit checks vs entry model 178.05: stop 115.73 / target 267.07 / trail-arm 222.56 - none hit (mark 160.33 between); no reversal (bearish -2, same side, |score|<3). Position HELD, 1 lot.",
   "morning_score_today": {
-    "date": "2026-07-20",
+    "date": "2026-07-21",
     "score": -2
   },
   "last_monitor": "2026-07-21T09:31:03+05:30"
