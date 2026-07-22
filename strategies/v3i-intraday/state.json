@@ -7,17 +7,17 @@
   "realized_pnl": -6306.46,
   "unrealized_pnl": 0.0,
   "open_positions": [],
-  "last_run": "2026-07-22T08:50:00+05:30",
-  "last_run_type": "morning",
+  "last_run": "2026-07-22T18:27:00+05:30",
+  "last_run_type": "evening",
   "next_trade_id": 4,
   "market_snapshot": {
-    "nifty_spot": 24120.0,
+    "nifty_spot": 23996.25,
     "nifty_prev_close": 24187.7,
-    "india_vix": 12.6,
+    "india_vix": 13.29,
     "pcr": 1.03,
     "fii_net_cash_cr": -656.88,
     "dii_net_cash_cr": 1650.16,
-    "as_of": "2026-07-22 MORNING run (08:50 IST, pre-open). Estimated open ~24120 from GIFT Nifty 24119.50 (-61.10/-0.25%, i.e. -0.28% vs NIFTY prev close 24187.70). US Tue close: S&P 500 +0.89% 7509.20, Nasdaq +1.29%, Dow +0.74%. Asia strong (KOSPI ~+6%, Nikkei +2%, Hang Seng -1%). Brent +0.6% to $91.55 on Red Sea tanker threats (Houthis); US-Iran tensions persist. FII (Tue prov.) -656.88cr, DII +1650.16cr. VIX prev close 12.60 (-2.93%). PCR carried 1.03. Range-bound view: breakout only >24500 or <24000; supports 24150/23950. NSE trading day, no holiday."
+    "as_of": "2026-07-22 EVENING run (18:27 IST). NIFTY closed 23996.25 (-191.45/-0.79%), third straight down day, below 24000; Sensex -715 (-0.92%). India VIX 13.29 (+5.49%). Brent Sep +4.57% to $95.17 on Red Sea tanker reversals (Houthi threats) and US-Iran conflict. All NSE sectors red except FMCG/auto. PCR/FII/DII carried from morning."
   },
   "pending_plan": {
     "bias": "neutral",
@@ -31,7 +31,7 @@
     ],
     "written_at": "2026-07-20T22:10:17+05:30"
   },
-  "notes": "22-Jul (Wed) MORNING run (08:50 IST). Note: 21-Jul 22:00 night run did not execute (pending_plan stale from 20-Jul). Score: GIFT -0.28% (0), US S&P +0.89% (+1), FII -657cr (0), news mixed - strong US/Asia vs Brent $91.55 & Red Sea/Iran risk (0), PCR 1.03 (0) => +1. Below entry threshold 2: NO TRADE. Book flat, cash 93693.54, equity unchanged.",
+  "notes": "22-Jul (Wed) EVENING run (18:27 IST). Book flat all day (morning score +1, below threshold; no entry). No positions to mark or eod-exit. Equity unchanged at 93693.54. NIFTY closed 23996.25 (-0.79%), VIX 13.29. Monitor quote feed failed at 14:06 IST (no open positions were exposed).",
   "morning_score_today": {
     "date": "2026-07-22",
     "score": 1

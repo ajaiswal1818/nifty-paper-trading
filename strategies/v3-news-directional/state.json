@@ -2,52 +2,32 @@
   "sim_name": "NIFTY news-driven directional v3",
   "currency": "INR",
   "starting_capital": 100000,
-  "cash": 82785.04,
-  "total_equity": 100297.54,
-  "realized_pnl": -3560.96,
-  "unrealized_pnl": 3958.5,
-  "open_positions": [
-    {
-      "trade_id": 2,
-      "option_type": "put",
-      "strike": 24200,
-      "short_strike": null,
-      "expiry": "2026-07-28",
-      "lots": 1,
-      "lot_size": 75,
-      "entry_premium": 180.72,
-      "entry_cost_total": 13654.0,
-      "entry_date": "2026-07-20T09:15:00+05:30",
-      "current_premium": 233.5,
-      "sentiment_at_entry": -2,
-      "trail_armed": true
-    }
-  ],
-  "last_run": "2026-07-22T08:50:00+05:30",
-  "last_run_type": "morning",
+  "cash": 102703.69,
+  "total_equity": 102703.69,
+  "realized_pnl": 2703.69,
+  "unrealized_pnl": 0.0,
+  "open_positions": [],
+  "last_run": "2026-07-22T18:27:00+05:30",
+  "last_run_type": "evening",
   "next_trade_id": 3,
   "market_snapshot": {
-    "nifty_spot": 24120.0,
+    "nifty_spot": 23996.25,
     "nifty_prev_close": 24187.7,
-    "india_vix": 12.6,
+    "india_vix": 13.29,
     "pcr": 1.03,
     "fii_net_cash_cr": -656.88,
     "dii_net_cash_cr": 1650.16,
-    "as_of": "2026-07-22 MORNING run (08:50 IST, pre-open). Estimated open ~24120 from GIFT Nifty 24119.50 (-61.10/-0.25%, i.e. -0.28% vs NIFTY prev close 24187.70). US Tue close: S&P 500 +0.89% 7509.20, Nasdaq +1.29%, Dow +0.74%. Asia strong (KOSPI ~+6%, Nikkei +2%, Hang Seng -1%). Brent +0.6% to $91.55 on Red Sea tanker threats (Houthis); US-Iran tensions persist. FII (Tue prov.) -656.88cr, DII +1650.16cr. VIX prev close 12.60 (-2.93%). PCR carried 1.03. Range-bound view: breakout only >24500 or <24000; supports 24150/23950. NSE trading day, no holiday."
+    "as_of": "2026-07-22 EVENING run (18:27 IST). NIFTY closed 23996.25 (-191.45/-0.79%), third straight down day, below 24000; Sensex -715 (-0.92%). India VIX 13.29 (+5.49%). Brent Sep +4.57% to $95.17 on Red Sea tanker reversals (Houthi threats) and US-Iran conflict (9th consecutive day of US strikes; Iran hinting at diplomacy). All NSE sectors red except FMCG/auto; pharma hit by US phased generic-tariff plan. PCR/FII/DII carried from morning (fresh EOD figures not fetched). Broader market underperformed: midcap -1.05%, smallcap -1.39%."
   },
   "pending_plan": {
     "bias": "neutral",
     "score_draft": 1,
     "key_news": [
-      "US Mon 20-Jul midday: S&P 500 +0.63%, Nasdaq +1.02%, Dow +0.23%, Russell -0.42%; chip stocks rebounding ahead of Big Tech earnings this week (SOX still ~-20% off late-June peak) => US signal +1",
-      "US-Iran tit-for-tat attacks over the weekend; oil eased after touching ~$90 (Brent ~$78-85). Strait of Hormuz supply risk remains the key macro overhang",
-      "India Mon close: NIFTY ~24,237 (-0.39% vs 24,334.30), VIX 13.56 (+3.27%); financials dragged the tape (HDFC Bank & Axis Bank ~-4% on Q1 results)",
-      "Technicals constructive: bullish weekly candle, higher-bottom daily; 24,000 & 24,200 pivots trend-deciding; upside targets 24,500-24,800 if held",
-      "Tue 21-Jul is weekly-expiry day => any entry uses 28-Jul weekly. Draft score +1 (US +1; news/PCR 1.03/FII neutral), below entry threshold 2. GIFT Nifty + fresh FII/DII to be confirmed at morning run"
+      "STALE (written 20-Jul, superseded by 22-Jul evening run)"
     ],
     "written_at": "2026-07-20T22:10:17+05:30"
   },
-  "notes": "22-Jul (Wed) MORNING run (08:50 IST). Note: 21-Jul 22:00 night run did not execute (pending_plan stale from 20-Jul). Score: GIFT -0.28% (0, just inside -0.3% band), US S&P +0.89% (+1), FII -657cr (0), news mixed - strong US/Asia vs Brent $91.55 & Red Sea/Iran risk (0), PCR 1.03 (0) => +1. Below threshold 2: NO ENTRY; also same-direction-only rule keeps book as-is. Repriced open 24200 PE 28-Jul at est. open 24120 (6d, VIX 12.6): model 186.83 -> unrealized +458.25, equity 96797.29. Exit checks vs entry model 178.05: stop 115.73 / target 267.08 / trail-arm 222.56 - none hit (mark 186.83, +4.9% vs entry); trail not armed. Position HELD, 1 lot.",
+  "notes": "22-Jul (Wed) EVENING run. TARGET EXIT: trade 2 (24200 PE 28-Jul, 1 lot). Close reprice: spot 23996.25, VIX 13.29, 6d -> model 270.98 = +52.2% vs entry model 178.05, above +50% target (267.08). Monitor had marked 233.5 at 11:35 and armed the trail, but its quote feed failed at 14:06 so evening run executed the exit at the close. Sold at 270.98 x 0.985 x 75 - 100 fee = 19918.65; trade P&L +6264.65. Book now flat, cash 102703.69, realized +2703.69. Strategy is net positive for the first time. NOTE: monitor.log shows quote fetch FAILED at 14:06 IST; intraday exit protection was down this afternoon.",
   "morning_score_today": {
     "date": "2026-07-22",
     "score": 1
