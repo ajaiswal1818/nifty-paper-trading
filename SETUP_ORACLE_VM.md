@@ -12,8 +12,9 @@ The one real unknown is whether the VM can reach the Yahoo quote feed (some clou
 ## 1. Create the VM (one time)
 1. Sign up at cloud.oracle.com (Always Free tier; it asks for a card for identity only).
 2. Compute → Instances → Create instance.
-3. Image: **Ubuntu 22.04**. Shape: any **Always Free eligible** (VM.Standard.A1.Flex ARM,
-   1 OCPU / 6 GB is plenty, or the E2.1.Micro).
+3. Image: **Ubuntu 22.04**. Shape: any **Always Free eligible**. The **VM.Standard.E2.1.Micro
+   (1 OCPU / 1 GB)** is fine; the monitor uses ~30-50 MB and runs a couple seconds per pass.
+   The ARM A1.Flex works too but isn't needed and is often capacity-constrained at signup.
 4. Add your SSH public key (or let Oracle generate one and download the private key).
 5. Create. Note the public IP.
 
