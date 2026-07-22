@@ -7,8 +7,8 @@
   "realized_pnl": -6306.46,
   "unrealized_pnl": 0.0,
   "open_positions": [],
-  "last_run": "2026-07-22T18:27:00+05:30",
-  "last_run_type": "evening",
+  "last_run": "2026-07-22T18:31:00+05:30",
+  "last_run_type": "night",
   "next_trade_id": 4,
   "market_snapshot": {
     "nifty_spot": 23996.25,
@@ -17,21 +17,21 @@
     "pcr": 1.03,
     "fii_net_cash_cr": -656.88,
     "dii_net_cash_cr": 1650.16,
-    "as_of": "2026-07-22 EVENING run (18:27 IST). NIFTY closed 23996.25 (-191.45/-0.79%), third straight down day, below 24000; Sensex -715 (-0.92%). India VIX 13.29 (+5.49%). Brent Sep +4.57% to $95.17 on Red Sea tanker reversals (Houthi threats) and US-Iran conflict. All NSE sectors red except FMCG/auto. PCR/FII/DII carried from morning."
+    "as_of": "2026-07-22 NIGHT run (~18:31 IST). Reflects 22-Jul CLOSE: NIFTY 23996.25 (-191.45/-0.79%, 3rd straight down day, below 24000); Sensex 76755.05 (-715/-0.92%); India VIX 13.29 (+5.49%); midcap -1.05%, smallcap -1.39%; all NSE sectors red except FMCG/auto. Brent Sep ~$94-95 (+~4.6%) on Red Sea/Houthi threats and US-Iran conflict. FII -656.88cr, DII +1650.16cr, PCR ~1.03. US 22-Jul futures soft pre-open, cautious ahead of Alphabet & Tesla Q2 after the close."
   },
   "pending_plan": {
-    "bias": "neutral",
-    "score_draft": 1,
+    "bias": "bearish",
+    "score_draft": -1,
     "key_news": [
-      "US Mon 20-Jul midday: S&P 500 +0.63%, Nasdaq +1.02%, Dow +0.23%, Russell -0.42%; chip stocks rebounding ahead of Big Tech earnings this week (SOX still ~-20% off late-June peak) => US signal +1",
-      "US-Iran tit-for-tat attacks over the weekend; oil eased after touching ~$90 (Brent ~$78-85). Strait of Hormuz supply risk remains the key macro overhang",
-      "India Mon close: NIFTY ~24,237 (-0.39% vs 24,334.30), VIX 13.56 (+3.27%); financials dragged the tape (HDFC Bank & Axis Bank ~-4% on Q1 results)",
-      "Technicals constructive: bullish weekly candle, higher-bottom daily; 24,000 & 24,200 pivots trend-deciding; upside targets 24,500-24,800 if held",
-      "Tue 21-Jul is weekly-expiry day => any entry uses 28-Jul weekly. Draft score +1 (US +1; news/PCR 1.03/FII neutral), below entry threshold 2. Book is flat, so a triggering morning score could open same-day (intraday exit). GIFT Nifty + fresh FII/DII to be confirmed at morning run"
+      "India Wed 22-Jul close: NIFTY 23,996.25 (-191.45/-0.79%; 3rd straight down day, below 24,000); Sensex 76,755 (-715/-0.92%); midcap -1.05%, smallcap -1.39%; all NSE sectors red except FMCG/auto (pharma hit by US phased generic-tariff plan) => news signal -1",
+      "Oil: Brent Sep ~$94-95 (+~4.6%) on Red Sea tanker/Houthi threats and US-Iran conflict (9th day of US strikes; Iran hinting at diplomacy). Inflation/rupee/import-bill = key risk-off overhang",
+      "US 22-Jul: futures soft pre-open (Dow -0.1%, S&P -0.2%, Nasdaq-100 -0.6%), cautious ahead of Alphabet & Tesla Q2 results after the close (first two Mag-7 to report) => US signal ~0/neutral; earnings are the swing catalyst",
+      "FII 22-Jul -656.88cr (within +/-1000 => neutral); DII +1650.16cr supportive; PCR ~1.03 neutral. Confirm GIFT Nifty + any FII/DII revision at the 08:45 morning run",
+      "Draft score -1 (news -1; US ~0; FII/PCR neutral); |score| below entry threshold 2 (VIX 13.29 <=16 => threshold 2, naked ATM). Book flat, so a triggering 23-Jul morning score could open same-day (intraday exit). Next weekly expiry 28-Jul (Tue)."
     ],
-    "written_at": "2026-07-20T22:10:17+05:30"
+    "written_at": "2026-07-22T18:31:00+05:30"
   },
-  "notes": "22-Jul (Wed) EVENING run (18:27 IST). Book flat all day (morning score +1, below threshold; no entry). No positions to mark or eod-exit. Equity unchanged at 93693.54. NIFTY closed 23996.25 (-0.79%), VIX 13.29. Monitor quote feed failed at 14:06 IST (no open positions were exposed).",
+  "notes": "22-Jul (Wed) NIGHT run (~18:31 IST). NO TRADES (night policy). Book flat (no overnight holds by design); no morning entry today (score +1, below threshold). Nothing to reprice; equity unchanged 93693.54 (-6306.46 vs start, -6.31%). Wrote pending_plan for 23-Jul (bias bearish, draft -1). Monitor quote feed failed 22-Jul 14:06 IST but no positions were exposed.",
   "morning_score_today": {
     "date": "2026-07-22",
     "score": 1
