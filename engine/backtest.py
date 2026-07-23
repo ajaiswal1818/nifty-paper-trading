@@ -14,7 +14,7 @@ Usage:
 Options: --capital N, --csv (machine-readable trade log), --quiet (summary only)
 """
 import argparse, csv, json, math, os, sys
-from datetime import date
+from datetime import date, timedelta
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from pricing import structure_value
@@ -75,9 +75,16 @@ def run(days, params, cash=100000.0, positions=None, log=None, curve=None):
     curve = curve if curve is not None else []
 
     def pick_expiry(d):
+        # prefer a real expiry from the CSV within the next ~10 days (live data);
+        # if the CSV doesn't cover this date (historical backtests), compute the
+        # next weekly Thursday >= d+2 (NIFTY weekly expiry was Thursday 2019-2023).
         for e in expiries:
-            if (e - d).days >= 2:
+            if 2 <= (e - d).days <= 10:
                 return e
+        cand = d
+        while (cand - d).days < 2 or cand.weekday() != 3:
+            cand += timedelta(days=1)
+        return cand
 
     def val(pos, spot, vix, d, ef=0.0):
         return structure_value(spot, pos["strike"], vix, (pos["expiry"] - d).days + ef,
