@@ -2,22 +2,37 @@
   "sim_name": "NIFTY news-driven directional v3",
   "currency": "INR",
   "starting_capital": 100000,
-  "cash": 102703.69,
-  "total_equity": 102703.69,
+  "cash": 91083.69,
+  "total_equity": 102433.44,
   "realized_pnl": 2703.69,
-  "unrealized_pnl": 0.0,
-  "open_positions": [],
-  "last_run": "2026-07-22T18:31:00+05:30",
-  "last_run_type": "night",
-  "next_trade_id": 3,
+  "unrealized_pnl": -270.25,
+  "open_positions": [
+    {
+      "trade_id": 3,
+      "option_type": "put",
+      "strike": 23900,
+      "short_strike": null,
+      "expiry": "2026-07-28",
+      "lots": 1,
+      "lot_size": 75,
+      "entry_premium": 153.6,
+      "entry_cost_total": 11620.0,
+      "entry_date": "2026-07-23",
+      "current_premium": 151.33,
+      "sentiment_at_entry": -2
+    }
+  ],
+  "last_run": "2026-07-23T08:52:00+05:30",
+  "last_run_type": "morning",
+  "next_trade_id": 4,
   "market_snapshot": {
-    "nifty_spot": 23996.25,
-    "nifty_prev_close": 24187.7,
+    "nifty_spot": 23876.35,
+    "nifty_prev_close": 23996.25,
     "india_vix": 13.29,
     "pcr": 1.03,
     "fii_net_cash_cr": -656.88,
     "dii_net_cash_cr": 1650.16,
-    "as_of": "2026-07-22 NIGHT run (~18:31 IST). Reflects 22-Jul CLOSE: NIFTY 23996.25 (-191.45/-0.79%, 3rd straight down day, below 24000); Sensex 76755.05 (-715/-0.92%); India VIX 13.29 (+5.49%); midcap -1.05%, smallcap -1.39%; all NSE sectors red except FMCG/auto (pharma hit by US phased generic-tariff plan). Brent Sep ~$94-95 (+~4.6%) on Red Sea/Houthi threats and US-Iran conflict (9th day of US strikes). FII -656.88cr, DII +1650.16cr, PCR ~1.03. US 22-Jul futures soft pre-open (Nasdaq-100 -0.6%), cautious ahead of Alphabet & Tesla Q2 after the close."
+    "as_of": "2026-07-23 MORNING run (~08:52 IST). GIFT Nifty 23868.5 (-119.9/-0.50%) => modeled open 23876.35. US 22-Jul close: S&P500 -0.13% 7499, Nasdaq -0.57%, Dow flat; after-hours Alphabet strong cloud but capex spooked, Tesla missed. Brent ~$94-95 near 5-week high (US-Iran conflict, Red Sea threats). FII selling persists, rupee weak. VIX 13.29 prev close. PCR ~1.03. Next weekly expiry 28-Jul (Tue)."
   },
   "pending_plan": {
     "bias": "bearish",
@@ -31,10 +46,10 @@
     ],
     "written_at": "2026-07-22T18:31:00+05:30"
   },
-  "notes": "22-Jul (Wed) NIGHT run (~18:31 IST). NO TRADES (night policy). Book flat after the evening run's target exit of the 24200 PE (+6264.65). Nothing to reprice; equity unchanged 102703.69 (+2703.69 vs start, +2.70%; strategy net positive). Wrote pending_plan for 23-Jul (bias bearish, draft -1). Reminder: monitor.log showed 'quote fetch FAILED' at 22-Jul 14:06 IST (feed down mid-afternoon); the evening run acted as the exit fallback. Watch monitor.log at tomorrow's runs.",
+  "notes": "23-Jul (Thu) MORNING run. ENTERED trade 3: BUY NIFTY 23900 PE 28-Jul x1 lot @ 153.6 (model 151.33 +1.5% slip, +Rs100 fee; cost Rs11620.0). Score -2 (GIFT -0.53% -1, news -1; US/FII/PCR 0). exits: stop -35%, target +50%, breakeven trail after +25%. Monitor feed failed once 22-Jul 14:06; watch monitor.log.",
   "morning_score_today": {
-    "date": "2026-07-22",
-    "score": 1
+    "date": "2026-07-23",
+    "score": -2
   },
   "last_monitor": "2026-07-22T11:35:20+05:30"
 }
