@@ -3,9 +3,9 @@
   "currency": "INR",
   "starting_capital": 100000,
   "cash": 91083.69,
-  "total_equity": 102868.44,
+  "total_equity": 102564.69,
   "realized_pnl": 2703.69,
-  "unrealized_pnl": 264.75,
+  "unrealized_pnl": -39.0,
   "open_positions": [
     {
       "trade_id": 3,
@@ -18,21 +18,21 @@
       "entry_premium": 153.6,
       "entry_cost_total": 11620.0,
       "entry_date": "2026-07-23",
-      "current_premium": 157.13,
+      "current_premium": 153.08,
       "sentiment_at_entry": -2
     }
   ],
-  "last_run": "2026-07-23T08:52:00+05:30",
-  "last_run_type": "morning",
+  "last_run": "2026-07-23T18:07:00+05:30",
+  "last_run_type": "evening",
   "next_trade_id": 4,
   "market_snapshot": {
-    "nifty_spot": 23876.35,
+    "nifty_spot": 23869.6,
     "nifty_prev_close": 23996.25,
-    "india_vix": 13.29,
+    "india_vix": 13.14,
     "pcr": 1.03,
-    "fii_net_cash_cr": -656.88,
-    "dii_net_cash_cr": 1650.16,
-    "as_of": "2026-07-23 MORNING run (~08:52 IST). GIFT Nifty 23868.5 (-119.9/-0.50%) => modeled open 23876.35. US 22-Jul close: S&P500 -0.13% 7499, Nasdaq -0.57%, Dow flat; after-hours Alphabet strong cloud but capex spooked, Tesla missed. Brent ~$94-95 near 5-week high (US-Iran conflict, Red Sea threats). FII selling persists, rupee weak. VIX 13.29 prev close. PCR ~1.03. Next weekly expiry 28-Jul (Tue)."
+    "fii_net_cash_cr": -819.2,
+    "dii_net_cash_cr": -418.3,
+    "as_of": "2026-07-23 EVENING run (~18:07 IST). NIFTY closed 23,869.60 (-126.65/-0.53%), 4th straight down day (open 23904, high 23990, low n/a); Sensex 76,391 (-364). VIX closed 13.14 (intraday high 13.53). Brent surged >$95 (reports up to $98 intraday) on US-Iran escalation (12th night of strikes, Saudi tanker attacked). Auto only green sector; realty -1.8%, energy -1.0%, fin services -0.75%. FII/DII are 22-Jul revised cash figures (-819.2/-418.3cr); 23-Jul provisional not yet published at run time. PCR carried from morning (~1.03, stale). Next weekly expiry 28-Jul (Tue)."
   },
   "pending_plan": {
     "bias": "bearish",
@@ -46,7 +46,7 @@
     ],
     "written_at": "2026-07-22T18:31:00+05:30"
   },
-  "notes": "23-Jul (Thu) MORNING run. ENTERED trade 3: BUY NIFTY 23900 PE 28-Jul x1 lot @ 153.6 (model 151.33 +1.5% slip, +Rs100 fee; cost Rs11620.0). Score -2 (GIFT -0.53% -1, news -1; US/FII/PCR 0). exits: stop -35%, target +50%, breakeven trail after +25%. Monitor feed failed once 22-Jul 14:06; watch monitor.log.",
+  "notes": "23-Jul (Thu) EVENING run. HELD trade 3 (23900 PE 28-Jul x1): mark 153.08 vs entry model 151.33 (+1.2%); no stop (-35%)/target (+50%); trail not armed (never +25%). Spot fell to 23869.6 but VIX eased to 13.14 and theta offset the move. Monitor alive (executed v3i eod exit 15:20 today). One quote-fetch fail 22-Jul 14:06, none since.",
   "morning_score_today": {
     "date": "2026-07-23",
     "score": -2

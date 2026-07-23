@@ -7,17 +7,17 @@
   "realized_pnl": -6418.6,
   "unrealized_pnl": 0,
   "open_positions": [],
-  "last_run": "2026-07-23T08:52:00+05:30",
-  "last_run_type": "morning",
+  "last_run": "2026-07-23T18:07:00+05:30",
+  "last_run_type": "evening",
   "next_trade_id": 5,
   "market_snapshot": {
-    "nifty_spot": 23876.35,
+    "nifty_spot": 23869.6,
     "nifty_prev_close": 23996.25,
-    "india_vix": 13.29,
+    "india_vix": 13.14,
     "pcr": 1.03,
-    "fii_net_cash_cr": -656.88,
-    "dii_net_cash_cr": 1650.16,
-    "as_of": "2026-07-23 MORNING run (~08:52 IST). GIFT Nifty 23868.5 (-119.9/-0.50%) => modeled open 23876.35. US 22-Jul close: S&P500 -0.13% 7499, Nasdaq -0.57%, Dow flat; after-hours Alphabet strong cloud but capex spooked, Tesla missed. Brent ~$94-95 near 5-week high (US-Iran conflict, Red Sea threats). FII selling persists, rupee weak. VIX 13.29 prev close. PCR ~1.03. Next weekly expiry 28-Jul (Tue)."
+    "fii_net_cash_cr": -819.2,
+    "dii_net_cash_cr": -418.3,
+    "as_of": "2026-07-23 EVENING run (~18:07 IST). NIFTY closed 23,869.60 (-126.65/-0.53%), 4th straight down day (open 23904, high 23990); Sensex 76,391 (-364). VIX closed 13.14 (intraday high 13.53). Brent surged >$95 (reports up to $98 intraday) on US-Iran escalation (12th night of strikes, Saudi tanker attacked). Auto only green sector; realty -1.8%, energy -1.0%, fin services -0.75%. FII/DII are 22-Jul revised cash figures (-819.2/-418.3cr); 23-Jul provisional not yet published at run time. PCR carried from morning (~1.03, stale). Next weekly expiry 28-Jul (Tue)."
   },
   "pending_plan": {
     "bias": "bearish",
@@ -31,7 +31,7 @@
     ],
     "written_at": "2026-07-22T18:31:00+05:30"
   },
-  "notes": "23-Jul (Thu) MORNING run. ENTERED trade 4: BUY NIFTY 23900 PE 28-Jul x1 lot @ 153.6 (model 151.33 +1.5% slip, +Rs100 fee; cost Rs11620.0). Score -2 (GIFT -0.53% -1, news -1; US/FII/PCR 0). EOD exit today via monitor (fallback: evening run). Monitor feed failed once 22-Jul 14:06; watch monitor.log.",
+  "notes": "23-Jul (Thu) EVENING run. Flat: monitor already executed eod exit at 15:20 (trade 4, 23900 PE, exit 157.13 net 11507.86, day P&L -112.14 incl fees); no evening force-close needed. Marked to close spot 23869.6 / VIX 13.14.",
   "morning_score_today": {
     "date": "2026-07-23",
     "score": -2
