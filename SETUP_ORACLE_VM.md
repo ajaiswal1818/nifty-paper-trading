@@ -23,7 +23,14 @@ The one real unknown is whether the VM can reach the Yahoo quote feed (some clou
 ssh ubuntu@<PUBLIC_IP>
 sudo apt update && sudo apt install -y git python3 tzdata
 sudo timedatectl set-timezone Asia/Kolkata     # makes cron + logs read in IST
+sudo systemctl restart cron rsyslog            # REQUIRED: cron/rsyslog cache the TZ
+                                               # at startup; without this restart cron
+                                               # keeps scheduling in UTC and the 9-15
+                                               # IST window fires at 14:30-20:30 IST.
 ```
+Verify cron is actually on IST after this: `date` and the timestamps in
+`grep CRON /var/log/syslog | tail` should agree. If syslog is hours behind `date`,
+the restart did not take and cron is still on UTC.
 
 ## 3. Give the VM write access to the repo (deploy key)
 ```bash

@@ -1,5 +1,7 @@
 # Intraday monitor on the always-on VM. Timezone assumed Asia/Kolkata
-# (set with: sudo timedatectl set-timezone Asia/Kolkata).
+# (set with: sudo timedatectl set-timezone Asia/Kolkata, THEN
+#  sudo systemctl restart cron rsyslog -- cron caches the TZ at startup, so
+#  without the restart it keeps scheduling this line in UTC).
 # Every 5 min, 09:00-15:59 IST, Mon-Fri. monitor.py self-guards the exact
 # 09:15-15:35 window and skips weekends/holidays and stale quotes.
 # Install with: crontab engine/monitor.cron   (edit the path to match your clone)
