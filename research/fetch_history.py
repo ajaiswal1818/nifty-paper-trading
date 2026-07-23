@@ -23,17 +23,25 @@ Outputs:
   research/history_signals.csv      -> full detail (each component) for auditing
 Then: python3 engine/backtest.py <params> --data engine/data/sessions_history.csv
 """
-import csv, json, os, sys, urllib.parse, urllib.request
+import argparse, csv, json, os, sys, urllib.parse, urllib.request
 from datetime import datetime, date, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-RANGE = "2y"  # pull 2y so a 1y backtest has prior-day context at the edges
+RANGE = "2y"  # default when no explicit --start/--end given
+
+# set by main() from --start/--end; when present, fetch that exact window
+PERIOD1 = None
+PERIOD2 = None
 
 
 def yahoo_daily(symbol):
-    """Return {date: {'open':o,'close':c}} from Yahoo chart API (daily)."""
-    url = (f"https://query1.finance.yahoo.com/v8/finance/chart/"
-           f"{urllib.parse.quote(symbol)}?interval=1d&range={RANGE}")
+    """Return {date: {'open':o,'close':c}} from Yahoo chart API (daily).
+    Uses an explicit period1/period2 window if set, else the default range."""
+    base = f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(symbol)}?interval=1d"
+    if PERIOD1 and PERIOD2:
+        url = f"{base}&period1={PERIOD1}&period2={PERIOD2}"
+    else:
+        url = f"{base}&range={RANGE}"
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
     d = json.load(urllib.request.urlopen(req, timeout=30))
     r = d["chart"]["result"][0]
@@ -82,6 +90,15 @@ def prior_value(sorted_dates, series, d):
 
 
 def main():
+    global PERIOD1, PERIOD2
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--start", type=date.fromisoformat, default=None, help="YYYY-MM-DD (else last 2y)")
+    ap.add_argument("--end", type=date.fromisoformat, default=None)
+    a = ap.parse_args()
+    if a.start and a.end:
+        PERIOD1 = int(datetime(a.start.year, a.start.month, a.start.day, tzinfo=timezone.utc).timestamp())
+        PERIOD2 = int(datetime(a.end.year, a.end.month, a.end.day, tzinfo=timezone.utc).timestamp()) + 86400
+        print(f"Window: {a.start} -> {a.end}")
     print("Fetching NIFTY (^NSEI), S&P 500 (^GSPC), India VIX (^INDIAVIX) from Yahoo...")
     nse = yahoo_daily("^NSEI")
     gspc = yahoo_daily("^GSPC")
