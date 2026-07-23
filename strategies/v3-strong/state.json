@@ -7,9 +7,27 @@
   "realized_pnl": 0,
   "unrealized_pnl": 0,
   "open_positions": [],
-  "last_run": "2026-07-23T20:00:00+05:30",
-  "last_run_type": "initial setup (candidate for the conviction hypothesis; first decision next morning run)",
+  "last_run": "2026-07-23T22:10:00+05:30",
+  "last_run_type": "night",
   "next_trade_id": 1,
-  "pending_plan": null,
-  "notes": "Created 2026-07-23. Identical to v3-news-directional but requires |score|>=3 to enter (vs 2). Tests, forward and live, whether filtering minimum-conviction entries improves results. Backtest 2019-2023 (gap+US+FII, normal-VIX): entry>=3 turned v3 from -21.4% to +13.1% and cut maxDD from -57% to -13%, but only ~15 trades (small sample). Holds overnight like v3."
+  "market_snapshot": {
+    "nifty_spot": 23869.6,
+    "nifty_prev_close": 23996.25,
+    "india_vix": 13.14,
+    "pcr": 1.03,
+    "fii_net_cash_cr": -819.2,
+    "as_of": "2026-07-23 NIGHT run (first cycle for this strategy). Book flat, no positions. Marks carried from 23-Jul India close (spot 23,869.60, VIX 13.14). US session after India close turned sharply risk-off (Nasdaq -2.6%, S&P -1.4%, oil >$100)."
+  },
+  "pending_plan": {
+    "bias": "bearish",
+    "score_draft": -2,
+    "key_news": [
+      "US Thu 23-Jul (after India close, hard risk-off): Nasdaq -2.6% (below 25,000 first time since May), S&P 500 -1.4%, Dow -1.1%. Tesla -14%, Alphabet -7% on raised AI capex => US signal -1",
+      "Oil Brent >$100 intraday on widening Middle-East attacks; US 10-yr to ~1.5-yr high on inflation fears => news signal -1",
+      "GIFT Nifty ~23,873 flat vs prev close 23,869.60 (neutral 0, quote likely stale/pre-US-selloff; gap-down open likely). FII 22-Jul -819.20cr (neutral 0); PCR ~1.03 (neutral 0)",
+      "Draft score -2 (US -1, news -1). v3-strong requires |score| >= 3 to enter => a -2 morning score would NOT trigger; book stays flat unless a 3rd bearish signal (e.g. a clear gap-down GIFT < -0.3% or FII < -1000cr) appears at the 08:45 run. Next weekly expiry 28-Jul (Tue)."
+    ],
+    "written_at": "2026-07-23T22:10:00+05:30"
+  },
+  "notes": "23-Jul (Thu) NIGHT run: first pending_plan for v3-strong. No trades (night). Identical to v3-news-directional but requires |score|>=3 to enter (vs 2). Draft -2 is below its threshold, so barring a stronger morning signal it stays flat tomorrow. Backtest 2019-2023 (gap+US+FII, normal-VIX): entry>=3 turned v3 from -21.4% to +13.1% and cut maxDD from -57% to -13%, but only ~15 trades (small sample). Holds overnight like v3."
 }

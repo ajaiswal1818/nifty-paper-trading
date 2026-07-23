@@ -7,8 +7,8 @@
   "realized_pnl": -6418.6,
   "unrealized_pnl": 0,
   "open_positions": [],
-  "last_run": "2026-07-23T18:07:00+05:30",
-  "last_run_type": "evening",
+  "last_run": "2026-07-23T22:10:00+05:30",
+  "last_run_type": "night",
   "next_trade_id": 5,
   "market_snapshot": {
     "nifty_spot": 23869.6,
@@ -21,17 +21,17 @@
   },
   "pending_plan": {
     "bias": "bearish",
-    "score_draft": -1,
+    "score_draft": -2,
     "key_news": [
-      "India Wed 22-Jul close: NIFTY 23,996.25 (-191.45/-0.79%; 3rd straight down day, below 24,000); Sensex 76,755 (-715/-0.92%); midcap -1.05%, smallcap -1.39%; all NSE sectors red except FMCG/auto (pharma hit by US phased generic-tariff plan) => news signal -1",
-      "Oil: Brent Sep ~$94-95 (+~4.6%) on Red Sea tanker/Houthi threats and US-Iran conflict (9th day of US strikes; Iran hinting at diplomacy). Inflation/rupee/import-bill = key risk-off overhang",
-      "US 22-Jul: futures soft pre-open (Dow -0.1%, S&P -0.2%, Nasdaq-100 -0.6%), cautious ahead of Alphabet & Tesla Q2 results after the close (first two Mag-7 to report) => US signal ~0/neutral; earnings are the swing catalyst",
-      "FII 22-Jul -656.88cr (within +/-1000 => neutral); DII +1650.16cr supportive; PCR ~1.03 neutral. Confirm GIFT Nifty + any FII/DII revision at the 08:45 morning run",
-      "Draft score -1 (news -1; US ~0; FII/PCR neutral); |score| below entry threshold 2 (VIX 13.29 <=16 => threshold 2, naked ATM). Book flat, so a triggering 23-Jul morning score could open same-day (intraday exit). Next weekly expiry 28-Jul (Tue)."
+      "US Thu 23-Jul (after India close, hard risk-off): Nasdaq -2.6% (broke below 25,000 first time since May), S&P 500 -1.4%, Dow -1.1%. Tesla -14% (profit fell despite strong EV deliveries); Alphabet -7% after raising AI capex forecast => Big-Tech capex fears. US signal -1 (S&P < -0.5%)",
+      "Oil: Brent surged above $100 intraday on widening Middle-East attacks (US-Iran 12th night of strikes, Saudi tanker hit). Bond sell-off, US 10-yr to ~1.5-year high on inflation fears => risk-off overhang; news signal -1",
+      "GIFT Nifty ~23,873, roughly flat vs India prev close 23,869.60 (within +/-0.3% => neutral 0) BUT that quote looks stale/pre-US-selloff; a gap-down open is likely tomorrow. Confirm fresh GIFT + overnight US at the 08:45 morning run",
+      "FII 22-Jul -819.20cr (revised; within +/-1000 => neutral 0); July FII net sellers ~-4,837cr. PCR ~1.03 neutral 0. Key levels: support 24,000/23,907/23,801, resistance 24,250/24,350",
+      "Draft score -2 (US -1, news -1; GIFT/FII/PCR neutral). VIX 13.14 <=16 => entry threshold 2, naked ATM PUT. Book is FLAT (v3i is intraday), so a confirming -2 at the 08:45 run could open a same-day PUT with monitor eod exit. Next weekly expiry 28-Jul (Tue)."
     ],
-    "written_at": "2026-07-22T18:31:00+05:30"
+    "written_at": "2026-07-23T22:10:00+05:30"
   },
-  "notes": "23-Jul (Thu) EVENING run. Flat: monitor already executed eod exit at 15:20 (trade 4, 23900 PE, exit 157.13 net 11507.86, day P&L -112.14 incl fees); no evening force-close needed. Marked to close spot 23869.6 / VIX 13.14.",
+  "notes": "23-Jul (Thu) NIGHT run. No trades (night); book flat. Marked to evening close spot 23869.6 / VIX 13.14, total_equity 93,581.40 unchanged overnight. US turned sharply risk-off after India closed (Nasdaq -2.6%, oil >$100) => bearish draft for tomorrow; a confirming morning score could open an intraday PUT.",
   "morning_score_today": {
     "date": "2026-07-23",
     "score": -2
