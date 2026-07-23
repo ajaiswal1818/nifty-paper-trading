@@ -45,9 +45,10 @@ def load_params(name_or_path):
         return {**DEFAULTS, **json.load(f)}
 
 
-def load_sessions(start=None, end=None):
+def load_sessions(start=None, end=None, data_file=None):
     rows = []
-    with open(os.path.join(DATA_DIR, "sessions_2026.csv")) as f:
+    path = data_file if data_file else os.path.join(DATA_DIR, "sessions_2026.csv")
+    with open(path) as f:
         for r in csv.DictReader(f):
             d = date.fromisoformat(r["date"])
             if start and d < start:
@@ -188,9 +189,10 @@ def main():
     ap.add_argument("--chain", default=None,
                     help="walk-forward switch, e.g. v2:2026-06-15 (new params from that date, capital carried)")
     ap.add_argument("--quiet", action="store_true")
+    ap.add_argument("--data", default=None, help="path to an alternate sessions CSV (e.g. the reconstructed year)")
     a = ap.parse_args()
 
-    sessions = load_sessions(a.start, a.end)
+    sessions = load_sessions(a.start, a.end, a.data)
     if not sessions:
         sys.exit("no sessions in range")
     p1 = load_params(a.params)
