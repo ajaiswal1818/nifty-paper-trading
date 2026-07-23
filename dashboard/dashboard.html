@@ -28,7 +28,7 @@
 <header>
  <h1>Paper trading dashboard</h1>
  <div class='muted'>NIFTY 23869.6 · VIX 13.14 · PCR 1.03 · FII -819.2 Cr · as of 2026-07-23 EVENING run (~18:07 IST). NIFTY closed 23,869.60 (-126.65/-0.53%), 4th straight down day (open 23904, high 23990, low n/a); Sensex 76,391 (-364). VIX closed 13.14 (intraday high 13.53). Brent surged &gt;$95 (reports up to $98 intraday) on US-Iran escalation (12th night of strikes, Saudi tanker attacked). Auto only green sector; realty -1.8%, energy -1.0%, fin services -0.75%. FII/DII are 22-Jul revised cash figures (-819.2/-418.3cr); 23-Jul provisional not yet published at run time. PCR carried from morning (~1.03, stale). Next weekly expiry 28-Jul (Tue).</div>
- <div class='warn'>Paper trading only. All fills simulated. Generated 2026-07-23 18:07 by dashboard/build_dashboard.py.</div>
+ <div class='warn'>Paper trading only. All fills simulated. Generated 2026-07-23 19:29 by dashboard/build_dashboard.py.</div>
 </header>
 
 <section class='card'>
@@ -80,5 +80,30 @@
   <div class='plan'><b>Pending plan</b> · bias bearish (draft -1) · written 2026-07-22T18:31<ul><li>India Wed 22-Jul close: NIFTY 23,996.25 (-191.45/-0.79%; 3rd straight down day, below 24,000); Sensex 76,755 (-715/-0.92%); midcap -1.05%, smallcap -1.39%; all NSE sectors red except FMCG/auto (pharma hit by US phased generic-tariff plan) =&gt; news signal -1</li><li>Oil: Brent Sep ~$94-95 (+~4.6%) on Red Sea tanker/Houthi threats and US-Iran conflict (9th day of US strikes; Iran hinting at diplomacy). Inflation/rupee/import-bill = key risk-off overhang</li><li>US 22-Jul: futures soft pre-open (Dow -0.1%, S&amp;P -0.2%, Nasdaq-100 -0.6%), cautious ahead of Alphabet &amp; Tesla Q2 results after the close (first two Mag-7 to report) =&gt; US signal ~0/neutral; earnings are the swing catalyst</li></ul></div>
   <h3>Trade log</h3>
   <div class='twrap'><table><thead><tr><th>datetime_ist</th><th>action</th><th>option_type</th><th>strike</th><th>expiry</th><th>premium</th><th>reason</th><th>sentiment_score</th><th>realized_pnl</th></tr></thead><tbody><tr><td>2026-07-23 15:20</td><td>EXIT</td><td>put</td><td>23900</td><td>2026-07-28</td><td>157.13</td><td>monitor: eod exit (intraday mode)</td><td></td><td>-112.14</td></tr><tr><td>2026-07-23 09:15</td><td>BUY</td><td>put</td><td>23900</td><td>2026-07-28</td><td>153.6</td><td>score -2: GIFT 23868.5 vs prev close 23996.25 -0.53% (-1); S&amp;P500 22-Jul -0.13% (0); FII -656.88Cr 22-Jul (0); PCR ~1.03 (0); news clearly negative - Brent ~$94-95 near 5-wk high (US-Iran conflict/Red Sea), persistent FII selling, weak rupee, NIFTY 3rd straight down day below 24000 (-1). VIX 13.29&lt;=16: naked ATM put 1 lot; next weekly 2026-07-28 (Tue, 5d); modeled open 23876.35 (prev close -0.50% per GIFT); strike 23900; open gap -0.50% &lt; 0.9% passes gap-chase</td><td>-2</td><td>0</td></tr><tr><td>2026-07-21 18:34</td><td>EXIT</td><td>put</td><td>24200</td><td>2026-07-28</td><td>162.22</td><td>eod exit</td><td></td><td>-420.75</td></tr><tr><td>2026-07-21 09:15</td><td>BUY</td><td>put</td><td>24200</td><td>2026-07-28</td><td>162.73</td><td>score -2: GIFT ~24153 vs prev close 24238.50 -0.35% (-1); S&amp;P500 20-Jul close -0.28% (0); FII -376Cr (0); PCR 1.03 (0); news negative - US-Iran strikes continue Brent ~$88 elevated 2nd gap-down risk-off (-1). VIX 12.9&lt;=16: naked ATM put; 21-Jul is expiry today so used next weekly 2026-07-28; open gap -0.16% &lt; 0.9% passes gap-chase</td><td>-2</td><td>0</td></tr><tr><td>2026-07-20 15:21</td><td>EXIT</td><td>put</td><td>24200</td><td>2026-07-28</td><td>154.71</td><td>monitor: eod exit (intraday mode)</td><td></td><td>-2324.75</td></tr><tr><td>2026-07-20 09:15</td><td>BUY</td><td>put</td><td>24200</td><td>2026-07-28</td><td>180.72</td><td>score -2: GIFT 24300.5 vs prev close 24334.30 -0.14% (0); S&amp;P500 -1.01% (-1); FII -376Cr 17Jul (0); PCR 1.03 (0); news clearly negative - US-Iran escalation (Kuwait oil facility + Strait of Hormuz strikes), Brent +4% &gt;$90, risk-off (-1). VIX 13.15&lt;=16: naked ATM put; 21-Jul weekly is tomorrow so used next weekly 2026-07-28; open gap -0.59% &lt; 0.9% passes gap-chase</td><td>-2</td><td>0</td></tr><tr><td>2026-07-17 09:22</td><td>EXIT</td><td>put</td><td>24050</td><td>2026-07-21</td><td>72.93</td><td>monitor: stop -35%</td><td></td><td>-3560.96</td></tr><tr><td>2026-07-17 09:15</td><td>BUY</td><td>put</td><td>24050</td><td>2026-07-21</td><td>116.65</td><td>score -2: GIFT 24066 vs prev close 24072.75 -0.03% (0); S&amp;P500 -0.51% (-1); FII -736Cr 16Jul (0); news mixed - chip selloff/Alphabet AI delay, crude ~$85 Mideast tension (0); PCR 0.7769 &lt;0.8 (-1). VIX 12.88&lt;=16: naked ATM put, next weekly 2026-07-21, gap -0.03% passes gap-chase</td><td>-2</td><td>0</td></tr></tbody></table></div>
+</section>
+<section class='card'>
+  <div class='shead'>
+    <div>
+      <h2>NIFTY news-directional v3-strong (entry&gt;=3, holds overnight)</h2>
+      <span class='badge active'>active</span>
+      <span class='badge mode'>paper</span>
+      <span class='muted'>since 2026-07-24</span>
+    </div>
+    <div class='thenumber pos'>₹100,000<small>+₹0 (+0.0%)</small></div>
+  </div>
+  <div class='stats'>
+    <div><b>₹100,000</b><span>cash</span></div>
+    <div><b>₹0</b><span>realized P&L</span></div>
+    <div><b>₹0</b><span>unrealized P&L</span></div>
+    <div><b>0</b><span>open positions</span></div>
+    <div><b>0</b><span>closed trades</span></div>
+    <div><b>2026-07-23T20:00</b><span>last run</span></div>
+  </div>
+  <p class='muted'>Not enough equity points yet to chart.</p>
+  <h3>Open positions</h3>
+  <p class='muted'>No open positions.</p>
+  
+  <h3>Trade log</h3>
+  <p class='muted'>No trades yet. The first live morning run makes the first entry decision.</p>
 </section>
 </body></html>

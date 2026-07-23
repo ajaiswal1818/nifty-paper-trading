@@ -1,0 +1,43 @@
+{
+  "version": "v3-strong",
+  "entry": 3,
+  "flip": 3,
+  "spread_vix": 16.0,
+  "stop": 0.35,
+  "target": 1.5,
+  "target_spread": 1.4,
+  "trail": 1.25,
+  "gap_chase": 0.009,
+  "highvix_entry": 4,
+  "no_opposite": true,
+  "cooldown": false,
+  "size_cap": 0.2,
+  "lot_size": 75,
+  "fee_per_leg": 100.0,
+  "entry_slippage": 1.015,
+  "exit_slippage": 0.985,
+  "max_positions": 2,
+  "spread_width_pts": 150,
+  "tunable_bounds": {
+    "stop": [
+      0.25,
+      0.45
+    ],
+    "target": [
+      1.3,
+      1.8
+    ],
+    "target_spread": [
+      1.25,
+      1.6
+    ],
+    "trail": [
+      1.15,
+      1.4
+    ],
+    "gap_chase": [
+      0.005,
+      0.015
+    ]
+  }
+}

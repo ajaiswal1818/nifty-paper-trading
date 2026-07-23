@@ -1,0 +1,15 @@
+{
+  "sim_name": "NIFTY news-directional v3-strong (entry>=3, holds overnight)",
+  "currency": "INR",
+  "starting_capital": 100000,
+  "cash": 100000,
+  "total_equity": 100000,
+  "realized_pnl": 0,
+  "unrealized_pnl": 0,
+  "open_positions": [],
+  "last_run": "2026-07-23T20:00:00+05:30",
+  "last_run_type": "initial setup (candidate for the conviction hypothesis; first decision next morning run)",
+  "next_trade_id": 1,
+  "pending_plan": null,
+  "notes": "Created 2026-07-23. Identical to v3-news-directional but requires |score|>=3 to enter (vs 2). Tests, forward and live, whether filtering minimum-conviction entries improves results. Backtest 2019-2023 (gap+US+FII, normal-VIX): entry>=3 turned v3 from -21.4% to +13.1% and cut maxDD from -57% to -13%, but only ~15 trades (small sample). Holds overnight like v3."
+}
