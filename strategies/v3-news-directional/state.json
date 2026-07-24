@@ -2,54 +2,43 @@
   "sim_name": "NIFTY news-driven directional v3",
   "currency": "INR",
   "starting_capital": 100000,
-  "cash": 91083.69,
-  "total_equity": 102564.69,
-  "realized_pnl": 2703.69,
-  "unrealized_pnl": -39.0,
+  "cash": 101832.87,
+  "total_equity": 110604.87,
+  "realized_pnl": 10836.12,
+  "unrealized_pnl": -131.25,
   "open_positions": [
     {
-      "trade_id": 3,
+      "trade_id": 4,
       "option_type": "put",
-      "strike": 23900,
+      "strike": 23650,
       "short_strike": null,
       "expiry": "2026-07-28",
       "lots": 1,
       "lot_size": 75,
-      "entry_premium": 153.6,
-      "entry_cost_total": 11620.0,
-      "entry_date": "2026-07-23",
-      "current_premium": 153.08,
-      "sentiment_at_entry": -2
+      "entry_premium": 118.71,
+      "entry_cost_total": 9003.25,
+      "entry_date": "2026-07-24",
+      "current_premium": 116.96,
+      "sentiment_at_entry": -4
     }
   ],
-  "last_run": "2026-07-23T22:10:00+05:30",
-  "last_run_type": "night",
-  "next_trade_id": 4,
+  "last_run": "2026-07-24T08:52:00+05:30",
+  "last_run_type": "morning",
+  "next_trade_id": 5,
   "market_snapshot": {
-    "nifty_spot": 23869.6,
-    "nifty_prev_close": 23996.25,
-    "india_vix": 13.14,
+    "nifty_spot": 23670.0,
+    "nifty_prev_close": 23869.6,
+    "india_vix": 13.48,
     "pcr": 1.03,
-    "fii_net_cash_cr": -819.2,
-    "dii_net_cash_cr": -418.3,
-    "as_of": "2026-07-23 EVENING run (~18:07 IST). NIFTY closed 23,869.60 (-126.65/-0.53%), 4th straight down day (open 23904, high 23990, low n/a); Sensex 76,391 (-364). VIX closed 13.14 (intraday high 13.53). Brent surged >$95 (reports up to $98 intraday) on US-Iran escalation (12th night of strikes, Saudi tanker attacked). Auto only green sector; realty -1.8%, energy -1.0%, fin services -0.75%. FII/DII are 22-Jul revised cash figures (-819.2/-418.3cr); 23-Jul provisional not yet published at run time. PCR carried from morning (~1.03, stale). Next weekly expiry 28-Jul (Tue)."
+    "fii_net_cash_cr": -2999.23,
+    "dii_net_cash_cr": 2947.14,
+    "as_of": "2026-07-24 MORNING run (~08:52 IST, pre-open). Modeled 9:15 open 23,670 from GIFT Nifty 23,671 (-202.6 / -0.85% vs prev close 23,869.60). India VIX 13.48 (+1.37%). US Thu 23-Jul close risk-off: S&P500 -1.21% (7,408.30), Nasdaq -2.15% (25,137.69), Dow -0.97%; Tesla -14%, Alphabet -7% (AI capex fears). Brent surged ~7% to >$100 ($100.85, intraday $102) on Red Sea tanker attacks; US 10-yr yields up on inflation fears. Asia sold off hard: KOSPI -4%, Nikkei -3%, Hang Seng -1.5%. FII 23-Jul provisional net SELL -2,999.23cr; DII net BUY +2,947.14cr. PCR ~1.03 (carried). Support 23,750/23,700/23,650; resistance 24,000/24,100. Next weekly expiry 28-Jul (Tue, 4d)."
   },
-  "pending_plan": {
-    "bias": "bearish",
-    "score_draft": -2,
-    "key_news": [
-      "US Thu 23-Jul (after India close, hard risk-off): Nasdaq -2.6% (broke below 25,000 first time since May), S&P 500 -1.4%, Dow -1.1%. Tesla -14% (profit fell despite strong EV deliveries); Alphabet -7% after raising AI capex forecast => Big-Tech capex fears. US signal -1 (S&P < -0.5%)",
-      "Oil: Brent surged above $100 intraday on widening Middle-East attacks (US-Iran 12th night of strikes, Saudi tanker hit). Bond sell-off, US 10-yr to ~1.5-year high on inflation fears => risk-off overhang; news signal -1",
-      "GIFT Nifty ~23,873, roughly flat vs India prev close 23,869.60 (within +/-0.3% => neutral 0) BUT that quote looks stale/pre-US-selloff; a gap-down open is likely tomorrow. Confirm fresh GIFT + overnight US at the 08:45 morning run",
-      "FII 22-Jul -819.20cr (revised; within +/-1000 => neutral 0); July FII net sellers ~-4,837cr. PCR ~1.03 neutral 0. Key levels: support 24,000/23,907/23,801, resistance 24,250/24,350",
-      "Draft score -2 (US -1, news -1; GIFT/FII/PCR neutral). VIX 13.14 <=16 => entry threshold 2, naked ATM PUT. But rule 9: a same-direction PUT is already open (trade 3, 23900 PE), so NO new v3 entry tomorrow -- existing put benefits from any gap-down. Next weekly expiry 28-Jul (Tue)."
-    ],
-    "written_at": "2026-07-23T22:10:00+05:30"
-  },
-  "notes": "23-Jul (Thu) NIGHT run. No trades (night). Held trade 3 (23900 PE 28-Jul x1) repriced overnight-flat: spot 23869.6 / VIX 13.14 unchanged since evening close => mark 153.08, unrealized -39.0, total_equity 102,564.69. US session turned sharply risk-off after India closed (Nasdaq -2.6%, oil >$100), which favours the open put. Morning run will rescore with fresh GIFT + US settle.",
+  "pending_plan": null,
+  "notes": "24-Jul (Fri) MORNING run. Gap-down open ~23670 (GIFT -0.85%) sent existing trade 3 (23900 PE) to model 268.73 = +77.6% -> TARGET hit, exited for +8,132.43 realized. Score -4 (strong bearish: GIFT, US, FII, news all -1). Book flat + gap under 0.9% + no same-dir position => re-entered fresh ATM 23650 PE 28-Jul (trade 4). Holds overnight.",
   "morning_score_today": {
-    "date": "2026-07-23",
-    "score": -2
+    "date": "2026-07-24",
+    "score": -4
   },
   "last_monitor": "2026-07-23T15:20:05+05:30"
 }

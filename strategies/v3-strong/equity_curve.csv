@@ -1,3 +1,4 @@
 datetime_ist,run_type,nifty_spot,india_vix,cash,unrealized_pnl,total_equity,open_positions
 2026-07-23 20:00,initial,,,100000,0,100000,0
 2026-07-23 22:10,night,23869.6,13.14,100000,0,100000,0
+2026-07-24 08:52,morning,23670.0,13.48,90996.75,-131.25,99768.75,1
