@@ -163,6 +163,8 @@ def run(days, params, cash=100000.0, positions=None, log=None, curve=None):
                 close_pos(pos, c, vixc, d, "close", "target"); continue
             if params["eod_exit"]:
                 close_pos(pos, c, vixc, d, "close", "eod exit (intraday mode)"); continue
+            if params.get("weekend_exit") and d.weekday() == 4:
+                close_pos(pos, c, vixc, d, "close", "weekend exit (no Fri->Mon hold)"); continue
             if (pos["expiry"] - d).days <= 1:
                 close_pos(pos, c, vixc, d, "close", "time stop"); continue
             if params["trail"] and m >= params["trail"] * pos["entry_v"]:
