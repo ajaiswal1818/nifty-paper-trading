@@ -4,6 +4,8 @@ engine/monitor.log
 engine/monitor.log.1
 engine/monitor.launchd.log
 engine/gitsync.launchd.log
+engine/monitor_cloud.log
+engine/monitor_cloud.log.1
 .monitor.lock
 engine/.monitor.heartbeat
 .DS_Store
