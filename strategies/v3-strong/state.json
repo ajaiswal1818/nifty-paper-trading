@@ -22,8 +22,8 @@
       "sentiment_at_entry": -4
     }
   ],
-  "last_run": "2026-07-24T18:06:00+05:30",
-  "last_run_type": "evening",
+  "last_run": "2026-07-24T22:55:00+05:30",
+  "last_run_type": "night",
   "next_trade_id": 2,
   "market_snapshot": {
     "nifty_spot": 23767.45,
@@ -34,8 +34,20 @@
     "dii_net_cash_cr": 2947.14,
     "as_of": "2026-07-24 EVENING run (~18:06 IST). NIFTY closed 23,767.45 (-102.15 / -0.43%), 5th straight down day; opened 23,666 (-203), high 23,823 \u2014 big intraday recovery. India VIX 14.03 (+4.11%). Bank Nifty +0.18% (56,693.50). IT best (+0.82%, HCLTech +2.11%); Auto worst (-1.10%). Brent retreated to ~$92 (-2.6%) after topping $100; Hormuz/Bab el-Mandeb partially operational. Week: NIFTY -2.33%. Rupee ~96.63. PCR/FII carried from morning (FII 23-Jul -2,999.23cr provisional). Support 23,600; resistance 23,900. Weekly expiry 28-Jul (Tue, 4d)."
   },
-  "pending_plan": null,
-  "notes": "24-Jul (Fri) EVENING run. First trade (23650 PE 28-Jul) marked to close: model 83.02 vs entry model 116.96 (-29.0%). Stop -35% not hit, no target/trail. HELD overnight per rules.",
+  "pending_plan": {
+    "bias": "neutral",
+    "score_draft": 0,
+    "key_news": [
+      "US Friday midday: rebound after Thursday tech rout - Dow +0.7%, S&P 500 +0.5%, Nasdaq flat; new global tariffs in effect, AI-spending jitters linger",
+      "Brent crude -5% to below $95 (from >$100 peak) as Middle East risk eases - positive for India inflation/trade deficit",
+      "NIFTY down 5th straight session (23,767.45, week -2.33%); strong intraday recovery off 23,666 open; VIX 14.03 rising",
+      "FII selling persists (-Rs 2,999 cr 23-Jul provisional), DII buying offsets; PCR 1.03 neutral",
+      "Signal draft: US +1 (borderline, watch close), FII -1, news mixed 0 (oil relief vs tariffs), PCR 0; GIFT Nifty pending Monday morning",
+      "Next trading day Monday 27-Jul; weekly expiry Tue 28-Jul - Monday evening time-stop applies to 28-Jul positions"
+    ],
+    "written_at": "2026-07-24T22:55:00+05:30"
+  },
+  "notes": "24-Jul (Fri) NIGHT run. No trades (night). Marks unchanged from evening close (spot 23,767.45, VIX 14.03). Pending plan drafted neutral (score 0) for Monday 27-Jul: US rebound + oil -5% vs FII selling and 5-day NIFTY losing streak.",
   "morning_score_today": {
     "date": "2026-07-24",
     "score": -4
