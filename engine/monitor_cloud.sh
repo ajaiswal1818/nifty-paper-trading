@@ -4,11 +4,11 @@
 #
 # Sync model (robust): each pass HARD-RESETS to the latest pushed state before
 # running, so the VM never holds local uncommitted edits that could conflict with
-# the Mac's pushes. It commits+pushes ONLY when a trade actually fires. Trade-off:
-# intraday mark-to-market and the breakeven-trail arm are not persisted between
-# passes on the VM; stop / target / EOD exits (which key off the committed
-# entry price) are fully reliable, and the 18:00 evening run re-checks the trail
-# against the close as a backstop.
+# the Mac's pushes. It commits+pushes when a trade fires OR when a position's
+# breakeven-trail arms (so that memory survives the next reset). Stop / target /
+# EOD exits key off the committed entry price and are always reliable; committing
+# on arm keeps the breakeven-trail reliable too. Plain mark-to-market passes
+# (nothing fired, nothing armed) are discarded on the next reset -- no conflicts.
 set -u
 REPO="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$REPO" || exit 1
@@ -30,8 +30,11 @@ git reset --hard --quiet origin/main 2>>"$LOG"
 # 2. one monitor pass (pure python; self-guards market hours/weekend/staleness)
 /usr/bin/python3 "$REPO/engine/monitor.py" >>"$LOG" 2>&1
 
-# 3. push ONLY when a trade fired (a trade_log.csv changed).
-if [ -n "$(git status --porcelain -- 'strategies/*/trade_log.csv')" ]; then
+# 3. push when a trade fired (trade_log changed) OR a breakeven-trail is armed
+#    (so the arm persists across the next reset). During market hours the Mac
+#    runs no scheduled jobs, so these commits don't collide with it.
+if [ -n "$(git status --porcelain -- 'strategies/*/trade_log.csv')" ] \
+   || grep -lq '"trail_armed": *true' strategies/*/state.json 2>/dev/null; then
   git add -A
   git commit -q -m "cloud monitor: exit $(ts) IST"
   git fetch --quiet origin main && git rebase --quiet origin/main 2>>"$LOG"
