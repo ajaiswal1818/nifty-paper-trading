@@ -10,7 +10,10 @@ cd "$(dirname "$0")/.." || exit 1
 
 # clear stale locks first: sandbox sessions can't always delete them.
 # >10 min old means no live operation owns it (sessions/monitor finish in seconds).
-find .git/index.lock .git/HEAD.lock .monitor.lock -maxdepth 0 -mmin +10 -delete 2>/dev/null
+# Sweep every *.lock under .git (index/HEAD/refs/objects/maintenance), plus the
+# repo-root monitor lock. Catches the ones the old fixed list missed.
+find .git -name '*.lock' -mmin +10 -delete 2>/dev/null
+find .monitor.lock -maxdepth 0 -mmin +10 -delete 2>/dev/null
 # leftover temp objects from interrupted commits (harmless but accumulate)
 find .git/objects -name 'tmp_obj_*' -mmin +60 -delete 2>/dev/null
 
