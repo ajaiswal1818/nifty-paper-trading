@@ -7,8 +7,8 @@
   "realized_pnl": -9388.75,
   "unrealized_pnl": 0,
   "open_positions": [],
-  "last_run": "2026-07-26T08:51:00+05:30",
-  "last_run_type": "morning-skip",
+  "last_run": "2026-07-26T18:43:00+05:30",
+  "last_run_type": "evening-skip",
   "next_trade_id": 6,
   "market_snapshot": {
     "nifty_spot": 23767.45,
@@ -32,7 +32,7 @@
     ],
     "written_at": "2026-07-24T22:55:00+05:30"
   },
-  "notes": "26-Jul (Sun) MORNING run: weekend, NSE closed - skipped per RUNBOOK step 3. No repricing, no trades, no equity row, no pending_plan change. Friday 24-Jul night pending_plan (for Mon 27-Jul) remains valid. Positions/marks unchanged from 24-Jul close. Next cycle: Monday 27-Jul morning (weekly expiry Tue 28-Jul).",
+  "notes": "26-Jul (Sun) EVENING run: weekend, NSE closed - skipped per RUNBOOK step 3. No repricing, no trades, no equity row, no pending_plan change (also skipped this morning). Flat (no open positions; intraday same-day-exit strategy). Friday 24-Jul night pending_plan (for Mon 27-Jul) remains valid. Next cycle: Monday 27-Jul morning (weekly expiry Tue 28-Jul).",
   "morning_score_today": {
     "date": "2026-07-24",
     "score": -4

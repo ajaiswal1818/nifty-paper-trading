@@ -47,7 +47,7 @@
     ],
     "written_at": "2026-07-24T22:55:00+05:30"
   },
-  "notes": "26-Jul (Sun) MORNING run: weekend, NSE closed - skipped per RUNBOOK step 3. No repricing, no trades, no equity row, no pending_plan change. Friday 24-Jul night pending_plan (for Mon 27-Jul) remains valid. Positions/marks unchanged from 24-Jul close. Next cycle: Monday 27-Jul morning (weekly expiry Tue 28-Jul).",
+  "notes": "26-Jul (Sun) EVENING run: weekend, NSE closed - skipped per RUNBOOK step 3. No repricing, no trades, no equity row, no pending_plan change (also skipped this morning). Friday 24-Jul night pending_plan (for Mon 27-Jul) remains valid. Open put 23650 (28-Jul expiry) marks unchanged from 24-Jul close. Next cycle: Monday 27-Jul morning (weekly expiry Tue 28-Jul; Mon evening time-stop applies).",
   "morning_score_today": {
     "date": "2026-07-24",
     "score": -4
