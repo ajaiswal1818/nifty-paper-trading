@@ -7,17 +7,17 @@
   "realized_pnl": -8691.42,
   "unrealized_pnl": 0,
   "open_positions": [],
-  "last_run": "2026-07-26T22:00:00+05:30",
-  "last_run_type": "night-skip",
+  "last_run": "2026-07-27T08:53:00+05:30",
+  "last_run_type": "morning",
   "next_trade_id": 2,
   "market_snapshot": {
-    "nifty_spot": 23767.45,
-    "nifty_prev_close": 23869.6,
+    "nifty_spot": 23941.0,
+    "nifty_prev_close": 23767.45,
     "india_vix": 14.03,
-    "pcr": 1.03,
-    "fii_net_cash_cr": -2999.23,
-    "dii_net_cash_cr": 2947.14,
-    "as_of": "2026-07-24 EVENING run (~18:06 IST). NIFTY closed 23,767.45 (-102.15 / -0.43%), 5th straight down day; opened 23,666 (-203), high 23,823 \u2014 big intraday recovery. India VIX 14.03 (+4.11%). Bank Nifty +0.18% (56,693.50). IT best (+0.82%, HCLTech +2.11%); Auto worst (-1.10%). Brent retreated to ~$92 (-2.6%) after topping $100; Hormuz/Bab el-Mandeb partially operational. Week: NIFTY -2.33%. Rupee ~96.63. PCR/FII carried from morning (FII 23-Jul -2,999.23cr provisional). Support 23,600; resistance 23,900. Weekly expiry 28-Jul (Tue, 4d)."
+    "pcr": 0.83,
+    "fii_net_cash_cr": -3892.8,
+    "dii_net_cash_cr": 5453.6,
+    "as_of": "2026-07-27 MORNING pre-open run (~08:53 IST) + cloud-monitor 09:15 exits. Prev NIFTY close 23,767.45 (Fri 24-Jul, -0.43%, 5th straight down day). GIFT Nifty 23,930.5 (+0.70%); NIFTY actually opened strong, monitor quoted spot 23,941 at 09:15. India VIX 14.03 (<16, normal regime). PCR 0.83. FII -3,892.8cr / DII +5,453.6cr (24-Jul cash). US Fri: S&P500 +0.05%, Dow +0.46%, Nasdaq -0.64%. Global cues green; Brent ~-7% after US-Iran paused strikes. Weekly expiry 28-Jul (Tue, 1d)."
   },
   "pending_plan": {
     "bias": "neutral",
@@ -32,10 +32,10 @@
     ],
     "written_at": "2026-07-24T22:55:00+05:30"
   },
-  "notes": "26-Jul (Sun) NIGHT run: weekend, NSE + US markets closed - skipped per RUNBOOK step 3. No repricing, no trades, no equity row, no pending_plan change (evening + morning runs today also skipped). Friday 24-Jul night pending_plan (for Mon 27-Jul) remains valid and unchanged. Next cycle: Monday 27-Jul 08:45 morning run (weekly expiry Tue 28-Jul; Mon evening time-stop applies to 28-Jul positions). Open put 23650 (28-Jul expiry) marks carried unchanged from 24-Jul close.",
+  "notes": "27-Jul MORNING run: scored +1 (score +1: GIFT +0.69% vs prev close (+1); S&P500 Fri +0.05% (0); FII -3,892.8cr 24-Jul (-1); news positive - Brent -7%, US-Iran de-escalation, global markets green, risk-on (+1); PCR 0.83 (0). VIX 14.03<=16 normal regime.) -> below entry threshold, NO new entry. Open put 23650 (28-Jul) was stopped out by the CLOUD MONITOR at 09:15 on live quotes: spot 23,941, mark 5.57 (-95.3% vs entry 118.71), well past the -35% stop; net proceeds Rs 311.83, trade P&L -Rs 8,691.42. Book now FLAT. Reconciliation note: the 08:53 morning run had also modeled this exit (assumed open 23,868, mark 8.48) before the monitor's commit arrived; that duplicate modeled fill was discarded during the git rebase and the monitor's live fill is authoritative.",
   "morning_score_today": {
-    "date": "2026-07-24",
-    "score": -4
+    "date": "2026-07-27",
+    "score": 1
   },
   "last_monitor": "2026-07-27T09:15:03+05:30"
 }

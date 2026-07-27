@@ -5,19 +5,19 @@
   "cash": 90611.25,
   "total_equity": 90611.25,
   "realized_pnl": -9388.75,
-  "unrealized_pnl": 0,
+  "unrealized_pnl": 0.0,
   "open_positions": [],
-  "last_run": "2026-07-26T22:00:00+05:30",
-  "last_run_type": "night-skip",
+  "last_run": "2026-07-27T08:53:00+05:30",
+  "last_run_type": "morning",
   "next_trade_id": 6,
   "market_snapshot": {
-    "nifty_spot": 23767.45,
-    "nifty_prev_close": 23869.6,
+    "nifty_spot": 23868.0,
+    "nifty_prev_close": 23767.45,
     "india_vix": 14.03,
-    "pcr": 1.03,
-    "fii_net_cash_cr": -2999.23,
-    "dii_net_cash_cr": 2947.14,
-    "as_of": "2026-07-24 EVENING run (~18:06 IST). NIFTY closed 23,767.45 (-102.15 / -0.43%), 5th straight down day; opened 23,666 (-203), high 23,823 — big intraday recovery. India VIX 14.03 (+4.11%). Bank Nifty +0.18% (56,693.50). IT best (+0.82%, HCLTech +2.11%); Auto worst (-1.10%). Brent retreated to ~$92 (-2.6%) after topping $100; Hormuz/Bab el-Mandeb partially operational. Week: NIFTY -2.33%. Rupee ~96.63. PCR/FII carried from morning (FII 23-Jul -2,999.23cr provisional). Support 23,600; resistance 23,900. Weekly expiry 28-Jul (Tue, 4d)."
+    "pcr": 0.83,
+    "fii_net_cash_cr": -3892.8,
+    "dii_net_cash_cr": 5453.6,
+    "as_of": "2026-07-27 MORNING pre-open run (~08:53 IST). Prev NIFTY close 23,767.45 (Fri 24-Jul, -0.43%, 5th straight down day). GIFT Nifty 23,930.5 (+0.70% vs GIFT prev close); implied NIFTY open ~+100 -> ~23,868 (gap-up). India VIX 14.03 (prev day, <16 normal regime). PCR 0.83. FII -3,892.8cr / DII +5,453.6cr (24-Jul cash). US Fri: S&P500 +0.05%, Dow +0.46%, Nasdaq -0.64%. Global cues broadly green (Asia/Europe up); Brent crude ~-7% after US-Iran paused strikes. Pivots R1 23,971 / P 23,889 / S1 23,788. Weekly expiry 28-Jul (Tue, 1d to expiry)."
   },
   "pending_plan": {
     "bias": "neutral",
@@ -32,10 +32,10 @@
     ],
     "written_at": "2026-07-24T22:55:00+05:30"
   },
-  "notes": "26-Jul (Sun) NIGHT run: weekend, NSE + US markets closed - skipped per RUNBOOK step 3. No repricing, no trades, no equity row, no pending_plan change (evening + morning runs today also skipped). Friday 24-Jul night pending_plan (for Mon 27-Jul) remains valid and unchanged. Next cycle: Monday 27-Jul 08:45 morning run (weekly expiry Tue 28-Jul; Mon evening time-stop applies to 28-Jul positions). Flat (no open positions; intraday same-day-exit strategy).",
+  "notes": "27-Jul MORNING run: scored +1 (below entry threshold 2) -> no entry. Flat all day (intraday same-day-exit book, carries nothing overnight). Monitor made no v3i trade today.",
   "morning_score_today": {
-    "date": "2026-07-24",
-    "score": -4
+    "date": "2026-07-27",
+    "score": 1
   },
   "last_monitor": "2026-07-23T15:20:05+05:30"
 }
