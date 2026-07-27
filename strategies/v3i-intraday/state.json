@@ -7,8 +7,8 @@
   "realized_pnl": -9388.75,
   "unrealized_pnl": 0,
   "open_positions": [],
-  "last_run": "2026-07-27T18:00:00+05:30",
-  "last_run_type": "evening",
+  "last_run": "2026-07-27T23:32:00+05:30",
+  "last_run_type": "night",
   "next_trade_id": 6,
   "market_snapshot": {
     "nifty_spot": 24002.1,
@@ -17,22 +17,22 @@
     "pcr": 0.83,
     "fii_net_cash_cr": -3892.8,
     "dii_net_cash_cr": 5453.6,
-    "as_of": "2026-07-27 EVENING close run (18:00 IST). NIFTY closed 24,002.10 (+234.65, +0.99%), reclaimed 24,000, snapped 5-day losing streak on ~6% crude drop after US-Iran strike pause. Open 23,928.40, day range 23,891.55-24,011.60. India VIX ~12.63 (-10%, below 13). PCR/FII-DII carried from morning (24-Jul cash: FII -3,892.8cr / DII +5,453.6cr). Weekly expiry 28-Jul (Tue, 1d). Book FLAT all day."
+    "as_of": "2026-07-27 NIGHT run (~23:32 IST). No Indian session (market closed); US Mon midday mixed (Dow +0.2%, S&P -0.3%, Nasdaq -0.6%, chip selloff), Brent <$90 (-7%). Carrying today's NIFTY close 24,002.10 / VIX 12.63. Weekly expiry Tue 28-Jul. Book FLAT. NO trades on night runs."
   },
   "pending_plan": {
     "bias": "neutral",
     "score_draft": 0,
     "key_news": [
-      "US Friday midday: rebound after Thursday tech rout - Dow +0.7%, S&P 500 +0.5%, Nasdaq flat; new global tariffs in effect, AI-spending jitters linger",
-      "Brent crude -5% to below $95 (from >$100 peak) as Middle East risk eases - positive for India inflation/trade deficit",
-      "NIFTY down 5th straight session (23,767.45, week -2.33%); strong intraday recovery off 23,666 open; VIX 14.03 rising",
-      "FII selling persists (-Rs 2,999 cr 23-Jul provisional), DII buying offsets; PCR 1.03 neutral",
-      "Signal draft: US +1 (borderline, watch close), FII -1, news mixed 0 (oil relief vs tariffs), PCR 0; GIFT Nifty pending Monday morning",
-      "Next trading day Monday 27-Jul; weekly expiry Tue 28-Jul - Monday evening time-stop applies to 28-Jul positions"
+      "US Mon 27-Jul midday: mixed - Dow +0.2%, S&P 500 -0.3%, Nasdaq -0.6%; chip selloff (Nvidia/ASML -4%) on China chipmaking-equipment news capped early gains",
+      "Oil tumbled ~7%, Brent below $90 on US-Iran strike pause/de-escalation - India-positive (inflation, trade deficit)",
+      "NIFTY closed 24,002.10 (+0.99%), reclaimed 24,000, snapped 5-day losing streak; India VIX 12.63 (-10%, calm regime)",
+      "FII -3,892.8cr / DII +5,453.6cr (24-Jul cash); PCR 0.83 (neutral band)",
+      "Busy week: Fed decision + Big Tech earnings. Tue 28-Jul is weekly expiry -> morning entries must use next weekly 04-Aug per rule 6",
+      "Signal draft: GIFT pending (0), S&P -0.3% (0), FII -1, news mildly positive oil+de-escalation (+1), PCR 0 => net 0, below entry threshold 2; VIX<16 normal"
     ],
-    "written_at": "2026-07-24T22:55:00+05:30"
+    "written_at": "2026-07-27T23:32:00+05:30"
   },
-  "notes": "27-Jul MORNING run: scored +1 (below entry threshold 2) -> no entry. Flat all day (intraday same-day-exit book, carries nothing overnight). Monitor made no v3i trade today. | EVENING 18:00: no open positions to mark or exit; recorded session close 24,002.10 / VIX ~12.63. No trades. Book flat.",
+  "notes": "27-Jul MORNING run: scored +1 (below entry threshold 2) -> no entry. Flat all day (intraday same-day-exit book, carries nothing overnight). Monitor made no v3i trade today. | EVENING 18:00: no open positions to mark or exit; recorded session close 24,002.10 / VIX ~12.63. No trades. Book flat. | NIGHT 23:32: no positions; wrote pending_plan for 28-Jul (bias neutral, score_draft 0). No trades.",
   "morning_score_today": {
     "date": "2026-07-27",
     "score": 1
