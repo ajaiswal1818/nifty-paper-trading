@@ -2,26 +2,11 @@
   "sim_name": "NIFTY news-driven directional v3",
   "currency": "INR",
   "starting_capital": 100000,
-  "cash": 101832.87,
-  "total_equity": 108059.37,
-  "realized_pnl": 10836.12,
-  "unrealized_pnl": -2776.75,
-  "open_positions": [
-    {
-      "trade_id": 4,
-      "option_type": "put",
-      "strike": 23650,
-      "short_strike": null,
-      "expiry": "2026-07-28",
-      "lots": 1,
-      "lot_size": 75,
-      "entry_premium": 118.71,
-      "entry_cost_total": 9003.25,
-      "entry_date": "2026-07-24",
-      "current_premium": 83.02,
-      "sentiment_at_entry": -4
-    }
-  ],
+  "cash": 102144.7,
+  "total_equity": 102144.7,
+  "realized_pnl": 2144.7,
+  "unrealized_pnl": 0,
+  "open_positions": [],
   "last_run": "2026-07-26T22:00:00+05:30",
   "last_run_type": "night-skip",
   "next_trade_id": 5,
@@ -32,7 +17,7 @@
     "pcr": 1.03,
     "fii_net_cash_cr": -2999.23,
     "dii_net_cash_cr": 2947.14,
-    "as_of": "2026-07-24 EVENING run (~18:06 IST). NIFTY closed 23,767.45 (-102.15 / -0.43%), 5th straight down day; opened 23,666 (-203), high 23,823 — big intraday recovery. India VIX 14.03 (+4.11%). Bank Nifty +0.18% (56,693.50). IT best (+0.82%, HCLTech +2.11%); Auto worst (-1.10%). Brent retreated to ~$92 (-2.6%) after topping $100; Hormuz/Bab el-Mandeb partially operational. Week: NIFTY -2.33%. Rupee ~96.63. PCR/FII carried from morning (FII 23-Jul -2,999.23cr provisional). Support 23,600; resistance 23,900. Weekly expiry 28-Jul (Tue, 4d)."
+    "as_of": "2026-07-24 EVENING run (~18:06 IST). NIFTY closed 23,767.45 (-102.15 / -0.43%), 5th straight down day; opened 23,666 (-203), high 23,823 \u2014 big intraday recovery. India VIX 14.03 (+4.11%). Bank Nifty +0.18% (56,693.50). IT best (+0.82%, HCLTech +2.11%); Auto worst (-1.10%). Brent retreated to ~$92 (-2.6%) after topping $100; Hormuz/Bab el-Mandeb partially operational. Week: NIFTY -2.33%. Rupee ~96.63. PCR/FII carried from morning (FII 23-Jul -2,999.23cr provisional). Support 23,600; resistance 23,900. Weekly expiry 28-Jul (Tue, 4d)."
   },
   "pending_plan": {
     "bias": "neutral",
@@ -52,5 +37,5 @@
     "date": "2026-07-24",
     "score": -4
   },
-  "last_monitor": "2026-07-23T15:20:05+05:30"
+  "last_monitor": "2026-07-27T09:15:03+05:30"
 }
