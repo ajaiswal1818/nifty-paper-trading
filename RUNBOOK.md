@@ -37,6 +37,7 @@ All state lives in `~/Projects/nifty-paper-trading/` (request this folder via di
 
 ## Evening run only (18:00 IST), after the every-run steps
 9. **Data capture:** append one row to `engine/data/sessions_2026.csv`: date, today's open, previous close, today's close, VIX close, previous VIX close, and the morning score recorded in `morning_score_today` (0 if the morning run was skipped). Never edit past rows. Add new weekly expiries to `engine/data/expiries.csv` as they become known.
+9b. **Flows capture:** append one row to `engine/data/flows_2026.csv`: `date,fii_net_cr,dii_net_cr` = today's session date and today's FII and DII net cash (₹ Cr) as published on this evening's data fetch (the same `fii_net_cash_cr` / `dii_net_cash_cr` written to `market_snapshot`). Use the provisional figure if final is not yet out; leave a field blank only if genuinely unavailable. One row per session, never edit past rows. This is the durable FII/DII series (state.json only holds the latest value and is overwritten each run); it is joined by date for signal backtests, exactly like `research/fii_history.csv`.
 
 ## Night run only (22:00 IST)
 6. Search US market open/afternoon status and global news. Per active strategy, write a short `pending_plan` into its `state.json`: {"bias": bullish/bearish/neutral, "score_draft": n, "key_news": [...], "written_at": ...}. No trades.
