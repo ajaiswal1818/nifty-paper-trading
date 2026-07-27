@@ -80,6 +80,22 @@
         "trade_log": "trade_log.csv",
         "equity_curve": "equity_curve.csv"
       }
+    },
+    {
+      "id": "v-ic1",
+      "name": "NIFTY iron condor income v-ic1 (net-short, defined risk, hold to expiry)",
+      "status": "candidate",
+      "mode": "paper",
+      "started": "2026-07-27",
+      "capital_start": 100000,
+      "run_schedule_ist": ["08:45", "18:00", "22:00"],
+      "files": {
+        "rules": "STRATEGY.md",
+        "params": "params.json",
+        "state": "state.json",
+        "trade_log": "trade_log.csv",
+        "equity_curve": "equity_curve.csv"
+      }
     }
   ],
   "notes": "All strategies are PAPER ONLY. status: active | candidate | paused | retired. Each strategy lives in strategies/<id>/ with the files listed above. Positions carry an 'underlying' (NIFTY default, or NIFTYNXT50); the monitor prices each against the matching index (^NSEI / ^NSMIDCP)."

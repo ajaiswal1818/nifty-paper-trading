@@ -1,0 +1,23 @@
+{
+  "sim_name": "NIFTY iron condor income v-ic1",
+  "currency": "INR",
+  "starting_capital": 100000,
+  "cash": 100000.0,
+  "total_equity": 100000.0,
+  "realized_pnl": 0.0,
+  "unrealized_pnl": 0.0,
+  "open_positions": [],
+  "last_run": null,
+  "last_run_type": null,
+  "next_trade_id": 1,
+  "market_snapshot": {},
+  "pending_plan": {
+    "bias": "neutral",
+    "score_draft": 0,
+    "key_news": [
+      "v-ic1 created 2026-07-27 as CANDIDATE (not traded until flipped to active in registry.json). Requires side='short' support in engine/monitor.py (added same date)."
+    ],
+    "written_at": "2026-07-27T18:30:00+05:30"
+  },
+  "notes": "Created 2026-07-27. Candidate, fresh Rs 1,00,000 virtual capital, no trades yet. Net-short defined-risk iron condor, hold toward expiry, per-side stop 2x credit / target 50% capture / expiry close."
+}

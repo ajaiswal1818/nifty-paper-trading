@@ -1,0 +1,28 @@
+{
+  "version": "v-ic1",
+  "structure": "iron_condor",
+  "side": "short",
+  "offset_pts": 300,
+  "wing_pts": 150,
+  "dte_max": 6,
+  "vix_entry_min": 0.0,
+  "lots": 1,
+  "size_cap_risk": 0.15,
+  "stop_mult": 2.0,
+  "target_capture": 0.5,
+  "expiry_exit": true,
+  "eod_exit": false,
+  "max_positions": 2,
+  "lot_size": 75,
+  "fee_per_leg": 100.0,
+  "entry_slippage": 1.015,
+  "exit_slippage": 0.985,
+  "_notes": "Net-short iron condor booked as TWO side positions (call spread + put spread), each with side='short'. The monitor manages each side independently: buy back a side at stop_mult x its credit, or after capturing target_capture of its credit, or at expiry_exit. entry_cost_total is stored NEGATIVE per side (credit is a cash inflow). Requires the side='short' support added to engine/monitor.py on 2026-07-27.",
+  "tunable_bounds": {
+    "offset_pts": [250, 350],
+    "wing_pts": [100, 200],
+    "stop_mult": [1.5, 2.5],
+    "target_capture": [0.4, 0.7],
+    "lots": [1, 2]
+  }
+}
