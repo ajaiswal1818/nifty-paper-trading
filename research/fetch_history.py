@@ -94,13 +94,15 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--start", type=date.fromisoformat, default=None, help="YYYY-MM-DD (else last 2y)")
     ap.add_argument("--end", type=date.fromisoformat, default=None)
+    ap.add_argument("--symbol", default="^NSEI", help="index to fetch (e.g. ^NSMIDCP for Nifty Next 50)")
+    ap.add_argument("--out", default=None, help="output sessions CSV (default engine/data/sessions_history.csv)")
     a = ap.parse_args()
     if a.start and a.end:
         PERIOD1 = int(datetime(a.start.year, a.start.month, a.start.day, tzinfo=timezone.utc).timestamp())
         PERIOD2 = int(datetime(a.end.year, a.end.month, a.end.day, tzinfo=timezone.utc).timestamp()) + 86400
         print(f"Window: {a.start} -> {a.end}")
-    print("Fetching NIFTY (^NSEI), S&P 500 (^GSPC), India VIX (^INDIAVIX) from Yahoo...")
-    nse = yahoo_daily("^NSEI")
+    print(f"Fetching index {a.symbol}, S&P 500 (^GSPC), India VIX (^INDIAVIX) from Yahoo...")
+    nse = yahoo_daily(a.symbol)
     gspc = yahoo_daily("^GSPC")
     vix = yahoo_daily("^INDIAVIX")
     fii = load_optional_csv("research/fii_history.csv", "fii_net_cr")
@@ -149,14 +151,17 @@ def main():
                          sig_gap=sg, sig_us=su, sig_fii=sf, sig_pcr=sp, morning_score=score))
 
     os.makedirs(os.path.join(ROOT, "engine", "data"), exist_ok=True)
-    sess = os.path.join(ROOT, "engine", "data", "sessions_history.csv")
+    sess = a.out or os.path.join(ROOT, "engine", "data", "sessions_history.csv")
+    if not os.path.isabs(sess):
+        sess = os.path.join(ROOT, sess)
     with open(sess, "w", newline="") as f:
         w = csv.writer(f)
         w.writerow(["date", "open", "prev_close", "close", "vix_close", "vix_prev", "morning_score"])
         for r in rows:
             w.writerow([r["date"], r["open"], r["prev_close"], r["close"],
                         r["vix_close"], r["vix_prev"], r["morning_score"]])
-    detail = os.path.join(ROOT, "research", "history_signals.csv")
+    detail = (os.path.join(ROOT, "research", "history_signals.csv") if not a.out
+              else os.path.join(ROOT, "research", os.path.basename(os.path.splitext(sess)[0]) + "_signals.csv"))
     with open(detail, "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
         w.writeheader()
