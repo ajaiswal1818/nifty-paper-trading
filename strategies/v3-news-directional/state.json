@@ -7,17 +7,17 @@
   "realized_pnl": 2144.7,
   "unrealized_pnl": 0,
   "open_positions": [],
-  "last_run": "2026-07-27T08:53:00+05:30",
-  "last_run_type": "morning",
+  "last_run": "2026-07-27T18:00:00+05:30",
+  "last_run_type": "evening",
   "next_trade_id": 5,
   "market_snapshot": {
-    "nifty_spot": 23941.0,
+    "nifty_spot": 24002.1,
     "nifty_prev_close": 23767.45,
-    "india_vix": 14.03,
+    "india_vix": 12.63,
     "pcr": 0.83,
     "fii_net_cash_cr": -3892.8,
     "dii_net_cash_cr": 5453.6,
-    "as_of": "2026-07-27 MORNING pre-open run (~08:53 IST) + cloud-monitor 09:15 exits. Prev NIFTY close 23,767.45 (Fri 24-Jul, -0.43%, 5th straight down day). GIFT Nifty 23,930.5 (+0.70%); NIFTY actually opened strong, monitor quoted spot 23,941 at 09:15. India VIX 14.03 (<16, normal regime). PCR 0.83. FII -3,892.8cr / DII +5,453.6cr (24-Jul cash). US Fri: S&P500 +0.05%, Dow +0.46%, Nasdaq -0.64%. Global cues green; Brent ~-7% after US-Iran paused strikes. Weekly expiry 28-Jul (Tue, 1d)."
+    "as_of": "2026-07-27 EVENING close run (18:00 IST). NIFTY closed 24,002.10 (+234.65, +0.99%), reclaimed 24,000, snapped 5-day losing streak on ~6% crude drop after US-Iran strike pause. Open 23,928.40, day range 23,891.55-24,011.60. India VIX ~12.63 (-10%, below 13). PCR/FII-DII carried from morning (24-Jul cash: FII -3,892.8cr / DII +5,453.6cr). Weekly expiry 28-Jul (Tue, 1d). Book FLAT all day."
   },
   "pending_plan": {
     "bias": "neutral",
@@ -32,7 +32,7 @@
     ],
     "written_at": "2026-07-24T22:55:00+05:30"
   },
-  "notes": "27-Jul MORNING run: scored +1 (score +1: GIFT +0.69% vs prev close (+1); S&P500 Fri +0.05% (0); FII -3,892.8cr 24-Jul (-1); news positive - Brent -7%, US-Iran de-escalation, global markets green, risk-on (+1); PCR 0.83 (0). VIX 14.03<=16 normal regime.) -> below entry threshold, NO new entry. Open put 23650 (28-Jul) was stopped out by the CLOUD MONITOR at 09:15 on live quotes: spot 23,941, mark 5.57 (-95.3% vs entry 118.71), well past the -35% stop; net proceeds Rs 311.83, trade P&L -Rs 8,691.42. Book now FLAT. Reconciliation note: the 08:53 morning run had also modeled this exit (assumed open 23,868, mark 8.48) before the monitor's commit arrived; that duplicate modeled fill was discarded during the git rebase and the monitor's live fill is authoritative.",
+  "notes": "27-Jul MORNING run: scored +1 (score +1: GIFT +0.69% vs prev close (+1); S&P500 Fri +0.05% (0); FII -3,892.8cr 24-Jul (-1); news positive - Brent -7%, US-Iran de-escalation, global markets green, risk-on (+1); PCR 0.83 (0). VIX 14.03<=16 normal regime.) -> below entry threshold, NO new entry. Open put 23650 (28-Jul) was stopped out by the CLOUD MONITOR at 09:15 on live quotes: spot 23,941, mark 5.57 (-95.3% vs entry 118.71), well past the -35% stop; net proceeds Rs 311.83, trade P&L -Rs 8,691.42. Book now FLAT. Reconciliation note: the 08:53 morning run had also modeled this exit (assumed open 23,868, mark 8.48) before the monitor's commit arrived; that duplicate modeled fill was discarded during the git rebase and the monitor's live fill is authoritative. | EVENING 18:00: no open positions to mark or exit; recorded session close 24,002.10 / VIX ~12.63. No trades. Book flat.",
   "morning_score_today": {
     "date": "2026-07-27",
     "score": 1

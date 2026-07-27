@@ -5,19 +5,19 @@
   "cash": 90611.25,
   "total_equity": 90611.25,
   "realized_pnl": -9388.75,
-  "unrealized_pnl": 0.0,
+  "unrealized_pnl": 0,
   "open_positions": [],
-  "last_run": "2026-07-27T08:53:00+05:30",
-  "last_run_type": "morning",
+  "last_run": "2026-07-27T18:00:00+05:30",
+  "last_run_type": "evening",
   "next_trade_id": 6,
   "market_snapshot": {
-    "nifty_spot": 23868.0,
+    "nifty_spot": 24002.1,
     "nifty_prev_close": 23767.45,
-    "india_vix": 14.03,
+    "india_vix": 12.63,
     "pcr": 0.83,
     "fii_net_cash_cr": -3892.8,
     "dii_net_cash_cr": 5453.6,
-    "as_of": "2026-07-27 MORNING pre-open run (~08:53 IST). Prev NIFTY close 23,767.45 (Fri 24-Jul, -0.43%, 5th straight down day). GIFT Nifty 23,930.5 (+0.70% vs GIFT prev close); implied NIFTY open ~+100 -> ~23,868 (gap-up). India VIX 14.03 (prev day, <16 normal regime). PCR 0.83. FII -3,892.8cr / DII +5,453.6cr (24-Jul cash). US Fri: S&P500 +0.05%, Dow +0.46%, Nasdaq -0.64%. Global cues broadly green (Asia/Europe up); Brent crude ~-7% after US-Iran paused strikes. Pivots R1 23,971 / P 23,889 / S1 23,788. Weekly expiry 28-Jul (Tue, 1d to expiry)."
+    "as_of": "2026-07-27 EVENING close run (18:00 IST). NIFTY closed 24,002.10 (+234.65, +0.99%), reclaimed 24,000, snapped 5-day losing streak on ~6% crude drop after US-Iran strike pause. Open 23,928.40, day range 23,891.55-24,011.60. India VIX ~12.63 (-10%, below 13). PCR/FII-DII carried from morning (24-Jul cash: FII -3,892.8cr / DII +5,453.6cr). Weekly expiry 28-Jul (Tue, 1d). Book FLAT all day."
   },
   "pending_plan": {
     "bias": "neutral",
@@ -32,7 +32,7 @@
     ],
     "written_at": "2026-07-24T22:55:00+05:30"
   },
-  "notes": "27-Jul MORNING run: scored +1 (below entry threshold 2) -> no entry. Flat all day (intraday same-day-exit book, carries nothing overnight). Monitor made no v3i trade today.",
+  "notes": "27-Jul MORNING run: scored +1 (below entry threshold 2) -> no entry. Flat all day (intraday same-day-exit book, carries nothing overnight). Monitor made no v3i trade today. | EVENING 18:00: no open positions to mark or exit; recorded session close 24,002.10 / VIX ~12.63. No trades. Book flat.",
   "morning_score_today": {
     "date": "2026-07-27",
     "score": 1
