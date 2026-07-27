@@ -96,7 +96,7 @@ def close_position(root, sid, strat_dir, state, pos, value, spot, vix, now, reas
     return pnl
 
 
-def process_strategy(root, entry, spot, vix, now):
+def process_strategy(root, entry, spots, vix, now):
     sid = entry["id"]
     strat_dir = os.path.join(root, "strategies", sid)
     with open(os.path.join(strat_dir, "params.json")) as f:
@@ -105,6 +105,11 @@ def process_strategy(root, entry, spot, vix, now):
     with open(sp) as f:
         state = json.load(f)
     positions = state.get("open_positions", [])
+    underlying = params.get("underlying", "NIFTY")   # NIFTY | NIFTYNXT50
+    spot = spots.get(underlying)
+    if spot is None:
+        log(root, f"[{sid}] no spot for {underlying}; skipping")
+        return 0, len(positions)
     closed = 0
     eod_now = params.get("eod_exit") and (now.hour, now.minute) >= (15, 20)
     for pos in positions[:]:
@@ -195,23 +200,33 @@ def main():
         if not have_pos:
             return  # nothing to watch; stay silent to keep the log readable
 
-        spot, vix = a.spot, a.vix
-        if spot is None or vix is None:
+        # which underlyings do the open positions actually need?
+        SYMBOL = {"NIFTY": "^NSEI", "NIFTYNXT50": "^NSMIDCP"}
+        needed = set()
+        for s in have_pos:
+            with open(os.path.join(root, "strategies", s["id"], "params.json")) as f:
+                needed.add(json.load(f).get("underlying", "NIFTY"))
+        spots, vix = {}, a.vix
+        if a.spot is not None:
+            for u in needed:
+                spots[u] = a.spot  # test override applies to all needed underlyings
+        else:
             try:
-                spot_q, t_spot = fetch_quote("^NSEI")
-                vix_q, _ = fetch_quote("^INDIAVIX")
+                for u in needed:
+                    q, t_q = fetch_quote(SYMBOL[u])
+                    if not a.force and now.timestamp() - t_q > 900:
+                        log(root, f"skip: {u} quote stale ({int(now.timestamp()-t_q)}s), market likely closed")
+                        return
+                    spots[u] = q
+                if vix is None:
+                    vix, _ = fetch_quote("^INDIAVIX")
             except Exception as e:
                 log(root, f"quote fetch FAILED: {type(e).__name__} {e}")
                 return
-            if not a.force and now.timestamp() - t_spot > 900:
-                log(root, f"skip: quote stale ({int(now.timestamp()-t_spot)}s old), market likely closed")
-                return
-            spot = spot if spot is not None else spot_q
-            vix = vix if vix is not None else vix_q
 
         total_closed = 0
         for s in have_pos:
-            closed, remaining = process_strategy(root, s, spot, vix, now)
+            closed, remaining = process_strategy(root, s, spots, vix, now)
             total_closed += closed
         if total_closed:
             subprocess.run([sys.executable, os.path.join(root, "dashboard", "build_dashboard.py")],

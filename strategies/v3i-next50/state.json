@@ -1,0 +1,15 @@
+{
+  "sim_name": "Nifty Next 50 news-directional, same-day exit (v3i-next50)",
+  "currency": "INR",
+  "starting_capital": 100000,
+  "cash": 100000,
+  "total_equity": 100000,
+  "realized_pnl": 0,
+  "unrealized_pnl": 0,
+  "open_positions": [],
+  "last_run": "2026-07-24T20:30:00+05:30",
+  "last_run_type": "initial setup (Next-50 v3i-style; first decision next morning run)",
+  "next_trade_id": 1,
+  "pending_plan": null,
+  "notes": "Created 2026-07-24. Trades Nifty Next 50 (NIFTYNXT50) options, lot 25, same-day exit. Same market-direction score as the Nifty books (US/FII/news market-wide; gap via GIFT Nifty proxy since Next-50 has no GIFT; India VIX as IV proxy - realized vols were ~equal 2019-2023; Nifty PCR as market proxy). Backtest 2019-2023 (gap+US+FII, scaled IV): +41.6%, +27.6% with 3% slippage, vs Nifty v3i +29.3%. Caveats: Next-50 options are thin (entry/exit slippage set to 3% to reflect this) and MONTHLY not weekly - watch fills and expiry cadence live."
+}
