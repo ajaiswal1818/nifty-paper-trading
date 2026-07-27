@@ -79,9 +79,18 @@ def close_position(root, sid, strat_dir, state, pos, value, spot, vix, now, reas
     lot, lots = pos.get("lot_size", 75), pos.get("lots", 1)
     legs = 2 if pos.get("short_strike") else 1
     fee = params.get("fee_per_leg", 100.0) * legs
-    proceeds = value * params.get("exit_slippage", 0.985) * lot * lots - fee
-    pnl = proceeds - pos["entry_cost_total"]
-    state["cash"] = round(state["cash"] + proceeds, 2)
+    if pos.get("side") == "short":
+        # Net-short structure (e.g. iron-condor side): buy back to close (pay).
+        # entry_cost_total is stored NEGATIVE for shorts (the credit was a cash inflow
+        # at entry). P&L = credit_received - buyback_cost.
+        txn = value * params.get("entry_slippage", 1.015) * lot * lots + fee  # buyback cost
+        pnl = (-pos["entry_cost_total"]) - txn
+        cash_delta = -txn
+    else:
+        txn = value * params.get("exit_slippage", 0.985) * lot * lots - fee   # sale proceeds
+        pnl = txn - pos["entry_cost_total"]
+        cash_delta = txn
+    state["cash"] = round(state["cash"] + cash_delta, 2)
     state["realized_pnl"] = round(state.get("realized_pnl", 0) + pnl, 2)
     state["open_positions"].remove(pos)
     strike_txt = (f"{pos['strike']}/{pos['short_strike']}" if pos.get("short_strike") else str(pos["strike"]))
@@ -89,7 +98,7 @@ def close_position(root, sid, strat_dir, state, pos, value, spot, vix, now, reas
         csv.writer(f).writerow([
             pos.get("trade_id", ""), "EXIT", now.strftime("%Y-%m-%d %H:%M"), "NIFTY",
             strike_txt, pos.get("expiry", ""), pos.get("option_type", ""), lots, lot,
-            f"{value:.2f}", f"{proceeds:.2f}", f"{fee:.0f}",
+            f"{value:.2f}", f"{txn:.2f}", f"{fee:.0f}",
             f"monitor: {reason}", "", spot, vix, f"{pnl:.2f}"])
     log(root, f"[{sid}] EXIT {pos.get('option_type','?').upper()} {strike_txt} "
               f"@ {value:.1f}pts pnl {pnl:+,.0f} ({reason})")
@@ -118,26 +127,46 @@ def process_strategy(root, entry, spots, vix, now):
                                 pos["option_type"], pos.get("short_strike"))
         entry_v = pos["entry_premium"]
         is_spread = bool(pos.get("short_strike"))
-        target = (params.get("target_spread") or params["target"]) if is_spread else params["target"]
         reason = None
-        if pos.get("trail_armed") and value <= entry_v:
-            reason = "trailing stop (breakeven)"
-        elif value <= (1 - params["stop"]) * entry_v:
-            reason = f"stop -{int(params['stop']*100)}%"
-        elif value >= target * entry_v:
-            reason = "target"
-        elif eod_now:
-            reason = "eod exit (intraday mode)"
+        if pos.get("side") == "short":
+            # Net-short: loss grows as the structure gets MORE expensive to buy back;
+            # profit as it decays. Stop/target are inverted vs a long position.
+            stop_mult = params.get("stop_mult", 2.0)       # buy back if value >= N x credit
+            tgt_cap = params.get("target_capture", 0.5)    # buy back after capturing X of credit
+            expiry_now = (params.get("expiry_exit") and now.date() >= d
+                          and (now.hour, now.minute) >= (15, 20))
+            if value >= stop_mult * entry_v:
+                reason = f"stop {stop_mult:g}x credit"
+            elif value <= (1 - tgt_cap) * entry_v:
+                reason = f"target {int(tgt_cap*100)}% capture"
+            elif expiry_now:
+                reason = "expiry close"
+            elif eod_now:
+                reason = "eod exit (intraday mode)"
+        else:
+            target = (params.get("target_spread") or params["target"]) if is_spread else params["target"]
+            if pos.get("trail_armed") and value <= entry_v:
+                reason = "trailing stop (breakeven)"
+            elif value <= (1 - params["stop"]) * entry_v:
+                reason = f"stop -{int(params['stop']*100)}%"
+            elif value >= target * entry_v:
+                reason = "target"
+            elif eod_now:
+                reason = "eod exit (intraday mode)"
         if reason:
             close_position(root, sid, strat_dir, state, pos, value, spot, vix, now, reason, params)
             closed += 1
             continue
-        if params.get("trail") and value >= params["trail"] * entry_v:
+        if pos.get("side") != "short" and params.get("trail") and value >= params["trail"] * entry_v:
             pos["trail_armed"] = True
         pos["current_premium"] = round(value, 2)
-    unreal = sum((p["current_premium"] - p["entry_premium"]) * p.get("lot_size", 75) * p.get("lots", 1)
+    # MTM: a long position adds its mark to equity; a short position is a liability
+    # (subtract its current buyback value) and profits when the mark falls below entry.
+    def _sgn(p):
+        return -1 if p.get("side") == "short" else 1
+    unreal = sum(_sgn(p) * (p["current_premium"] - p["entry_premium"]) * p.get("lot_size", 75) * p.get("lots", 1)
                  for p in state.get("open_positions", []))
-    marks = sum(p["current_premium"] * p.get("lot_size", 75) * p.get("lots", 1)
+    marks = sum(_sgn(p) * p["current_premium"] * p.get("lot_size", 75) * p.get("lots", 1)
                 for p in state.get("open_positions", []))
     state["unrealized_pnl"] = round(unreal, 2)
     state["total_equity"] = round(state["cash"] + marks, 2)
