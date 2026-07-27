@@ -1,0 +1,26 @@
+{
+  "version": "v-lv1",
+  "structure": "straddle",
+  "vix_entry_max": 13.0,
+  "lots": 2,
+  "size_cap": 0.30,
+  "no_opposite": false,
+  "eod_exit": true,
+  "max_positions": 2,
+  "stop": 0.99,
+  "target": 9.99,
+  "target_spread": 9.99,
+  "trail": 9.99,
+  "gap_chase": 1.0,
+  "lot_size": 75,
+  "fee_per_leg": 100.0,
+  "entry_slippage": 1.015,
+  "exit_slippage": 0.985,
+  "spread_width_pts": 0,
+  "_notes": "Long ATM straddle (call+put booked as two naked longs). Price exits disabled on purpose: stop/target/trail set unreachable; only eod_exit closes the legs. no_opposite off because the call+put pair is intentional.",
+  "tunable_bounds": {
+    "vix_entry_max": [12.0, 14.0],
+    "lots": [1, 3],
+    "size_cap": [0.20, 0.35]
+  }
+}
