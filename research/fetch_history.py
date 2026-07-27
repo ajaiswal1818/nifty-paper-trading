@@ -78,14 +78,19 @@ def sig(v, hi, lo):
     return 1 if v > hi else (-1 if v < lo else 0)
 
 
-def prior_value(sorted_dates, series, d):
-    """Most recent series value strictly before date d (for US close, FII, PCR)."""
-    prev = None
+def prior_value(sorted_dates, series, d, max_stale_days=7):
+    """Most recent series value strictly before date d (for US close, FII, PCR).
+    Returns None if the newest available value is more than max_stale_days old, so a
+    data series that has RUN OUT is reported as missing (signal 0) rather than silently
+    frozen at its last value (which would fake a constant signal, e.g. FII past its file)."""
+    prev, prev_date = None, None
     for dt in sorted_dates:
         if dt < d:
-            prev = series[dt]
+            prev, prev_date = series[dt], dt
         else:
             break
+    if prev_date is not None and (d - prev_date).days > max_stale_days:
+        return None
     return prev
 
 
