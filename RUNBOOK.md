@@ -56,8 +56,18 @@ End by messaging the user a compact summary:
 Keep it short. The user mainly wants the P&L numbers.
 
 ## Position object schema (open_positions[])
-{"trade_id": n, "option_type": "call|put", "strike": n, "short_strike": n|null, "expiry": "YYYY-MM-DD", "lots": 1, "lot_size": 75, "entry_premium": n, "entry_cost_total": n, "entry_date": "...", "current_premium": n, "sentiment_at_entry": n}
-(`short_strike` non-null means a debit spread; premium fields are the net structure value.)
+{"trade_id": n, "underlying": "NIFTY|NIFTYNXT50", "option_type": "call|put", "strike": n, "short_strike": n|null, "expiry": "YYYY-MM-DD", "lots": 1, "lot_size": n, "entry_premium": n, "entry_cost_total": n, "entry_date": "...", "current_premium": n, "sentiment_at_entry": n}
+(`short_strike` non-null means a debit spread; premium fields are the net structure value.
+`underlying` defaults to NIFTY; NIFTYNXT50 positions use lot_size 25 and are priced against the Next-50 index. Set it from the strategy's `params.json → underlying`.)
+
+## Multi-index strategies (e.g. v3i-next50)
+Some strategies trade a different index (params.json → `underlying`). For those:
+get the index spot for the RIGHT underlying (Nifty from GIFT/niftytrader; Next-50 from
+niftytrader/Yahoo ^NSMIDCP), use India VIX as the IV proxy for all, and score the same
+market-direction signals (for Next-50: gap via GIFT Nifty proxy, US/FII/news market-wide,
+Nifty PCR as proxy). Strikes and lot size come from that index; expiry cadence may differ
+(Next-50 is monthly). The intraday monitor already prices each position against its own
+underlying, so it just needs the position's `underlying` field set correctly at entry.
 
 ## Adding a strategy (for future sessions)
 Create `strategies/<new-id>/` with STRATEGY.md, params.json, state.json (same schema, own virtual capital), empty trade_log.csv/equity_curve.csv with headers, and add an entry to registry.json. Backtest it first with `engine/backtest.py` against `engine/data/`. Registry statuses: `active` (runs trade it), `candidate` (proposed by the research loop, never run until a human flips it to active), `paused`, `retired`.

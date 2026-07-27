@@ -5,6 +5,7 @@ proposes; only rows here are real. Newest first.
 
 | Date | Decision | Evidence / rationale |
 |---|---|---|
+| 2026-07-24 | Added `v3i-next50` (Nifty Next 50 options, same-day exit, lot 25) as live paper; monitor made multi-underlying | Backtest 2019-2023 (vol-corrected IV): +41.6%, +27.6% w/ 3% slippage, vs Nifty v3i +29.3%. Live-test the two unknowns: Next-50 liquidity and monthly expiry. See research/next50_report.md |
 | 2026-07-27 | Added `v-lv1` cheap-vol long straddle as a **candidate** (non-directional; ATM straddle when prior-day VIX<=13, same-day close, 2 lots, no price stop) | In-sample backtest May15-Jul27 (50 sessions): vix<=13/same-day/2-lot +25.3%, maxDD -6.6%, 12 trades. Baseline "always long vol" -16.5% (filter is the edge); mechanical stop flips +25% to -33% (disabled on purpose). Honest caveat: ~all P&L from the 08-Jul eruption — a tail-capture profile, not income. See research/proposal_longvol_straddle.md. Not activated; flip to active when ready. |
 | 2026-07-24 | Added `v3-strong` (entry >=3) as a live paper candidate alongside v3/v3i | Pre-registered 2019-2023 backtest: entry>=3 turned v3 hold from -21.4% to +13.1%, maxDD -57%->-13%; but only ~15 trades, needs forward confirmation |
 | 2026-07-23 | One-year (2019-2023) reconstruction backtest run (gap+US+FII, news+PCR omitted) | v3i same-day exit +29.3% vs v3 hold -21.4% out-of-sample (normal-VIX only); supports same-day-exit thesis. See research/year_backtest_report.md |

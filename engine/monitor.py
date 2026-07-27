@@ -231,7 +231,7 @@ def main():
         if total_closed:
             subprocess.run([sys.executable, os.path.join(root, "dashboard", "build_dashboard.py")],
                            check=False, capture_output=True)
-            log(root, f"pass done: spot {spot} vix {vix}, {total_closed} exit(s), dashboard rebuilt")
+            log(root, f"pass done: spots {spots} vix {vix}, {total_closed} exit(s), dashboard rebuilt")
     finally:
         try:
             os.remove(lock)
