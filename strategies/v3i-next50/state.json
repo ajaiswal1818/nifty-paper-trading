@@ -7,8 +7,8 @@
   "realized_pnl": 0,
   "unrealized_pnl": 0,
   "open_positions": [],
-  "last_run": "2026-07-28T18:31:00+05:30",
-  "last_run_type": "evening",
+  "last_run": "2026-07-28T21:58:00+05:30",
+  "last_run_type": "night",
   "next_trade_id": 1,
   "morning_score_today": {
     "date": "2026-07-28",
@@ -16,25 +16,25 @@
   },
   "pending_plan": {
     "bias": "neutral",
-    "score_draft": 0,
+    "score_draft": -1,
     "key_news": [
-      "US Mon 27-Jul midday: mixed - Dow +0.2%, S&P 500 -0.3%, Nasdaq -0.6%; chip selloff (Nvidia/ASML -4%) on China chipmaking-equipment news capped early gains",
-      "Oil tumbled ~7%, Brent below $90 on US-Iran strike pause/de-escalation - India-positive (inflation, trade deficit)",
-      "NIFTY closed 24,002.10 (+0.99%), reclaimed 24,000, snapped 5-day losing streak; India VIX 12.63 (-10%, calm regime)",
-      "FII -3,892.8cr / DII +5,453.6cr (24-Jul cash); PCR 0.83 (neutral band)",
-      "Busy week: Fed decision + Big Tech earnings. Tue 28-Jul is weekly expiry -> morning entries must use next weekly 04-Aug per rule 6",
-      "Signal draft: GIFT pending (0), S&P -0.3% (0), FII -1, news mildly positive oil+de-escalation (+1), PCR 0 => net 0, below entry threshold 2; VIX<16 normal"
+      "US Tue 28-Jul afternoon: Dow +1.0%, S&P 500 +0.3%, Nasdaq -0.1%; semiconductor gauge -6% on AI circular-financing worries; US consumer confidence 90.8 (labor perceptions softer)",
+      "Fed decision Wed 29-Jul ~11:30pm IST (AFTER India close) + Powell presser - India trades Wednesday before the outcome; event-risk day, expect range-bound positioning",
+      "Oil extended slide to ~$86.9/bbl on US-Iran peace talks - India-positive (inflation, trade deficit)",
+      "NIFTY closed 24,004.25 (+0.03%), expiry-day chop above 24,000; India VIX 12.56 (calm regime); monthly F&O expiry Thu 30-Jul",
+      "FII -1,688.2cr / DII +2,329.1cr (27-Jul cash figures; 28-Jul provisional not seen at night run); PCR 0.83 (neutral band)",
+      "Signal draft: GIFT pending (0), S&P +0.3% (0), FII -1, news mixed 0 (oil positive vs semi selloff + Fed event risk), PCR 0 => net -1; below entry threshold 2 (and 3 for v3-strong); VIX<16 normal regime"
     ],
-    "written_at": "2026-07-27T23:32:00+05:30"
+    "written_at": "2026-07-28T21:58:00+05:30"
   },
-  "notes": "Created 2026-07-24. Trades Nifty Next 50 (NIFTYNXT50) options, lot 25, same-day exit. Same market-direction score as the Nifty books (US/FII/news market-wide; gap via GIFT Nifty proxy since Next-50 has no GIFT; India VIX as IV proxy - realized vols were ~equal 2019-2023; Nifty PCR as market proxy). Backtest 2019-2023 (gap+US+FII, scaled IV): +41.6%, +27.6% with 3% slippage, vs Nifty v3i +29.3%. Caveats: Next-50 options are thin (entry/exit slippage set to 3% to reflect this) and MONTHLY not weekly - watch fills and expiry cadence live. | NIGHT 23:32: no positions; wrote pending_plan for 28-Jul (bias neutral, score_draft 0). No trades. | 28-Jul MORNING run: score -1, no entry, book FLAT. | 28-Jul EVENING run: book FLAT (score -1, below threshold 2). No Next-50 position; no eod exit needed. Market-wide: NIFTY 24,004.25 (+0.03%), VIX 12.52. Equity unchanged.",
+  "notes": "NIGHT run 28-Jul: book FLAT, no trades. Wrote pending_plan for 29-Jul: bias neutral, score_draft -1, below threshold 2. Reminder: July monthly Next-50 expiry ~Thu 30-Jul; any entry Wed must use August monthly (nearest >=2 days out).",
   "market_snapshot": {
     "nifty_spot": 24004.25,
     "nifty_prev_close": 23995.95,
-    "india_vix": 12.52,
+    "india_vix": 12.56,
     "pcr": 0.83,
     "fii_net_cash_cr": -1688.2,
     "dii_net_cash_cr": 2329.1,
-    "as_of": "2026-07-28 EVENING run (~18:31 IST). NIFTY closed 24,004.25 (+0.03%, expiry-day chop; open 23,971.25, range 23,954.60-24,041.15). India VIX 12.52 (calm). FII -1,688.2cr / DII +2,329.1cr are 27-Jul cash figures (28-Jul provisional not yet published at run time); PCR carried from morning. Book FLAT all day; no positions to mark, no exits. Next-50 spot not tracked while flat; India VIX used as IV proxy."
+    "as_of": "2026-07-28 NIGHT run (~21:58 IST). NIFTY closed 24,004.25 (+0.03%); India VIX 12.56 at close (evening run had 12.52 intraday print). US Tue afternoon: Dow +1.0%, S&P +0.3%, Nasdaq -0.1%, semis -6%. FII -1,688.2cr / DII +2,329.1cr are 27-Jul cash; PCR 0.83 carried. All books flat; no positions to mark."
   }
 }
