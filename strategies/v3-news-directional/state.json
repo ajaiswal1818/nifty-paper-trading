@@ -7,17 +7,17 @@
   "realized_pnl": 2144.7,
   "unrealized_pnl": 0,
   "open_positions": [],
-  "last_run": "2026-07-28T08:57:00+05:30",
-  "last_run_type": "morning",
+  "last_run": "2026-07-28T18:31:00+05:30",
+  "last_run_type": "evening",
   "next_trade_id": 5,
   "market_snapshot": {
-    "nifty_spot": 23978,
+    "nifty_spot": 24004.25,
     "nifty_prev_close": 23995.95,
-    "india_vix": 12.63,
+    "india_vix": 12.52,
     "pcr": 0.83,
-    "fii_net_cash_cr": -3892.8,
-    "dii_net_cash_cr": 5453.6,
-    "as_of": "2026-07-28 MORNING run (~08:57 IST). GIFT Nifty 23,978 (-0.08%, implied flat/slightly-negative open vs prev close ~23,996). US Mon 27-Jul close: Dow +0.51%, S&P500 +0.02% (flat), Nasdaq -0.18%; Nasdaq futures -0.83%, Nikkei -4.44%, Shanghai -1.39% (mixed/mildly-bearish Asia). India VIX 12.63 (<16 normal). PCR 0.83. FII -3,892.8cr (24-Jul latest). Tue 28-Jul = weekly/F&O expiry. Score -1 (below |2| threshold) -> NO trade. Book FLAT."
+    "fii_net_cash_cr": -1688.2,
+    "dii_net_cash_cr": 2329.1,
+    "as_of": "2026-07-28 EVENING run (~18:31 IST). NIFTY closed 24,004.25 (+0.03%, expiry-day chop; open 23,971.25, range 23,954.60-24,041.15). India VIX 12.52 (calm). FII -1,688.2cr / DII +2,329.1cr are 27-Jul cash figures (28-Jul provisional not yet published at run time); PCR carried from morning. Book FLAT all day; no positions to mark, no exits."
   },
   "pending_plan": {
     "bias": "neutral",
@@ -32,7 +32,7 @@
     ],
     "written_at": "2026-07-27T23:32:00+05:30"
   },
-  "notes": "28-Jul MORNING run: scored -1 (GIFT 23,978 -0.08% vs prev close (0); S&P500 +0.02% (0); FII -3,892.8cr 24-Jul (-1); news mixed - oil/de-escalation positives now priced, but Nasdaq fut -0.83%, Nikkei -4.44%, Shanghai -1.39%, gap-down implied, overnight bias mildly bearish (0); PCR 0.83 (0). VIX 12.63<=16 normal regime.) -> |score| 1 below entry threshold 2, NO new entry. Tue 28-Jul is weekly/F&O expiry; entries would use next weekly 04-Aug per rule 6, but no signal anyway. Book FLAT.",
+  "notes": "28-Jul EVENING run: book FLAT (no morning entry, score -1). NIFTY closed 24,004.25 (+0.03%), VIX 12.52. Nothing to mark or exit. Equity unchanged.",
   "morning_score_today": {
     "date": "2026-07-28",
     "score": -1
