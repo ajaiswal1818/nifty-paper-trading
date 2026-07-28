@@ -7,17 +7,17 @@
   "realized_pnl": -8691.42,
   "unrealized_pnl": 0,
   "open_positions": [],
-  "last_run": "2026-07-27T23:32:00+05:30",
-  "last_run_type": "night",
+  "last_run": "2026-07-28T08:57:00+05:30",
+  "last_run_type": "morning",
   "next_trade_id": 2,
   "market_snapshot": {
-    "nifty_spot": 24002.1,
-    "nifty_prev_close": 23767.45,
+    "nifty_spot": 23978,
+    "nifty_prev_close": 23995.95,
     "india_vix": 12.63,
     "pcr": 0.83,
     "fii_net_cash_cr": -3892.8,
     "dii_net_cash_cr": 5453.6,
-    "as_of": "2026-07-27 NIGHT run (~23:32 IST). No Indian session (market closed); US Mon midday mixed (Dow +0.2%, S&P -0.3%, Nasdaq -0.6%, chip selloff), Brent <$90 (-7%). Carrying today's NIFTY close 24,002.10 / VIX 12.63. Weekly expiry Tue 28-Jul. Book FLAT. NO trades on night runs."
+    "as_of": "2026-07-28 MORNING run (~08:57 IST). GIFT Nifty 23,978 (-0.08%, implied flat/slightly-negative open vs prev close ~23,996). US Mon 27-Jul close: Dow +0.51%, S&P500 +0.02% (flat), Nasdaq -0.18%; Nasdaq futures -0.83%, Nikkei -4.44%, Shanghai -1.39% (mixed/mildly-bearish Asia). India VIX 12.63 (<16 normal). PCR 0.83. FII -3,892.8cr (24-Jul latest). Tue 28-Jul = weekly/F&O expiry. Score -1 (needs |3| to enter) -> NO trade. Book FLAT."
   },
   "pending_plan": {
     "bias": "neutral",
@@ -32,10 +32,10 @@
     ],
     "written_at": "2026-07-27T23:32:00+05:30"
   },
-  "notes": "27-Jul MORNING run: scored +1 (score +1: GIFT +0.69% vs prev close (+1); S&P500 Fri +0.05% (0); FII -3,892.8cr 24-Jul (-1); news positive - Brent -7%, US-Iran de-escalation, global markets green, risk-on (+1); PCR 0.83 (0). VIX 14.03<=16 normal regime.) -> below entry threshold, NO new entry. Open put 23650 (28-Jul) was stopped out by the CLOUD MONITOR at 09:15 on live quotes: spot 23,941, mark 5.57 (-95.3% vs entry 118.71), well past the -35% stop; net proceeds Rs 311.83, trade P&L -Rs 8,691.42. Book now FLAT. Reconciliation note: the 08:53 morning run had also modeled this exit (assumed open 23,868, mark 8.48) before the monitor's commit arrived; that duplicate modeled fill was discarded during the git rebase and the monitor's live fill is authoritative. | EVENING 18:00: no open positions to mark or exit; recorded session close 24,002.10 / VIX ~12.63. No trades. Book flat. | NIGHT 23:32: no positions; wrote pending_plan for 28-Jul (bias neutral, score_draft 0). No trades.",
+  "notes": "28-Jul MORNING run: scored -1 (GIFT 0; S&P500 +0.02% 0; FII -3,892.8cr -1; news mixed 0; PCR 0.83 0). VIX 12.63<=16 normal. v3-strong needs |score|>=3 to enter; |1| well below -> NO entry. Book FLAT.",
   "morning_score_today": {
-    "date": "2026-07-27",
-    "score": 1
+    "date": "2026-07-28",
+    "score": -1
   },
   "last_monitor": "2026-07-27T09:15:03+05:30"
 }

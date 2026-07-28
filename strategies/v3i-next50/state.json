@@ -7,9 +7,13 @@
   "realized_pnl": 0,
   "unrealized_pnl": 0,
   "open_positions": [],
-  "last_run": "2026-07-27T23:32:00+05:30",
-  "last_run_type": "night",
+  "last_run": "2026-07-28T08:57:00+05:30",
+  "last_run_type": "morning",
   "next_trade_id": 1,
+  "morning_score_today": {
+    "date": "2026-07-28",
+    "score": -1
+  },
   "pending_plan": {
     "bias": "neutral",
     "score_draft": 0,
@@ -23,14 +27,14 @@
     ],
     "written_at": "2026-07-27T23:32:00+05:30"
   },
-  "notes": "Created 2026-07-24. Trades Nifty Next 50 (NIFTYNXT50) options, lot 25, same-day exit. Same market-direction score as the Nifty books (US/FII/news market-wide; gap via GIFT Nifty proxy since Next-50 has no GIFT; India VIX as IV proxy - realized vols were ~equal 2019-2023; Nifty PCR as market proxy). Backtest 2019-2023 (gap+US+FII, scaled IV): +41.6%, +27.6% with 3% slippage, vs Nifty v3i +29.3%. Caveats: Next-50 options are thin (entry/exit slippage set to 3% to reflect this) and MONTHLY not weekly - watch fills and expiry cadence live. | NIGHT 23:32: no positions; wrote pending_plan for 28-Jul (bias neutral, score_draft 0). No trades.",
+  "notes": "Created 2026-07-24. Trades Nifty Next 50 (NIFTYNXT50) options, lot 25, same-day exit. Same market-direction score as the Nifty books (US/FII/news market-wide; gap via GIFT Nifty proxy since Next-50 has no GIFT; India VIX as IV proxy - realized vols were ~equal 2019-2023; Nifty PCR as market proxy). Backtest 2019-2023 (gap+US+FII, scaled IV): +41.6%, +27.6% with 3% slippage, vs Nifty v3i +29.3%. Caveats: Next-50 options are thin (entry/exit slippage set to 3% to reflect this) and MONTHLY not weekly - watch fills and expiry cadence live. | NIGHT 23:32: no positions; wrote pending_plan for 28-Jul (bias neutral, score_draft 0). No trades. | 28-Jul MORNING run: market-direction score -1 (GIFT proxy 0; S&P500 +0.02% 0; FII -3,892.8cr -1; news mixed 0; Nifty PCR 0.83 0). VIX 12.63<=16 normal. |score| 1 below threshold 2 -> NO Next-50 entry. Book FLAT.",
   "market_snapshot": {
-    "nifty_spot": 24002.1,
-    "nifty_prev_close": 23767.45,
+    "nifty_spot": 23978,
+    "nifty_prev_close": 23995.95,
     "india_vix": 12.63,
     "pcr": 0.83,
     "fii_net_cash_cr": -3892.8,
     "dii_net_cash_cr": 5453.6,
-    "as_of": "2026-07-27 NIGHT run (~23:32 IST). No Indian session (market closed); US Mon midday mixed (Dow +0.2%, S&P -0.3%, Nasdaq -0.6%, chip selloff), Brent <$90 (-7%). Carrying today's NIFTY close 24,002.10 / VIX 12.63. Weekly expiry Tue 28-Jul. Book FLAT. NO trades on night runs."
+    "as_of": "2026-07-28 MORNING run (~08:57 IST). Score -1 (below |2| threshold) -> NO trade. GIFT Nifty 23,978 (proxy for Next-50 direction), S&P500 +0.02% flat, FII -3,892.8cr, Asia mixed/weak (Nikkei -4.44%). India VIX 12.63 (<16 normal, IV proxy). Book FLAT."
   }
 }
