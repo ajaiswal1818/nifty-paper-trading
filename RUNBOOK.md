@@ -30,7 +30,7 @@ All state lives in `~/Projects/nifty-paper-trading/` (request this folder via di
 5. Regenerate the dashboard: `python3 dashboard/build_dashboard.py`.
 
 ## Morning run only (08:45 IST)
-6. Per active strategy: score sentiment per its `STRATEGY.md` signal table (use `pending_plan` from last night's run plus fresh GIFT Nifty and overnight US data).
+6. Per active strategy: score sentiment per its `STRATEGY.md` signal table. Gather all overnight inputs directly in this run: the finalized US close (S&P 500, fully closed by ~02:00 IST), fresh GIFT Nifty vs previous NIFTY close, latest published FII/DII, and overnight/weekend global + India news (the Every-run step 2 fetch already covers these). This run is self-sufficient and does not depend on any prior night run.
 7. If the score triggers an entry and the strategy's constraints allow: enter per its rules (strike selection, spread vs naked, sizing cap, expiry choice all come from `STRATEGY.md`/`params.json`). Entry price = model value × entry_slippage + fee per leg. Update cash, open_positions, trade_log.csv, increment next_trade_id.
 8. Record the sentiment score and each signal's value in the trade_log reason field.
 9. **Data capture:** write the day's score into each active strategy's `state.json` as `"morning_score_today": {"date": "YYYY-MM-DD", "score": n}` — even on no-trade days. This is the hindsight-free record the weekly research loop depends on.
@@ -39,8 +39,12 @@ All state lives in `~/Projects/nifty-paper-trading/` (request this folder via di
 9. **Data capture:** append one row to `engine/data/sessions_2026.csv`: date, today's open, previous close, today's close, VIX close, previous VIX close, and the morning score recorded in `morning_score_today` (0 if the morning run was skipped). Never edit past rows. Add new weekly expiries to `engine/data/expiries.csv` as they become known.
 9b. **Flows capture:** append one row to `engine/data/flows_2026.csv`: `date,fii_net_cr,dii_net_cr` = today's session date and today's FII and DII net cash (₹ Cr) as published on this evening's data fetch (the same `fii_net_cash_cr` / `dii_net_cash_cr` written to `market_snapshot`). Use the provisional figure if final is not yet out; leave a field blank only if genuinely unavailable. One row per session, never edit past rows. This is the durable FII/DII series (state.json only holds the latest value and is overwritten each run); it is joined by date for signal backtests, exactly like `research/fii_history.csv`.
 
-## Night run only (22:00 IST)
-6. Search US market open/afternoon status and global news. Per active strategy, write a short `pending_plan` into its `state.json`: {"bias": bullish/bearish/neutral, "score_draft": n, "key_news": [...], "written_at": ...}. No trades.
+## (Removed 2026-07-27) Night run — retired as redundant
+The 22:00 IST night run only wrote a provisional `pending_plan` that the 08:45 morning run
+re-scored from scratch with better data (finalized US close, fresh GIFT Nifty, latest FII), and
+it placed no trades and captured no durable data. Its overnight-news gathering now lives in the
+morning run (step 6). Schedule is 08:45 + 18:00 only. Existing `pending_plan` fields in state.json
+are harmless leftovers and are simply no longer updated.
 
 ## Git (every run, after all file updates)
 Commit the cycle's changes: `git add -A && git commit -m "<run-type> YYYY-MM-DD: <one-line summary>"`.

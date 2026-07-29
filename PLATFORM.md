@@ -4,8 +4,9 @@ One-person platform for designing, backtesting, and paper-running trading strate
 **No real money, no broker connection. All fills are simulated.**
 
 ## How it runs
-Claude executes `RUNBOOK.md` on scheduled runs (08:45 / 18:00 / 22:00 IST): fetches live
+Claude executes `RUNBOOK.md` on scheduled runs (08:45 / 18:00 IST): fetches live
 market data, then updates every strategy marked `active` in `strategies/registry.json`.
+(The 22:00 night run was retired 2026-07-27 as redundant — the morning run re-scored it anyway.)
 Between runs, `engine/monitor.py` (5-min polls, Yahoo ^NSEI/^INDIAVIX) executes mechanical
 intraday exits. Judgment lives in the scheduled runs; arithmetic lives in the daemon.
 
