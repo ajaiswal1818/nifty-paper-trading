@@ -7,17 +7,17 @@
   "realized_pnl": -9388.75,
   "unrealized_pnl": 0,
   "open_positions": [],
-  "last_run": "2026-07-28T21:58:00+05:30",
-  "last_run_type": "night",
+  "last_run": "2026-07-29T08:52:00+05:30",
+  "last_run_type": "morning",
   "next_trade_id": 6,
   "market_snapshot": {
-    "nifty_spot": 24004.25,
-    "nifty_prev_close": 23995.95,
-    "india_vix": 12.56,
+    "nifty_spot": 24136,
+    "nifty_prev_close": 24004.25,
+    "india_vix": 12.64,
     "pcr": 0.83,
-    "fii_net_cash_cr": -1688.2,
-    "dii_net_cash_cr": 2329.1,
-    "as_of": "2026-07-28 NIGHT run (~21:58 IST). NIFTY closed 24,004.25 (+0.03%); India VIX 12.56 at close (evening run had 12.52 intraday print). US Tue afternoon: Dow +1.0%, S&P +0.3%, Nasdaq -0.1%, semis -6%. FII -1,688.2cr / DII +2,329.1cr are 27-Jul cash; PCR 0.83 carried. All books flat; no positions to mark."
+    "fii_net_cash_cr": 755.33,
+    "dii_net_cash_cr": 1664.16,
+    "as_of": "2026-07-29 MORNING run (~08:52 IST, pre-open). GIFT Nifty 24,231 (+132) => implied open ~24,136 (+0.55%% gap, ~+0.94%% vs prev close 24,004.25 incl futures premium). India VIX ~12.64 pre-open. Overnight US (Tue): Dow +1.03%%, S&P 500 +0.21%%, Nasdaq -0.22%%. Iran surprise attack overnight, Brent +4%%; Asia mixed (Nikkei -0.5%%, Kospi -2.1%%, HangSeng +1.5%%). FII +755.33cr / DII +1,664.16cr (28-Jul cash). PCR 0.83 carried. Fed decision tonight ~11:30pm IST. NOTE: one source shows 28-Jul close 23,985.35 vs our recorded 24,004.25; kept our series."
   },
   "pending_plan": {
     "bias": "neutral",
@@ -32,10 +32,10 @@
     ],
     "written_at": "2026-07-28T21:58:00+05:30"
   },
-  "notes": "NIGHT run 28-Jul: book FLAT, no trades. Wrote pending_plan for 29-Jul: bias neutral, score_draft -1, below threshold 2.",
+  "notes": "MORNING run 29-Jul: Signals 29-Jul: GIFT +0.94% (+1), S&P500 +0.21% (0), FII +755cr (0), news clearly negative - Iran surprise attack + Brent +4% + Fed event risk (-1), PCR 0.83 (0) => score 0. score 0 < entry 2: NO TRADE. Book flat.",
   "morning_score_today": {
-    "date": "2026-07-28",
-    "score": -1
+    "date": "2026-07-29",
+    "score": 0
   },
   "last_monitor": "2026-07-23T15:20:05+05:30"
 }
