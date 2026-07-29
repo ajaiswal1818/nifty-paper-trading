@@ -7,17 +7,17 @@
   "realized_pnl": -9388.75,
   "unrealized_pnl": 0,
   "open_positions": [],
-  "last_run": "2026-07-29T08:52:00+05:30",
-  "last_run_type": "morning",
+  "last_run": "2026-07-29T21:38:00+05:30",
+  "last_run_type": "evening",
   "next_trade_id": 6,
   "market_snapshot": {
-    "nifty_spot": 24136,
+    "nifty_spot": 24250.2,
     "nifty_prev_close": 24004.25,
-    "india_vix": 12.64,
+    "india_vix": 12.03,
     "pcr": 0.83,
-    "fii_net_cash_cr": 755.33,
-    "dii_net_cash_cr": 1664.16,
-    "as_of": "2026-07-29 MORNING run (~08:52 IST, pre-open). GIFT Nifty 24,231 (+132) => implied open ~24,136 (+0.55%% gap, ~+0.94%% vs prev close 24,004.25 incl futures premium). India VIX ~12.64 pre-open. Overnight US (Tue): Dow +1.03%%, S&P 500 +0.21%%, Nasdaq -0.22%%. Iran surprise attack overnight, Brent +4%%; Asia mixed (Nikkei -0.5%%, Kospi -2.1%%, HangSeng +1.5%%). FII +755.33cr / DII +1,664.16cr (28-Jul cash). PCR 0.83 carried. Fed decision tonight ~11:30pm IST. NOTE: one source shows 28-Jul close 23,985.35 vs our recorded 24,004.25; kept our series."
+    "fii_net_cash_cr": 2981.87,
+    "dii_net_cash_cr": 998.02,
+    "as_of": "2026-07-29 EVENING run (~21:40 IST). NIFTY closed 24,250.20 +264.85 (+1.10%), day range per morning implied open ~24,136; Sensex 77,654.60 +1.16%, Bank Nifty 57,205.90 +0.79%. India VIX 12.03 (-3.9%). IT +2.32% (3rd day, Jefferies upgrade), Metal +2.31%, FMCG +1.66%; broad-based rally ahead of Fed decision tonight (~11:30pm IST, status quo expected). FII +2,981.87cr / DII +998.02cr (29-Jul provisional). PCR 0.83 carried (fresh close PCR unavailable; niftytrader page stale, showing 24-Jul data). Monthly F&O expiry tomorrow Thu 30-Jul."
   },
   "pending_plan": {
     "bias": "neutral",
@@ -32,7 +32,7 @@
     ],
     "written_at": "2026-07-28T21:58:00+05:30"
   },
-  "notes": "MORNING run 29-Jul: Signals 29-Jul: GIFT +0.94% (+1), S&P500 +0.21% (0), FII +755cr (0), news clearly negative - Iran surprise attack + Brent +4% + Fed event risk (-1), PCR 0.83 (0) => score 0. score 0 < entry 2: NO TRADE. Book flat.",
+  "notes": "EVENING run 29-Jul: book flat all day (morning score 0 < entry threshold; no trade). NIFTY closed 24,250.20 (+1.10%), VIX 12.03. Nothing to mark, no exits. Equity unchanged.",
   "morning_score_today": {
     "date": "2026-07-29",
     "score": 0
