@@ -7,8 +7,8 @@
   "realized_pnl": 0,
   "unrealized_pnl": 0,
   "open_positions": [],
-  "last_run": "2026-07-30T09:05:00+05:30",
-  "last_run_type": "morning",
+  "last_run": "2026-07-30T18:05:00+05:30",
+  "last_run_type": "evening",
   "next_trade_id": 1,
   "morning_score_today": {
     "date": "2026-07-30",
@@ -27,14 +27,14 @@
     ],
     "written_at": "2026-07-28T21:58:00+05:30"
   },
-  "notes": "MORNING run 30-Jul: score 0 (GIFT flat ~+0.1%/-28 fut = 0, S&P -1.52% = -1, FII +2,982cr = +1, news mixed 0 [US hawkish-Fed selloff vs resilient India cues], PCR 0.83 = 0) < entry threshold; no trade. VIX 12.64 <16 normal regime. Book flat, nothing to reprice/exit.",
+  "notes": "EVENING run 30-Jul: book flat all day (morning score 0, no entry); nothing to reprice or exit. Marked to close 24,317.15, VIX ~12.16 (last available quote, official close unpublished at run time).",
   "market_snapshot": {
-    "nifty_spot": 24222.2,
+    "nifty_spot": 24317.15,
     "nifty_prev_close": 24250.2,
-    "india_vix": 12.64,
+    "india_vix": 12.16,
     "pcr": 0.83,
     "fii_net_cash_cr": 2981.87,
     "dii_net_cash_cr": 998.02,
-    "as_of": "2026-07-30 MORNING run (~09:05 IST). GIFT Nifty 24,275 (-28 vs fut prev close 24,303, snapshot 02:08 IST) -> implied NIFTY open ~24,222, flat/slightly negative vs close 24,250.20. US overnight: S&P 500 -1.52% to 7,316.15, Dow -1,100 (-2.2%), Nasdaq 100 entered correction; Fed hawkish hold at 3.50-3.75% (3 dissents preferred a HIKE), yields rose; oil UP on renewed Middle East tensions. India cues resilient: rupee firm, domestic outlets see range-bound/positive bias; India VIX ~12.64 live (prev close 12.03). FII +2,981.87cr / DII +998.02cr (29-Jul provisional). PCR 0.83 carried (niftytrader page stale again). Weekly expiry Tue 04-Aug."
+    "as_of": "2026-07-30 EVENING run (~18:05 IST). NIFTY closed 24,317.15 (+66.95, +0.28%), day range 24,213-~24,330, open 24,249.55; Sensex 77,928.15 (+273.55, +0.35%). Lacklustre post-Fed session: IT/auto led, realty/SMIDs lagged; investors watching West Asia geopolitics. India VIX ~12.16 last seen (open 12.01, high 12.235, low 11.30; official close not published on reachable sources). FII/DII 30-Jul provisional NOT yet published at run time (niftytrader still showing 29-Jul: FII +2,981.87cr / DII +998.02cr); carrying 29-Jul figures. PCR 0.83 carried (page stale). Weekly expiry Tue 04-Aug."
   }
 }
