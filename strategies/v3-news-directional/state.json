@@ -7,17 +7,17 @@
   "realized_pnl": 2144.7,
   "unrealized_pnl": 0,
   "open_positions": [],
-  "last_run": "2026-07-29T21:38:00+05:30",
-  "last_run_type": "evening",
+  "last_run": "2026-07-30T09:05:00+05:30",
+  "last_run_type": "morning",
   "next_trade_id": 5,
   "market_snapshot": {
-    "nifty_spot": 24250.2,
-    "nifty_prev_close": 24004.25,
-    "india_vix": 12.03,
+    "nifty_spot": 24222.2,
+    "nifty_prev_close": 24250.2,
+    "india_vix": 12.64,
     "pcr": 0.83,
     "fii_net_cash_cr": 2981.87,
     "dii_net_cash_cr": 998.02,
-    "as_of": "2026-07-29 EVENING run (~21:40 IST). NIFTY closed 24,250.20 +264.85 (+1.10%), day range per morning implied open ~24,136; Sensex 77,654.60 +1.16%, Bank Nifty 57,205.90 +0.79%. India VIX 12.03 (-3.9%). IT +2.32% (3rd day, Jefferies upgrade), Metal +2.31%, FMCG +1.66%; broad-based rally ahead of Fed decision tonight (~11:30pm IST, status quo expected). FII +2,981.87cr / DII +998.02cr (29-Jul provisional). PCR 0.83 carried (fresh close PCR unavailable; niftytrader page stale, showing 24-Jul data). Monthly F&O expiry tomorrow Thu 30-Jul."
+    "as_of": "2026-07-30 MORNING run (~09:05 IST). GIFT Nifty 24,275 (-28 vs fut prev close 24,303, snapshot 02:08 IST) -> implied NIFTY open ~24,222, flat/slightly negative vs close 24,250.20. US overnight: S&P 500 -1.52% to 7,316.15, Dow -1,100 (-2.2%), Nasdaq 100 entered correction; Fed hawkish hold at 3.50-3.75% (3 dissents preferred a HIKE), yields rose; oil UP on renewed Middle East tensions. India cues resilient: rupee firm, domestic outlets see range-bound/positive bias; India VIX ~12.64 live (prev close 12.03). FII +2,981.87cr / DII +998.02cr (29-Jul provisional). PCR 0.83 carried (niftytrader page stale again). Weekly expiry Tue 04-Aug."
   },
   "pending_plan": {
     "bias": "neutral",
@@ -32,9 +32,9 @@
     ],
     "written_at": "2026-07-28T21:58:00+05:30"
   },
-  "notes": "EVENING run 29-Jul: book flat all day (morning score 0 < entry threshold; no trade). NIFTY closed 24,250.20 (+1.10%), VIX 12.03. Nothing to mark, no exits. Equity unchanged.",
+  "notes": "MORNING run 30-Jul: score 0 (GIFT flat ~+0.1%/-28 fut = 0, S&P -1.52% = -1, FII +2,982cr = +1, news mixed 0 [US hawkish-Fed selloff vs resilient India cues], PCR 0.83 = 0) < entry threshold; no trade. VIX 12.64 <16 normal regime. Book flat, nothing to reprice/exit.",
   "morning_score_today": {
-    "date": "2026-07-29",
+    "date": "2026-07-30",
     "score": 0
   },
   "last_monitor": "2026-07-27T09:15:03+05:30"
