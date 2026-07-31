@@ -7,17 +7,17 @@
   "realized_pnl": -10548.17,
   "unrealized_pnl": 0,
   "open_positions": [],
-  "last_run": "2026-07-31T08:57:00+05:30",
-  "last_run_type": "morning",
+  "last_run": "2026-07-31T20:35:00+05:30",
+  "last_run_type": "evening",
   "next_trade_id": 7,
   "market_snapshot": {
-    "nifty_spot": 24388.0,
+    "nifty_spot": 24383.6,
     "nifty_prev_close": 24317.15,
-    "india_vix": 12.15,
+    "india_vix": 11.75,
     "pcr": 1.15,
-    "fii_net_cash_cr": 3624.0,
-    "dii_net_cash_cr": 998.02,
-    "as_of": "2026-07-31 MORNING run (~08:57 IST). US Thu 30-Jul finalized: S&P500 +1.70% (7,437.63), Nasdaq +2.8%, Dow +1.2%; Microsoft +16% record value gain post-Azure earnings, chips rebounded. Asia: Kospi +15% record (SK Hynix +25%, Samsung +20%) on AI rally. GIFT Nifty ~24,413 pre-open (+0.26%), implied NIFTY open ~24,388 (+0.29% vs prev close 24,317.15). India VIX prev close 12.155. FII 30-Jul provisional +3,624cr (DII 30-Jul unpublished at run time; 29-Jul DII +998cr carried). PCR Aug series ~1.1-1.2 per pre-market commentary. Watch: Brent >$90 (India-negative), Bank Nifty lag, LIC Q1 results. Weekly expiry Tue 04-Aug."
+    "fii_net_cash_cr": 277.0,
+    "dii_net_cash_cr": -1864.0,
+    "as_of": "2026-07-31 EVENING run (~20:35 IST). NIFTY closed 24,383.60 (+0.27%, +66.45), open 24,361 high 24,429; third straight up day, July +2.2%. India VIX 11.75 (-3.4% d/d, prev 12.16). Auto +1.64%, FinServ +1.31% (Bajaj Finance +8.32% Q1 beat), Energy +1.09%; IT -1.56% (TCS -2.72%), FMCG -1.05%. FII 31-Jul cash provisional +277cr (small buy; holds ~1.73L net short index futures); DII 31-Jul not yet published at run time - dii_net_cash_cr below is the 30-Jul final (-1,864cr; 30-Jul FII final +3,623.5cr). PCR ~1.15 is the morning Aug-series reading (evening not refetched). Brent ~$92.2 (>$90, India-negative watch). Global: STOXX record high, US futures up on Amazon/Microsoft earnings. Weekly expiry Tue 04-Aug."
   },
   "pending_plan": {
     "bias": "neutral",
@@ -32,7 +32,7 @@
     ],
     "written_at": "2026-07-28T21:58:00+05:30"
   },
-  "notes": "MORNING run 31-Jul: score +3, same entry as v3 (trade 6): NIFTY 24400 CE 04-Aug @126.68, 1 lot. Same-day book: EOD exit via monitor 15:20 (fallback evening run). NOTE: monitor last heartbeat seen 27-Jul in synced state; verify VM monitor is alive today.",
+  "notes": "EVENING run 31-Jul: flat. Monitor executed the eod exit at 15:20 (trade 6, 24400 CE @115.62, -1,159.42). Evening run is mark-only; nothing to do.",
   "morning_score_today": {
     "date": "2026-07-31",
     "score": 3
