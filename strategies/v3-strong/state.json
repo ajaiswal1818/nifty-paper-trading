@@ -2,22 +2,38 @@
   "sim_name": "NIFTY news-directional v3-strong (entry>=3, holds overnight)",
   "currency": "INR",
   "starting_capital": 100000,
-  "cash": 91308.58,
-  "total_equity": 91308.58,
+  "cash": 81707.58,
+  "total_equity": 91068.33,
   "realized_pnl": -8691.42,
-  "unrealized_pnl": 0,
-  "open_positions": [],
-  "last_run": "2026-07-30T18:05:00+05:30",
-  "last_run_type": "evening",
-  "next_trade_id": 2,
+  "unrealized_pnl": -140.25,
+  "open_positions": [
+    {
+      "trade_id": 2,
+      "underlying": "NIFTY",
+      "option_type": "call",
+      "strike": 24400,
+      "short_strike": null,
+      "expiry": "2026-08-04",
+      "lots": 1,
+      "lot_size": 75,
+      "entry_premium": 126.68,
+      "entry_cost_total": 9601.0,
+      "entry_date": "2026-07-31",
+      "current_premium": 124.81,
+      "sentiment_at_entry": 3
+    }
+  ],
+  "last_run": "2026-07-31T08:57:00+05:30",
+  "last_run_type": "morning",
+  "next_trade_id": 3,
   "market_snapshot": {
-    "nifty_spot": 24317.15,
-    "nifty_prev_close": 24250.2,
-    "india_vix": 12.16,
-    "pcr": 0.83,
-    "fii_net_cash_cr": 2981.87,
+    "nifty_spot": 24388.0,
+    "nifty_prev_close": 24317.15,
+    "india_vix": 12.15,
+    "pcr": 1.15,
+    "fii_net_cash_cr": 3624.0,
     "dii_net_cash_cr": 998.02,
-    "as_of": "2026-07-30 EVENING run (~18:05 IST). NIFTY closed 24,317.15 (+66.95, +0.28%), day range 24,213-~24,330, open 24,249.55; Sensex 77,928.15 (+273.55, +0.35%). Lacklustre post-Fed session: IT/auto led, realty/SMIDs lagged; investors watching West Asia geopolitics. India VIX ~12.16 last seen (open 12.01, high 12.235, low 11.30; official close not published on reachable sources). FII/DII 30-Jul provisional NOT yet published at run time (niftytrader still showing 29-Jul: FII +2,981.87cr / DII +998.02cr); carrying 29-Jul figures. PCR 0.83 carried (page stale). Weekly expiry Tue 04-Aug."
+    "as_of": "2026-07-31 MORNING run (~08:57 IST). US Thu 30-Jul finalized: S&P500 +1.70% (7,437.63), Nasdaq +2.8%, Dow +1.2%; Microsoft +16% record value gain post-Azure earnings, chips rebounded. Asia: Kospi +15% record (SK Hynix +25%, Samsung +20%) on AI rally. GIFT Nifty ~24,413 pre-open (+0.26%), implied NIFTY open ~24,388 (+0.29% vs prev close 24,317.15). India VIX prev close 12.155. FII 30-Jul provisional +3,624cr (DII 30-Jul unpublished at run time; 29-Jul DII +998cr carried). PCR Aug series ~1.1-1.2 per pre-market commentary. Watch: Brent >$90 (India-negative), Bank Nifty lag, LIC Q1 results. Weekly expiry Tue 04-Aug."
   },
   "pending_plan": {
     "bias": "neutral",
@@ -32,10 +48,10 @@
     ],
     "written_at": "2026-07-28T21:58:00+05:30"
   },
-  "notes": "EVENING run 30-Jul: book flat all day (morning score 0, no entry); nothing to reprice or exit. Marked to close 24,317.15, VIX ~12.16 (last available quote, official close unpublished at run time).",
+  "notes": "MORNING run 31-Jul: score +3 meets the strong threshold (>=3). First entry since the 24-Jul stop-out: BUY NIFTY 24400 CE 04-Aug @126.68 (trade 2), 1 lot naked, holds overnight per rules.",
   "morning_score_today": {
-    "date": "2026-07-30",
-    "score": 0
+    "date": "2026-07-31",
+    "score": 3
   },
   "last_monitor": "2026-07-27T09:15:03+05:30"
 }
