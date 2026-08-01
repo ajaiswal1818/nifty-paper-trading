@@ -7,8 +7,8 @@
   "realized_pnl": 0,
   "unrealized_pnl": 0,
   "open_positions": [],
-  "last_run": "2026-07-31T20:35:00+05:30",
-  "last_run_type": "evening",
+  "last_run": "2026-08-01T18:15:00+05:30",
+  "last_run_type": "evening-skip",
   "next_trade_id": 1,
   "morning_score_today": {
     "date": "2026-07-31",
@@ -27,7 +27,7 @@
     ],
     "written_at": "2026-07-28T21:58:00+05:30"
   },
-  "notes": "EVENING run 31-Jul: flat, no positions (morning skipped entry on sizing cap - monthly Next-50 ATM premium > 20% cap). Mark-only.",
+  "notes": "01-Aug (Sat) EVENING run: weekend, NSE closed - skipped per RUNBOOK step 3. No repricing, no trades, no equity row, no sessions/flows capture. Positions/marks unchanged from 31-Jul close. Next cycle: Monday 03-Aug morning (weekly expiry Tue 04-Aug).",
   "market_snapshot": {
     "nifty_spot": 24383.6,
     "nifty_prev_close": 24317.15,

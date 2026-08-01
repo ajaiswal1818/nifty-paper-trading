@@ -7,8 +7,8 @@
   "realized_pnl": -10548.17,
   "unrealized_pnl": 0,
   "open_positions": [],
-  "last_run": "2026-07-31T20:35:00+05:30",
-  "last_run_type": "evening",
+  "last_run": "2026-08-01T18:15:00+05:30",
+  "last_run_type": "evening-skip",
   "next_trade_id": 7,
   "market_snapshot": {
     "nifty_spot": 24383.6,
@@ -32,7 +32,7 @@
     ],
     "written_at": "2026-07-28T21:58:00+05:30"
   },
-  "notes": "EVENING run 31-Jul: flat. Monitor executed the eod exit at 15:20 (trade 6, 24400 CE @115.62, -1,159.42). Evening run is mark-only; nothing to do.",
+  "notes": "01-Aug (Sat) EVENING run: weekend, NSE closed - skipped per RUNBOOK step 3. No repricing, no trades, no equity row, no sessions/flows capture. Positions/marks unchanged from 31-Jul close. Next cycle: Monday 03-Aug morning (weekly expiry Tue 04-Aug).",
   "morning_score_today": {
     "date": "2026-07-31",
     "score": 3

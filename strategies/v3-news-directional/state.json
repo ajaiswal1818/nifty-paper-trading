@@ -23,8 +23,8 @@
       "sentiment_at_entry": 3
     }
   ],
-  "last_run": "2026-07-31T20:35:00+05:30",
-  "last_run_type": "evening",
+  "last_run": "2026-08-01T18:15:00+05:30",
+  "last_run_type": "evening-skip",
   "next_trade_id": 6,
   "market_snapshot": {
     "nifty_spot": 24383.6,
@@ -48,7 +48,7 @@
     ],
     "written_at": "2026-07-28T21:58:00+05:30"
   },
-  "notes": "EVENING run 31-Jul: HELD 24400 CE 04-Aug, marked 118.53 vs entry 126.68 (-6.4%). No exit: stop 82.34 (-35%) not hit, target 190.02 not hit, trail not armed (never +25%), no reversal (day was positive). Time stop applies Mon evening (expiry Tue 04-Aug).",
+  "notes": "01-Aug (Sat) EVENING run: weekend, NSE closed - skipped per RUNBOOK step 3. No repricing, no trades, no equity row, no sessions/flows capture. Positions/marks unchanged from 31-Jul close. Next cycle: Monday 03-Aug morning (weekly expiry Tue 04-Aug).",
   "morning_score_today": {
     "date": "2026-07-31",
     "score": 3
