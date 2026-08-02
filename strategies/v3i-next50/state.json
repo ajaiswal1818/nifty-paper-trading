@@ -7,8 +7,8 @@
  "realized_pnl": 0,
  "unrealized_pnl": 0,
  "open_positions": [],
- "last_run": "2026-08-02T09:15:00+05:30",
- "last_run_type": "morning-skip",
+ "last_run": "2026-08-02T19:48:00+05:30",
+ "last_run_type": "evening-skip",
  "next_trade_id": 1,
  "morning_score_today": {
   "date": "2026-07-31",
@@ -37,5 +37,5 @@
   "dii_net_cash_cr": -1864.0,
   "as_of": "2026-07-31 EVENING run (~20:35 IST). NIFTY closed 24,383.60 (+0.27%, +66.45), open 24,361 high 24,429; third straight up day, July +2.2%. India VIX 11.75 (-3.4% d/d, prev 12.16). Auto +1.64%, FinServ +1.31% (Bajaj Finance +8.32% Q1 beat), Energy +1.09%; IT -1.56% (TCS -2.72%), FMCG -1.05%. FII 31-Jul cash provisional +277cr (small buy; holds ~1.73L net short index futures); DII 31-Jul not yet published at run time - dii_net_cash_cr below is the 30-Jul final (-1,864cr; 30-Jul FII final +3,623.5cr). PCR ~1.15 is the morning Aug-series reading (evening not refetched). Brent ~$92.2 (>$90, India-negative watch). Global: STOXX record high, US futures up on Amazon/Microsoft earnings. Weekly expiry Tue 04-Aug. Next-50 31-Jul close not sourced this run (no open positions; mark-only)."
  },
- "skip_note": "2026-08-02 (Sunday): weekend, NSE closed; morning cycle skipped, no repricing or entries."
+ "skip_note": "2026-08-02: Sunday, NSE closed - evening cycle skipped, no repricing or state changes."
 }

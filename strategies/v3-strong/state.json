@@ -23,8 +23,8 @@
    "sentiment_at_entry": 3
   }
  ],
- "last_run": "2026-08-02T09:15:00+05:30",
- "last_run_type": "morning-skip",
+ "last_run": "2026-08-02T19:48:00+05:30",
+ "last_run_type": "evening-skip",
  "next_trade_id": 3,
  "market_snapshot": {
   "nifty_spot": 24383.6,
@@ -54,5 +54,5 @@
   "score": 3
  },
  "last_monitor": "2026-07-31T15:20:03+05:30",
- "skip_note": "2026-08-02 (Sunday): weekend, NSE closed; morning cycle skipped, no repricing or entries."
+ "skip_note": "2026-08-02: Sunday, NSE closed - evening cycle skipped, no repricing or state changes."
 }
