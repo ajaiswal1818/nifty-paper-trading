@@ -63,6 +63,44 @@ weekly fallback, so that comparison was apples-to-apples-wrong.
    week; live monthly contracts would hold longer with slower theta — the flip-only rule is
    effectively untested at its real horizon. 2026 OOS trade counts are single digits.
 
+## Exit redesign attempt (2026-08-03, user-directed) — also fails
+
+Rather than retune, the exit rule was rebuilt from the signal's properties. Three new opt-in
+engine primitives were added (`decay_exit`/`decay_level`, `max_hold`, `expiry_buffer`, plus
+per-underlying `expiries_file`); all default-off, and all 8 existing backtest baselines verified
+**byte-identical** after the change.
+
+**Design pre-registered before running** (each exit answers a distinct question, none chosen
+from results):
+
+| Exit | Rationale |
+|---|---|
+| `decay_exit`, level 1 | thesis-based: hold while the score still leans your way, exit when it stops. The honest "sell on sell signal" — unlike flip-only, it actually fires. |
+| `max_hold` 5 | staleness: a morning signal is not a 3-week thesis. |
+| `stop` 0.35 | risk: gap protection (the Jul 24→27 lesson on the Nifty books). |
+| `expiry_buffer` 7 | structure: never hold a monthly into its final week (extrinsic decay + gamma cliff). |
+
+Result — the pre-registered primary and its one-at-a-time sensitivities, real monthly expiries:
+
+| Config | 2019-23 | 2026 OOS |
+|---|---|---|
+| **PRIMARY** decay(1) + hold5 + stop35 + buf7 | **−29.2%** | **−31.5%** |
+| sens: decay_level 3 (strict) | −4.1% | −4.1% |
+| sens: max_hold 3 / 10 / none | −26.7% / +1.6% / +10.2% | −20.1% / −31.5% / −31.5% |
+| sens: expiry_buffer 1 | −34.1% | −8.8% |
+| sens: no stop / no decay / +target 1.5 | −21.6% / +1.0% / −21.9% | −34.5% / −33.3% / −23.2% |
+
+**Every single cell is negative out-of-sample.** The best (decay_level 3, −4.1%) is the variant
+that barely holds at all — it exits the next morning unless the score stays ≥3, i.e. it
+converges back toward the same-day book we already run. Meanwhile the in-sample column swings
+from −34% to +10% across exit tweaks on 3-6 trades: that spread is noise, and any config picked
+from it would be a fit to three trades.
+
+**Conclusion: the exit was not the bottleneck.** A well-designed exit cannot rescue an entry
+with no edge. This is consistent with the 2026-07-27 clean out-of-sample finding across the
+whole platform (all strategies negative on real 2026 signals) and with the live signal audit
+(overnight 7/10 is encouraging but n=10, and it has never been shown to persist beyond one day).
+
 ## Verdict
 
 Candidate built (`strategies/v3h-next50/`, registry status `candidate`), **not recommended for

@@ -23,7 +23,20 @@ DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
 
 DEFAULTS = dict(lot_size=75, fee_per_leg=100.0, entry_slippage=1.015,
                 exit_slippage=0.985, max_positions=2, spread_width_pts=150,
-                eod_exit=False)  # eod_exit: force-close everything at the close (intraday mode)
+                eod_exit=False,      # eod_exit: force-close everything at the close (intraday mode)
+                # --- opt-in exit primitives (added 2026-08-03, all default-off / legacy values,
+                # so every existing strategy takes the identical code path) ---
+                decay_exit=False,    # close at the open when the morning score no longer supports
+                                     # the position's direction at `decay_level` strength (the honest
+                                     # version of "exit on signal": the reason for the trade is gone)
+                decay_level=None,    # threshold for decay_exit; defaults to `entry` (strict:
+                                     # the signal must stay entry-strong). Set 1 for the loose
+                                     # reading (exit only when the score stops leaning your way).
+                max_hold=None,       # int: force-close at the close after N sessions held
+                                     # (a morning signal is not an N-week thesis)
+                expiry_buffer=1,     # close when days-to-expiry <= this (legacy 1; raise it on
+                                     # monthly contracts to keep extrinsic value / dodge the gamma cliff)
+                expiries_file="expiries.csv")  # per-underlying expiry calendar
 
 PRESETS = {
     "v1": dict(entry=2, flip=2, spread_vix=None, stop=0.30, target=1.50,
@@ -60,15 +73,19 @@ def load_sessions(start=None, end=None, data_file=None):
     return rows
 
 
-def load_expiries():
-    with open(os.path.join(DATA_DIR, "expiries.csv")) as f:
-        return [date.fromisoformat(r["expiry"]) for r in csv.DictReader(f)]
+def load_expiries(fname="expiries.csv"):
+    with open(os.path.join(DATA_DIR, fname)) as f:
+        rows = list(csv.DictReader(f))
+    key = "expiry" if rows and "expiry" in rows[0] else "date"
+    return [date.fromisoformat(r[key]) for r in rows]
 
 
 def run(days, params, cash=100000.0, positions=None, log=None, curve=None):
     """Simulate the rule set over sessions. Returns (cash, positions, log, curve).
     log rows: (date, when, action, detail, pnl_or_blank, reason)"""
-    expiries = load_expiries()
+    expiries = load_expiries(params.get("expiries_file", "expiries.csv"))
+    # monthly calendars need a wider search window than the weekly default
+    exp_window = 45 if params.get("expiries_file", "expiries.csv") != "expiries.csv" else 10
     LOT, FEE = params["lot_size"], params["fee_per_leg"]
     positions = positions if positions is not None else []
     log = log if log is not None else []
@@ -79,7 +96,7 @@ def run(days, params, cash=100000.0, positions=None, log=None, curve=None):
         # if the CSV doesn't cover this date (historical backtests), compute the
         # next weekly Thursday >= d+2 (NIFTY weekly expiry was Thursday 2019-2023).
         for e in expiries:
-            if 2 <= (e - d).days <= 10:
+            if 2 <= (e - d).days <= exp_window:
                 return e
         cand = d
         while (cand - d).days < 2 or cand.weekday() != 3:
@@ -111,6 +128,11 @@ def run(days, params, cash=100000.0, positions=None, log=None, curve=None):
                 close_pos(pos, o, vixp, d, "open", "trailing stop (breakeven)", 0.25); continue
             if abs(score) >= params["flip"] and ((score > 0) != (pos["type"] == "call")):
                 close_pos(pos, o, vixp, d, "open", f"signal reversal ({score:+d})", 0.25); continue
+            if params.get("decay_exit"):
+                lvl = params.get("decay_level") or params["entry"]
+                supported = (score >= lvl) if pos["type"] == "call" else (score <= -lvl)
+                if not supported:
+                    close_pos(pos, o, vixp, d, "open", f"signal decayed ({score:+d})", 0.25); continue
             if m <= (1 - params["stop"]) * pos["entry_v"]:
                 close_pos(pos, o, vixp, d, "open", f"stop -{int(params['stop']*100)}%", 0.25)
                 stopped_today = True; continue
@@ -165,7 +187,11 @@ def run(days, params, cash=100000.0, positions=None, log=None, curve=None):
                 close_pos(pos, c, vixc, d, "close", "eod exit (intraday mode)"); continue
             if params.get("weekend_exit") and d.weekday() == 4:
                 close_pos(pos, c, vixc, d, "close", "weekend exit (no Fri->Mon hold)"); continue
-            if (pos["expiry"] - d).days <= 1:
+            if params.get("max_hold") is not None:
+                pos["held"] = pos.get("held", 0) + 1
+                if pos["held"] >= params["max_hold"]:
+                    close_pos(pos, c, vixc, d, "close", f"max hold {params['max_hold']}d"); continue
+            if (pos["expiry"] - d).days <= params.get("expiry_buffer", 1):
                 close_pos(pos, c, vixc, d, "close", "time stop"); continue
             if params["trail"] and m >= params["trail"] * pos["entry_v"]:
                 pos["trail_armed"] = True

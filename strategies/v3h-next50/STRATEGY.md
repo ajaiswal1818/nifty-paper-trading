@@ -44,8 +44,17 @@ Full matrix in `research/next50_combo_backtest.md`. Headline, this exact config 
    edge over v3i-next50 disappears, since that config was run under the same wrong assumption.
 
 Variant E (identical but keeping stop 0.35) is the only member of this family with a defensible
-shape, because the stop is what actually closes positions. See the report for three alternative
-exit designs worth building before this family is retested.
+shape, because the stop is what actually closes positions.
+
+## Exit redesign attempted and failed (2026-08-03)
+A properly designed exit was built and pre-registered (thesis-decay + max-hold 5 + stop 0.35 +
+expiry-buffer 7, on true monthly expiries): **−29.2% in-sample, −31.5% out-of-sample.** All nine
+sensitivity variants are negative out-of-sample; the least-bad is the one that barely holds at
+all. The exit is not the bottleneck — the entry has no measurable edge on 2026 data. Full matrix
+in `research/next50_combo_backtest.md`.
+
+**Recommendation: do not activate.** Kept as a documented negative result so the idea isn't
+re-proposed from scratch.
 
 ## Known caveats
 1. The backtest engine assumes weekly expiries and force-closes at expiry−1; live Next-50 is
