@@ -7,8 +7,8 @@
  "realized_pnl": 0,
  "unrealized_pnl": 0,
  "open_positions": [],
- "last_run": "2026-08-03T09:58:00+05:30",
- "last_run_type": "morning",
+ "last_run": "2026-08-03T17:28:00+05:30",
+ "last_run_type": "evening",
  "next_trade_id": 1,
  "morning_score_today": {
   "date": "2026-08-03",
@@ -27,15 +27,17 @@
   ],
   "written_at": "2026-07-28T21:58:00+05:30"
  },
- "notes": "03-Aug MORNING: score +4 triggers CALL but NO ENTRY - sizing cap. ATM 71900 CE Aug-27 monthly model 991.69, x1.03 slippage = 1021.44 x 25 lot = 25,536 premium > 20% cap 20,000. One lot cannot fit the cap at current index level/IV; structural issue every day so far - flag for weekly research (e.g. spread or cap review, proposals only).",
+ "notes": "03-Aug EVENING: no position (morning +4 signal blocked by the 20% sizing cap - one ATM Next-50 lot costs ~25,536 vs the 20,000 cap). Book untouched at capital_start. Next-50 close not published on any reachable source at run time, so index_spot left blank in the equity row, consistent with prior evening rows. The structural cap block is now every session since 24-Jul - flagged again for the weekly research loop (proposals only).",
  "market_snapshot": {
-  "nifty_spot": 24545.0,
+  "nifty_spot": 24774.3,
   "nifty_prev_close": 24383.6,
-  "india_vix": 11.76,
+  "india_vix": 11.94,
   "pcr": 1.49,
-  "fii_net_cash_cr": 277.0,
-  "dii_net_cash_cr": -1610.31,
-  "as_of": "2026-08-03 MORNING run (~09:58 IST). NIFTY opened 24,529 (+0.60% gap vs prev close 24,383.60), 9:18 at 24,545 (+0.66%); Sensex +560. India VIX ~11.76 (prev 11.75). GIFT Nifty 24,630 pre-open (+1.0%). US Fri 31-Jul: S&P500 +0.70%, Dow +0.53%, Nasdaq +1.0%. Asia sharply lower Monday: Kospi -4%, Hang Seng -3.9%, Nikkei -1.8%. Brent -5% to ~$83.7 as Trump cancelled Iran attack and said Tehran talks begin Monday (Iran denies Hormuz-reopening deal). Rupee opened 95.14 (+25p). FII 31-Jul +277cr provisional; DII 30-Jul final -1,610cr (31-Jul DII not yet published). PCR ~1.49 (Aug-4 weekly, niftyinvest). RBI MPC + PMI data this week. Weekly expiry Tue 04-Aug; next weekly 11-Aug. Score +4: gap/GIFT +1, US +1, FII 0, news +1 (oil slump, positive open; offset Asia risk-off), PCR +1. Next-50 spot ~71,896.75 (coindataflow, vs 71,660 31-Jul morning)."
- },
- "skip_note": "2026-08-02: Sunday, NSE closed - evening cycle skipped, no repricing or state changes."
+  "fii_net_cash_cr": 277.48,
+  "dii_net_cash_cr": 2260.37,
+  "as_of": "2026-08-03 EVENING run (17:28 IST). NIFTY closed 24,774.30 (+390.70, +1.60% vs prev close 24,383.60); official open 24,572.70 (+189.10). Sensex closed 78,639.03 (+544.39, +0.70%). NOTE: from today NSE/BSE replaced the VWAP closing method with a Closing Auction Session (CAS) for F&O stocks; press reports attribute the unusually wide Nifty(+1.60%)/Sensex(+0.70%) divergence and the jump from the ~24,573 3:20pm print to the CAS close. Treat today's close as a regime-change print. India VIX ~11.94 (monitor 15:20 IST quote; no published close found - public VIX pages were serving stale snapshots). PCR 1.49 (morning figure; niftytrader served a cached page this evening, no fresh evening PCR). 4th straight up session on Brent -5% to ~$83.7 after Trump cancelled the Iran strike and opened Tehran talks. IT led (+3%); InterGlobe, Infosys, TCS top Nifty gainers; midcap +1.21%, smallcap +1.29%; Nifty Media the sole laggard. FII/DII for 03-Aug not yet published at run time; latest published is 31-Jul FII +277.48cr / DII +2,260.37cr (this corrects the morning run's DII -1,610.31cr, which was the 30-Jul figure). RBI MPC this week. Weekly expiry Tue 04-Aug; next weekly 11-Aug.",
+  "next50_spot": null,
+  "nifty_open": 24572.7,
+  "flows_as_of": "2026-07-31 (03-Aug not yet published)"
+ }
 }
