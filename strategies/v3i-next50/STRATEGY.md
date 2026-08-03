@@ -11,8 +11,16 @@ captures more move per correct call. Backtest 2019-2023 (gap+US+FII, vol-correct
 
 ## Instrument
 - Underlying: **Nifty Next 50** index options (Yahoo/data symbol `^NSMIDCP`). Lot size **25**.
-- Expiry: Next-50 options are **monthly**, not weekly. Use the nearest monthly expiry >= 2 days
-  out. (The backtest assumed weekly; monthly theta is slower, so watch live behavior.)
+- Expiry: Next-50 options are **monthly**, not weekly. Per NSE contract spec (circular
+  NSE/FAOP/68747): expiry is the **last Tuesday of the month** (declared holiday → previous
+  trading day). Use the nearest monthly expiry >= 2 days out, read from
+  `engine/data/expiries_next50.csv` — do NOT assume last-Thursday (legacy) or improvise.
+  (The backtest assumed weekly; monthly theta is slower, so watch live behavior.)
+- **Stale-quote guard:** never use a close from `engine/data/sessions_next50.csv` (or any
+  historical file) as the live spot — that file ends in 2023 reconstruction data and its last
+  rows have leaked into a live run before (03-Aug-2026, spot recorded = 16-Jul close). If no
+  live Next-50 quote is fetchable (niftytrader / Yahoo ^NSMIDCP), record the spot as blank and
+  make NO entry that run: no sizing on stale data.
 - Strikes: round to the nearest listed Next-50 strike (~100 spacing).
 
 ## Signals (same market-direction score as the Nifty books)

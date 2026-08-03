@@ -27,7 +27,7 @@
   ],
   "written_at": "2026-07-28T21:58:00+05:30"
  },
- "notes": "03-Aug EVENING: no position (morning +4 signal blocked by the 20% sizing cap - one ATM Next-50 lot costs ~25,536 vs the 20,000 cap). Book untouched at capital_start. Next-50 close not published on any reachable source at run time, so index_spot left blank in the equity row, consistent with prior evening rows. The structural cap block is now every session since 24-Jul - flagged again for the weekly research loop (proposals only).",
+ "notes": "03-Aug EVENING: no position (morning +4 signal blocked by the 20% sizing cap - one ATM Next-50 lot costs ~25,536 vs the 20,000 cap). Book untouched at capital_start. Next-50 close not published on any reachable source at run time, so index_spot left blank in the equity row, consistent with prior evening rows. The structural cap block is now every session since 24-Jul - flagged again for the weekly research loop (proposals only). | DATA CORRECTION 2026-08-03 (user session): the 09:58 morning equity row had recorded index_spot 71,896.75, which is the 16-Jul close from sessions_next50.csv (stale fallback, not a live quote) - spot blanked in the curve; the morning blocked-trade premium estimate (~25,536) was computed on that stale spot AND a wrong 27-Aug expiry assumption (NSE spec: Next-50 options expire the LAST TUESDAY of the month -> 25-Aug-2026), so treat it as indicative only. No position was opened; equity unaffected.",
  "market_snapshot": {
   "nifty_spot": 24774.3,
   "nifty_prev_close": 24383.6,
