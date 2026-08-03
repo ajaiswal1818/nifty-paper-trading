@@ -1,0 +1,27 @@
+{
+  "version": "v3h-next50",
+  "entry": 3,
+  "flip": 3,
+  "spread_vix": 16.0,
+  "stop": 1.0,
+  "target": 99.0,
+  "target_spread": null,
+  "trail": null,
+  "gap_chase": 0.009,
+  "highvix_entry": 4,
+  "no_opposite": true,
+  "cooldown": false,
+  "size_cap": 0.35,
+  "lot_size": 25,
+  "fee_per_leg": 100.0,
+  "entry_slippage": 1.03,
+  "exit_slippage": 0.97,
+  "max_positions": 2,
+  "spread_width_pts": 150,
+  "eod_exit": false,
+  "underlying": "NIFTYNXT50",
+  "_note": "stop=1.0 and target=99.0 are sentinels that DISABLE the mechanical stop/target: exits are signal-flip (|score|>=flip, opposite direction), expiry time-stop, and nothing else, per design. Variant E in research/next50_combo_backtest.md re-enables stop 0.35.",
+  "tunable_bounds": {
+    "gap_chase": [0.005, 0.015]
+  }
+}

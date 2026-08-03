@@ -82,6 +82,23 @@
       }
     },
     {
+      "id": "v3h-next50",
+      "name": "Nifty Next 50 strong-signal hold, exit on signal flip (v3h-next50)",
+      "status": "candidate",
+      "mode": "paper",
+      "underlying": "NIFTYNXT50",
+      "started": "2026-08-03",
+      "capital_start": 100000,
+      "run_schedule_ist": ["08:45", "18:00"],
+      "files": {
+        "rules": "STRATEGY.md",
+        "params": "params.json",
+        "state": "state.json",
+        "trade_log": "trade_log.csv",
+        "equity_curve": "equity_curve.csv"
+      }
+    },
+    {
       "id": "v-ic1",
       "name": "NIFTY iron condor income v-ic1 (net-short, defined risk, hold to expiry)",
       "status": "candidate",

@@ -1,0 +1,14 @@
+{
+ "sim_name": "Nifty Next 50 strong-signal hold, exit on signal flip (v3h-next50)",
+ "currency": "INR",
+ "starting_capital": 100000,
+ "cash": 100000,
+ "total_equity": 100000,
+ "realized_pnl": 0,
+ "unrealized_pnl": 0,
+ "open_positions": [],
+ "last_run": null,
+ "last_run_type": null,
+ "next_trade_id": 1,
+ "notes": "CANDIDATE - never run by scheduled cycles until a human flips registry status to active."
+}
