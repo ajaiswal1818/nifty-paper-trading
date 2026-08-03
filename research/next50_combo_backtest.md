@@ -15,6 +15,33 @@ supporting evidence. All runs: `engine/backtest.py --data research/sessions_next
 | **D. entry 3, hold, flip-only exit (the proposal)** | **+22.5%** (DD −28.5%, 16/19) | **−11.7%** (DD −27.2%, 3/3) |
 | E. entry 3, hold, flip + stop 0.35 (no target/trail) | **+41.0%** (DD −19.0%, 17/21) | −11.3% (DD −30.8%, 2/6) |
 
+## Follow-up (same day, after inspecting the trade list) — two findings that change the verdict
+
+**The 2026 window is Jan 2 → Jul 17 2026 (131 sessions, 25 of them |score| ≥ 3)** — the full
+year-to-date real-signal series, not a short tail. But printing D's trades exposes two problems:
+
+**(i) The "sell on sell signal only" rule never fired once.** All six 2026 exits are `time stop`
+(expiry−1); there is not a single `signal reversal` exit in the window. Every entry was a CALL,
+and no opposite ≥3 score arrived while a position was open. So what the matrix actually tested
+is **"hold to expiry,"** not "hold until the signal flips." The flip rule is untested, not
+validated — on this data it is inert.
+
+**(ii) Corrected to the real monthly expiry, it gets much worse.** The runs above used the
+engine's weekly-Thursday fallback (`expiries.csv` doesn't cover Jan-Jun 2026), so modeled holds
+were 3-7 days. Re-running D with true Next-50 monthlies (last Tuesday, per the spec pinned
+2026-08-03):
+
+| D, 2026 OOS | Result | maxDD | W/L | Trades |
+|---|---|---|---|---|
+| weekly-expiry fallback (as first run) | −11.7% | −27.2% | 3/3 | 6 |
+| **true monthly expiry (correct)** | **−38.3%** | **−39.9%** | **0/3** | 3 |
+
+Holding a monthly contract to expiry−1 means each position sits ~2-4 weeks, blocks re-entry
+that whole time (`no_opposite` + max one per direction), and gives back all extrinsic value:
+two of the three trades expired near worthless (0.4 and 3.3 pts). The one apparent advantage
+over config A therefore does not survive the expiry correction — A was run under the same
+weekly fallback, so that comparison was apples-to-apples-wrong.
+
 ## Reading
 
 1. **No variant is positive on the clean 2026 out-of-sample window.** The proposal (D) loses
