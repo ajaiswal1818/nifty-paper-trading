@@ -66,9 +66,23 @@ weekly fallback, so that comparison was apples-to-apples-wrong.
 ## Verdict
 
 Candidate built (`strategies/v3h-next50/`, registry status `candidate`), **not recommended for
-activation on this evidence**: it loses on the only clean out-of-sample data we have, and its
-best property (beating config A out-of-sample) is an argument about A's weakness, not D's
-strength. If the user still wants a live A/B leg from this family, variant E (with the stop) is
-the defensible one. Suggested next check before any activation: 4–6 more weeks of live morning
-scores, then re-run this matrix on 2026-only data that post-dates the proposal (hard rule 5:
-never evaluate on the data that suggested it).
+activation on this evidence**: it loses on the only clean out-of-sample data we have (−38.3%
+once the expiry is corrected), its headline rule never triggers on that data, and its one
+apparent advantage over config A was an artifact of a shared wrong-expiry assumption.
+
+Before this family is worth re-testing, the **exit rule needs redesigning, not re-tuning**:
+"flip-only" degenerates to "hold to expiry" on monthly contracts, which is a theta-donation
+strategy, not a directional one. Candidate exit designs worth building instead — all human
+redesigns, not tunables:
+
+1. flip **or** stop 0.35 (variant E) — the stop is what actually closes positions;
+2. flip **or** a max-hold of N sessions (e.g. 3-5), so a dead signal doesn't ride to expiry;
+3. flip **or** roll — exit at expiry−7 rather than expiry−1 to keep extrinsic value.
+
+Also worth noting the raw entry side: 25 sessions in 2026 hit |score| ≥ 3, but only 3-6 became
+trades (gap-chase filter + one-position-per-direction blocking). Whatever edge the strong-signal
+gate has, the current plumbing expresses very little of it.
+
+Any future evaluation must use `engine/data/expiries_next50.csv` (or the last-Tuesday rule) —
+the engine's default weekly-Thursday fallback silently produces a different, more favorable
+strategy than the one that would trade live.

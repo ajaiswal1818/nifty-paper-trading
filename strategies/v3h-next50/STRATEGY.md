@@ -29,13 +29,23 @@ Full matrix in `research/next50_combo_backtest.md`. Headline, this exact config 
 
 | Window | Result | maxDD | W/L |
 |---|---|---|---|
-| 2019-2023 reconstruction | **+22.5%** | −28.5% | 16/19 |
-| 2026 real-signal out-of-sample | **−11.7%** | −27.2% | 3/3 |
+| 2019-2023 reconstruction | +22.5% | −28.5% | 16/19 |
+| 2026 real-signal OOS (Jan 2–Jul 17), weekly-expiry fallback | −11.7% | −27.2% | 3/3 |
+| **2026 real-signal OOS, TRUE monthly expiry (last Tue)** | **−38.3%** | **−39.9%** | **0/3** |
 
-The combination beats the current v3i-next50 config on the clean 2026 window (−11.7% vs
-−38.7%) — but it still **loses** there, as does every variant tested. The 2019-23 gain does
-not survive out-of-sample. Variant E (same but stop 0.35 kept) dominates in-sample (+41.0%)
-and ties OOS (−11.3%): if this is ever activated, the no-stop choice deserves a rethink.
+**Two findings that undercut the design, both from the 2026 trade list:**
+
+1. **The flip exit never fires.** All 2026 exits were expiry time-stops; no opposite ≥3 score
+   ever arrived while a position was open. On real monthly contracts "exit on signal flip"
+   degenerates to **"hold to expiry"** — positions sit 2-4 weeks, block re-entry, and bleed all
+   extrinsic value (two of three expired at 0.4 and 3.3 pts).
+2. **The expiry assumption was doing the work.** The −11.7% run used the engine's weekly-Thursday
+   fallback (3-7 day holds). Corrected to real monthlies it is −38.3%, 0 wins — and the apparent
+   edge over v3i-next50 disappears, since that config was run under the same wrong assumption.
+
+Variant E (identical but keeping stop 0.35) is the only member of this family with a defensible
+shape, because the stop is what actually closes positions. See the report for three alternative
+exit designs worth building before this family is retested.
 
 ## Known caveats
 1. The backtest engine assumes weekly expiries and force-closes at expiry−1; live Next-50 is
