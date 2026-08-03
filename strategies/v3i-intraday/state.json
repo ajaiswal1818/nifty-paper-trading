@@ -2,22 +2,38 @@
  "sim_name": "NIFTY news-driven directional v3i (same-day exit)",
  "currency": "INR",
  "starting_capital": 100000,
- "cash": 89451.83,
- "total_equity": 89451.83,
+ "cash": 76100.83,
+ "total_equity": 89777.83,
  "realized_pnl": -10548.17,
- "unrealized_pnl": 0,
- "open_positions": [],
- "last_run": "2026-08-02T19:48:00+05:30",
- "last_run_type": "evening-skip",
- "next_trade_id": 7,
+ "unrealized_pnl": 426.0,
+ "open_positions": [
+  {
+   "trade_id": 7,
+   "underlying": "NIFTY",
+   "option_type": "call",
+   "strike": 24550,
+   "short_strike": null,
+   "expiry": "2026-08-11",
+   "lots": 1,
+   "lot_size": 75,
+   "entry_premium": 176.68,
+   "entry_cost_total": 13351.0,
+   "entry_date": "2026-08-03",
+   "current_premium": 182.36,
+   "sentiment_at_entry": 4
+  }
+ ],
+ "last_run": "2026-08-03T09:58:00+05:30",
+ "last_run_type": "morning",
+ "next_trade_id": 8,
  "market_snapshot": {
-  "nifty_spot": 24383.6,
-  "nifty_prev_close": 24317.15,
-  "india_vix": 11.75,
-  "pcr": 1.15,
+  "nifty_spot": 24545.0,
+  "nifty_prev_close": 24383.6,
+  "india_vix": 11.76,
+  "pcr": 1.49,
   "fii_net_cash_cr": 277.0,
-  "dii_net_cash_cr": -1864.0,
-  "as_of": "2026-07-31 EVENING run (~20:35 IST). NIFTY closed 24,383.60 (+0.27%, +66.45), open 24,361 high 24,429; third straight up day, July +2.2%. India VIX 11.75 (-3.4% d/d, prev 12.16). Auto +1.64%, FinServ +1.31% (Bajaj Finance +8.32% Q1 beat), Energy +1.09%; IT -1.56% (TCS -2.72%), FMCG -1.05%. FII 31-Jul cash provisional +277cr (small buy; holds ~1.73L net short index futures); DII 31-Jul not yet published at run time - dii_net_cash_cr below is the 30-Jul final (-1,864cr; 30-Jul FII final +3,623.5cr). PCR ~1.15 is the morning Aug-series reading (evening not refetched). Brent ~$92.2 (>$90, India-negative watch). Global: STOXX record high, US futures up on Amazon/Microsoft earnings. Weekly expiry Tue 04-Aug."
+  "dii_net_cash_cr": -1610.31,
+  "as_of": "2026-08-03 MORNING run (~09:58 IST). NIFTY opened 24,529 (+0.60% gap vs prev close 24,383.60), 9:18 at 24,545 (+0.66%); Sensex +560. India VIX ~11.76 (prev 11.75). GIFT Nifty 24,630 pre-open (+1.0%). US Fri 31-Jul: S&P500 +0.70%, Dow +0.53%, Nasdaq +1.0%. Asia sharply lower Monday: Kospi -4%, Hang Seng -3.9%, Nikkei -1.8%. Brent -5% to ~$83.7 as Trump cancelled Iran attack and said Tehran talks begin Monday (Iran denies Hormuz-reopening deal). Rupee opened 95.14 (+25p). FII 31-Jul +277cr provisional; DII 30-Jul final -1,610cr (31-Jul DII not yet published). PCR ~1.49 (Aug-4 weekly, niftyinvest). RBI MPC + PMI data this week. Weekly expiry Tue 04-Aug; next weekly 11-Aug. Score +4: gap/GIFT +1, US +1, FII 0, news +1 (oil slump, positive open; offset Asia risk-off), PCR +1."
  },
  "pending_plan": {
   "bias": "neutral",
@@ -32,10 +48,10 @@
   ],
   "written_at": "2026-07-28T21:58:00+05:30"
  },
- "notes": "01-Aug (Sat) EVENING run: weekend, NSE closed - skipped per RUNBOOK step 3. No repricing, no trades, no equity row, no sessions/flows capture. Positions/marks unchanged from 31-Jul close. Next cycle: Monday 03-Aug morning (weekly expiry Tue 04-Aug).",
+ "notes": "03-Aug MORNING: score +4 -> BUY NIFTY 24550 CE 11-Aug (naked, VIX<16), entry 176.68 (model 174.07 x1.015 +100 fee), cost 13,351.00, premium within 20% cap (13,251 <= 17,890). Same-day book: monitor exits by 15:20, evening run fallback.",
  "morning_score_today": {
-  "date": "2026-07-31",
-  "score": 3
+  "date": "2026-08-03",
+  "score": 4
  },
  "last_monitor": "2026-07-31T15:20:03+05:30",
  "skip_note": "2026-08-02: Sunday, NSE closed - evening cycle skipped, no repricing or state changes."
