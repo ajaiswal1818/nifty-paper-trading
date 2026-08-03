@@ -11,7 +11,7 @@
   "highvix_entry": 4,
   "no_opposite": true,
   "cooldown": false,
-  "size_cap": 0.2,
+  "size_cap": 0.35,
   "lot_size": 25,
   "fee_per_leg": 100.0,
   "entry_slippage": 1.03,
