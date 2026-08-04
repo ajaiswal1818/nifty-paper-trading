@@ -1,59 +1,43 @@
 {
- "sim_name": "NIFTY news-driven directional v3i (same-day exit)",
- "currency": "INR",
- "starting_capital": 100000,
- "cash": 77800.1,
- "total_equity": 90507.35,
- "realized_pnl": -9202.15,
- "unrealized_pnl": -190.5,
- "open_positions": [
-  {
-   "trade_id": 8,
-   "underlying": "NIFTY",
-   "option_type": "call",
-   "strike": 24650,
-   "short_strike": null,
-   "expiry": "2026-08-11",
-   "lots": 1,
-   "lot_size": 75,
-   "entry_premium": 171.97,
-   "entry_cost_total": 12997.75,
-   "entry_date": "2026-08-04 08:45",
-   "current_premium": 169.43,
-   "sentiment_at_entry": 2
-  }
- ],
- "last_run": "2026-08-04T08:45:00+05:30",
- "last_run_type": "morning",
- "next_trade_id": 9,
- "market_snapshot": {
-  "nifty_spot": 24639.0,
-  "nifty_prev_close": 24774.3,
-  "india_vix": 11.93,
-  "pcr": 1.5728,
-  "fii_net_cash_cr": 922.0,
-  "dii_net_cash_cr": 1571.0,
-  "as_of": "2026-08-04 MORNING run (08:45 IST), pre-open. GIFT Nifty 24,639.00 @08:09 IST (+0.19% vs its own prev close 24,592.50); Nifty Aug futures 24,664.90 (+212.30, +0.87%). NIFTY prev close (03-Aug official) 24,774.30 - the first Closing-Auction-Session (CAS) close; the 3:20pm print was ~24,573-24,595 and Aug futures now trade ~110 pts BELOW that spot close, so 24,774.30 is very likely CAS-inflated. Scored mechanically off the official prev close as the rules require: GIFT/prev-close = -0.55% -> gap signal -1. On the 3:20pm ~24,595 print the gap would be +0.18% (0) and the net score +3 rather than +2. Flagged for the weekly research loop; NOT changed here. India VIX 11.93 (03-Aug close, +0.17); PCR (OI) 1.5728 for the 03-Aug session; max pain 24,550. FII/DII 03-Aug now published: FII +922 Cr cash (5th straight buy day, cumulative +8,560 Cr) but net SHORT 1,50,816 index-futures contracts (niftytrader classifies it Profit Lock / hedge); DII +1,571 Cr. Overnight: S&P 500 +1.48% to 7,600.50 (Amazon +4.6%, past $3trn), Dow +1.21%, Nasdaq +1.92%; Europe firm (DAX +1.42%, CAC +1.22%, FTSE -0.16%); Asia mixed this morning (Nikkei -0.94%, Shanghai -0.59%, Hang Seng +0.48%). Brent soft on Trump-Tehran talks. RBI MPC outcome Wed 05-Aug - event risk for any overnight hold. Weekly expiry is TODAY (04-Aug), so entries use the 11-Aug weekly. DATA NOTE: niftytrader /nifty-today and /india-vix again served stale snapshots (24-Jul and 31-Jul data); spot/VIX/PCR were taken from /nifty-put-call-ratio and /fii-dii-data, which were current.",
-  "nifty_open": null,
-  "flows_as_of": "2026-08-03"
- },
- "pending_plan": {
-  "bias": "neutral",
-  "score_draft": -1,
-  "key_news": [
-   "US Tue 28-Jul afternoon: Dow +1.0%, S&P 500 +0.3%, Nasdaq -0.1%; semiconductor gauge -6% on AI circular-financing worries; US consumer confidence 90.8 (labor perceptions softer)",
-   "Fed decision Wed 29-Jul ~11:30pm IST (AFTER India close) + Powell presser - India trades Wednesday before the outcome; event-risk day, expect range-bound positioning",
-   "Oil extended slide to ~$86.9/bbl on US-Iran peace talks - India-positive (inflation, trade deficit)",
-   "NIFTY closed 24,004.25 (+0.03%), expiry-day chop above 24,000; India VIX 12.56 (calm regime); monthly F&O expiry Thu 30-Jul",
-   "FII -1,688.2cr / DII +2,329.1cr (27-Jul cash figures; 28-Jul provisional not seen at night run); PCR 0.83 (neutral band)",
-   "Signal draft: GIFT pending (0), S&P +0.3% (0), FII -1, news mixed 0 (oil positive vs semi selloff + Fed event risk), PCR 0 => net -1; below entry threshold 2 (and 3 for v3-strong); VIX<16 normal regime"
-  ],
-  "written_at": "2026-07-28T21:58:00+05:30"
- },
- "notes": "04-Aug MORNING: score +2 (>= entry threshold 2) -> BOUGHT 1 lot NIFTY 24650 CE 11-Aug @ 171.97 (cost Rs 12,997.75 vs 20 pct cap Rs 18,159.57). Same-day mandate: the cloud monitor closes this at/near 15:20 IST; the 18:00 run is the fallback. Scoring caveat: the -1 gap signal comes off the CAS-distorted 03-Aug close of 24,774.30; on the 3:20pm ~24,595 print the score would be +3. Rules applied as written; raised for the weekly research loop only.",
- "morning_score_today": {
-  "date": "2026-08-04",
-  "score": 2
- },
- "last_monitor": "2026-08-03T15:20:03+05:30"
+  "sim_name": "NIFTY news-driven directional v3i (same-day exit)",
+  "currency": "INR",
+  "starting_capital": 100000,
+  "cash": 85949.33,
+  "total_equity": 85949.33,
+  "realized_pnl": -14050.67,
+  "unrealized_pnl": 0,
+  "open_positions": [],
+  "last_run": "2026-08-04T08:45:00+05:30",
+  "last_run_type": "morning",
+  "next_trade_id": 9,
+  "market_snapshot": {
+    "nifty_spot": 24639.0,
+    "nifty_prev_close": 24774.3,
+    "india_vix": 11.93,
+    "pcr": 1.5728,
+    "fii_net_cash_cr": 922.0,
+    "dii_net_cash_cr": 1571.0,
+    "as_of": "2026-08-04 MORNING run (08:45 IST), pre-open. GIFT Nifty 24,639.00 @08:09 IST (+0.19% vs its own prev close 24,592.50); Nifty Aug futures 24,664.90 (+212.30, +0.87%). NIFTY prev close (03-Aug official) 24,774.30 - the first Closing-Auction-Session (CAS) close; the 3:20pm print was ~24,573-24,595 and Aug futures now trade ~110 pts BELOW that spot close, so 24,774.30 is very likely CAS-inflated. Scored mechanically off the official prev close as the rules require: GIFT/prev-close = -0.55% -> gap signal -1. On the 3:20pm ~24,595 print the gap would be +0.18% (0) and the net score +3 rather than +2. Flagged for the weekly research loop; NOT changed here. India VIX 11.93 (03-Aug close, +0.17); PCR (OI) 1.5728 for the 03-Aug session; max pain 24,550. FII/DII 03-Aug now published: FII +922 Cr cash (5th straight buy day, cumulative +8,560 Cr) but net SHORT 1,50,816 index-futures contracts (niftytrader classifies it Profit Lock / hedge); DII +1,571 Cr. Overnight: S&P 500 +1.48% to 7,600.50 (Amazon +4.6%, past $3trn), Dow +1.21%, Nasdaq +1.92%; Europe firm (DAX +1.42%, CAC +1.22%, FTSE -0.16%); Asia mixed this morning (Nikkei -0.94%, Shanghai -0.59%, Hang Seng +0.48%). Brent soft on Trump-Tehran talks. RBI MPC outcome Wed 05-Aug - event risk for any overnight hold. Weekly expiry is TODAY (04-Aug), so entries use the 11-Aug weekly. DATA NOTE: niftytrader /nifty-today and /india-vix again served stale snapshots (24-Jul and 31-Jul data); spot/VIX/PCR were taken from /nifty-put-call-ratio and /fii-dii-data, which were current.",
+    "nifty_open": null,
+    "flows_as_of": "2026-08-03"
+  },
+  "pending_plan": {
+    "bias": "neutral",
+    "score_draft": -1,
+    "key_news": [
+      "US Tue 28-Jul afternoon: Dow +1.0%, S&P 500 +0.3%, Nasdaq -0.1%; semiconductor gauge -6% on AI circular-financing worries; US consumer confidence 90.8 (labor perceptions softer)",
+      "Fed decision Wed 29-Jul ~11:30pm IST (AFTER India close) + Powell presser - India trades Wednesday before the outcome; event-risk day, expect range-bound positioning",
+      "Oil extended slide to ~$86.9/bbl on US-Iran peace talks - India-positive (inflation, trade deficit)",
+      "NIFTY closed 24,004.25 (+0.03%), expiry-day chop above 24,000; India VIX 12.56 (calm regime); monthly F&O expiry Thu 30-Jul",
+      "FII -1,688.2cr / DII +2,329.1cr (27-Jul cash figures; 28-Jul provisional not seen at night run); PCR 0.83 (neutral band)",
+      "Signal draft: GIFT pending (0), S&P +0.3% (0), FII -1, news mixed 0 (oil positive vs semi selloff + Fed event risk), PCR 0 => net -1; below entry threshold 2 (and 3 for v3-strong); VIX<16 normal regime"
+    ],
+    "written_at": "2026-07-28T21:58:00+05:30"
+  },
+  "notes": "04-Aug MORNING: score +2 (>= entry threshold 2) -> BOUGHT 1 lot NIFTY 24650 CE 11-Aug @ 171.97 (cost Rs 12,997.75 vs 20 pct cap Rs 18,159.57). Same-day mandate: the cloud monitor closes this at/near 15:20 IST; the 18:00 run is the fallback. Scoring caveat: the -1 gap signal comes off the CAS-distorted 03-Aug close of 24,774.30; on the 3:20pm ~24,595 print the score would be +3. Rules applied as written; raised for the weekly research loop only.",
+  "morning_score_today": {
+    "date": "2026-08-04",
+    "score": 2
+  },
+  "last_monitor": "2026-08-04T12:45:04+05:30"
 }
