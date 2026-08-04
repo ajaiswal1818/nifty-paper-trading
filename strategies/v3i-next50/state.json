@@ -7,8 +7,8 @@
  "realized_pnl": 0,
  "unrealized_pnl": 0,
  "open_positions": [],
- "last_run": "2026-08-04T08:45:00+05:30",
- "last_run_type": "morning",
+ "last_run": "2026-08-04T19:27:00+05:30",
+ "last_run_type": "evening",
  "next_trade_id": 1,
  "morning_score_today": {
   "date": "2026-08-04",
@@ -27,16 +27,16 @@
   ],
   "written_at": "2026-07-28T21:58:00+05:30"
  },
- "notes": "04-Aug MORNING: NO ENTRY - STALE-QUOTE GUARD fired. Score +2 would have qualified, but no live Nifty Next 50 quote was obtainable from any reachable source: niftytrader next50-contributors returned an empty table, INDmoney was stamped 09-Jul-2026 (71,485.85), Kotak Neo 26-Jul-2026 (71,766.00), Bajaj Broking 16-Jun-2026. Per STRATEGY.md the spot is recorded blank and no position is sized on stale data. Nearest monthly expiry would have been 2026-08-25 (last Tuesday, per expiries_next50.csv). Second distinct blocker in a week (sizing cap 24-Jul..03-Aug, data availability today); this book has still not placed a trade since it started 24-Jul. Worth the weekly research loop's attention.",
+ "notes": "04-Aug EVENING: no position (morning stale-quote guard blocked entry; still zero trades since 24-Jul start). No fresh Nifty Next 50 close obtained this evening either (known sources stale). Flat, no action.",
  "market_snapshot": {
-  "nifty_spot": 24639.0,
+  "nifty_spot": 24614.9,
   "nifty_prev_close": 24774.3,
-  "india_vix": 11.93,
+  "india_vix": 12.19,
   "pcr": 1.5728,
   "fii_net_cash_cr": 922.0,
   "dii_net_cash_cr": 1571.0,
-  "as_of": "2026-08-04 MORNING run (08:45 IST), pre-open. GIFT Nifty 24,639.00 @08:09 IST (+0.19% vs its own prev close 24,592.50); Nifty Aug futures 24,664.90 (+212.30, +0.87%). NIFTY prev close (03-Aug official) 24,774.30 - the first Closing-Auction-Session (CAS) close; the 3:20pm print was ~24,573-24,595 and Aug futures now trade ~110 pts BELOW that spot close, so 24,774.30 is very likely CAS-inflated. Scored mechanically off the official prev close as the rules require: GIFT/prev-close = -0.55% -> gap signal -1. On the 3:20pm ~24,595 print the gap would be +0.18% (0) and the net score +3 rather than +2. Flagged for the weekly research loop; NOT changed here. India VIX 11.93 (03-Aug close, +0.17); PCR (OI) 1.5728 for the 03-Aug session; max pain 24,550. FII/DII 03-Aug now published: FII +922 Cr cash (5th straight buy day, cumulative +8,560 Cr) but net SHORT 1,50,816 index-futures contracts (niftytrader classifies it Profit Lock / hedge); DII +1,571 Cr. Overnight: S&P 500 +1.48% to 7,600.50 (Amazon +4.6%, past $3trn), Dow +1.21%, Nasdaq +1.92%; Europe firm (DAX +1.42%, CAC +1.22%, FTSE -0.16%); Asia mixed this morning (Nikkei -0.94%, Shanghai -0.59%, Hang Seng +0.48%). Brent soft on Trump-Tehran talks. RBI MPC outcome Wed 05-Aug - event risk for any overnight hold. Weekly expiry is TODAY (04-Aug), so entries use the 11-Aug weekly. DATA NOTE: niftytrader /nifty-today and /india-vix again served stale snapshots (24-Jul and 31-Jul data); spot/VIX/PCR were taken from /nifty-put-call-ratio and /fii-dii-data, which were current.",
-  "nifty_open": null,
+  "as_of": "2026-08-04 EVENING run (~19:30 IST, scheduled 18:00 slot). NIFTY closed 24,614.90 (-159.40, -0.64%), open 24,703, high 24,703; four-session winning streak snapped on profit-booking after Mon's CAS-driven rally, caution before Wed 05-Aug RBI MPC (repo hold at 5.25% expected), weekly expiry today, Brent rebound ~+2.9% to ~$86-88. Realty -2.39% worst, Metal +0.91% only gainer. India VIX ~12.19 (one-week high; from close reports). PCR (OI) 1.5728 CARRIED from 03-Aug - niftytrader PCR page's '04-Aug intraday' table is mislabeled 03-Aug data (09:10 spot 24,572.7 = 03-Aug open). FII/DII 04-Aug provisional NOT yet published at run time (NSE ~20:30 IST); snapshot carries 03-Aug figures (FII +922 Cr, DII +1,571 Cr). Global: STOXX 600 +0.5% record, US futures firm (Nasdaq fut +0.7%), Asia mixed. Gold ~$4,059. All books flat at close: monitor stop-exited v3 and v3i 24650 CE at 12:45 (-35% stop, spot 24,495.35); v3-strong and v3i-next50 had no positions.",
+  "nifty_open": 24703.0,
   "flows_as_of": "2026-08-03",
   "next50_spot": null
  }
