@@ -2,17 +2,33 @@
  "sim_name": "Nifty Next 50 news-directional, same-day exit (v3i-next50)",
  "currency": "INR",
  "starting_capital": 100000,
- "cash": 100000,
- "total_equity": 100000,
+ "cash": 75705.25,
+ "total_equity": 99195.25,
  "realized_pnl": 0,
- "unrealized_pnl": 0,
- "open_positions": [],
- "last_run": "2026-08-04T19:27:00+05:30",
- "last_run_type": "evening",
- "next_trade_id": 1,
+ "unrealized_pnl": -804.75,
+ "open_positions": [
+  {
+   "trade_id": 1,
+   "underlying": "NIFTYNXT50",
+   "option_type": "call",
+   "strike": 72300,
+   "short_strike": null,
+   "expiry": "2026-08-25",
+   "lots": 1,
+   "lot_size": 25,
+   "entry_premium": 967.79,
+   "entry_cost_total": 24294.75,
+   "entry_date": "2026-08-05 08:45",
+   "current_premium": 939.6,
+   "sentiment_at_entry": 3
+  }
+ ],
+ "last_run": "2026-08-05T08:45:00+05:30",
+ "last_run_type": "morning",
+ "next_trade_id": 2,
  "morning_score_today": {
-  "date": "2026-08-04",
-  "score": 2
+  "date": "2026-08-05",
+  "score": 3
  },
  "pending_plan": {
   "bias": "neutral",
@@ -27,17 +43,17 @@
   ],
   "written_at": "2026-07-28T21:58:00+05:30"
  },
- "notes": "04-Aug EVENING: no position (morning stale-quote guard blocked entry; still zero trades since 24-Jul start). No fresh Nifty Next 50 close obtained this evening either (known sources stale). Flat, no action.",
+ "notes": "05-Aug MORNING: score +3 -> BUY NIFTYNXT50 72300 CE 2026-08-25 @ 967.79 (model 939.6 x1.03 +Rs100). RBI MPC 10:00 IST today - monitor guards the position. First-ever trade on this book: fresh Next-50 quote 71,896.75 (04-Aug close) obtained, stale-quote guard passed; implied open ~72,317, monthly expiry 25-Aug.",
  "market_snapshot": {
-  "nifty_spot": 24614.9,
-  "nifty_prev_close": 24774.3,
+  "nifty_spot": 24760.0,
+  "nifty_prev_close": 24614.9,
   "india_vix": 12.19,
-  "pcr": 1.5728,
-  "fii_net_cash_cr": 922.0,
-  "dii_net_cash_cr": 1571.0,
-  "as_of": "2026-08-04 EVENING run (~19:30 IST, scheduled 18:00 slot). NIFTY closed 24,614.90 (-159.40, -0.64%), open 24,703, high 24,703; four-session winning streak snapped on profit-booking after Mon's CAS-driven rally, caution before Wed 05-Aug RBI MPC (repo hold at 5.25% expected), weekly expiry today, Brent rebound ~+2.9% to ~$86-88. Realty -2.39% worst, Metal +0.91% only gainer. India VIX ~12.19 (one-week high; from close reports). PCR (OI) 1.5728 CARRIED from 03-Aug - niftytrader PCR page's '04-Aug intraday' table is mislabeled 03-Aug data (09:10 spot 24,572.7 = 03-Aug open). FII/DII 04-Aug provisional NOT yet published at run time (NSE ~20:30 IST); snapshot carries 03-Aug figures (FII +922 Cr, DII +1,571 Cr). Global: STOXX 600 +0.5% record, US futures firm (Nasdaq fut +0.7%), Asia mixed. Gold ~$4,059. All books flat at close: monitor stop-exited v3 and v3i 24650 CE at 12:45 (-35% stop, spot 24,495.35); v3-strong and v3i-next50 had no positions.",
-  "nifty_open": 24703.0,
-  "flows_as_of": "2026-08-03",
-  "next50_spot": null
+  "pcr": 0.76,
+  "fii_net_cash_cr": 2446.0,
+  "dii_net_cash_cr": -936.0,
+  "as_of": "2026-08-05 MORNING run (08:45 IST, pre-open). GIFT Nifty ~24,723 @07:31 implies open ~24,760 (+0.59 pct vs prev close 24,614.90). US 04-Aug: S&P 500 +1.79 pct to 7,737 (record), Dow +1.71 pct >54,000, Nasdaq strong - easing geopolitics (Hormuz reopening progress) + tech rally. FII 04-Aug provisional +2,446 Cr cash (6-day buy streak, cum +11,007 Cr), DII -936 Cr; FII still net short 1.54 lakh index futures (profit-lock pattern). PCR (OI) 0.76 post-expiry (niftytrader 04-Aug 14:34 snapshot - latest observable). India VIX prev close 12.19. RBI MPC decision TODAY 10:00 IST, consensus hold at 5.25 pct; presser 12:00. Weekly expiry 2026-08-11. Score +3 -> CALL entries in all four active books (v3-strong threshold 3 met). Next-50 spot 71,896.75 (04-Aug close, coindataflow, fresh) -> implied open ~72,317.",
+  "nifty_open": 24760.0,
+  "flows_as_of": "2026-08-04",
+  "next50_spot": 72317.0
  }
 }
