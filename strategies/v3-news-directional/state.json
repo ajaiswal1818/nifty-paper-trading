@@ -7,18 +7,18 @@
   "realized_pnl": -3563.82,
   "unrealized_pnl": 0,
   "open_positions": [],
-  "last_run": "2026-08-05T08:45:00+05:30",
-  "last_run_type": "morning",
+  "last_run": "2026-08-05T18:10:00+05:30",
+  "last_run_type": "evening",
   "next_trade_id": 8,
   "market_snapshot": {
-    "nifty_spot": 24760.0,
+    "nifty_spot": 24624.65,
     "nifty_prev_close": 24614.9,
-    "india_vix": 12.19,
-    "pcr": 0.76,
-    "fii_net_cash_cr": 2446.0,
-    "dii_net_cash_cr": -936.0,
-    "as_of": "2026-08-05 MORNING run (08:45 IST, pre-open). GIFT Nifty ~24,723 @07:31 implies open ~24,760 (+0.59 pct vs prev close 24,614.90). US 04-Aug: S&P 500 +1.79 pct to 7,737 (record), Dow +1.71 pct >54,000, Nasdaq strong - easing geopolitics (Hormuz reopening progress) + tech rally. FII 04-Aug provisional +2,446 Cr cash (6-day buy streak, cum +11,007 Cr), DII -936 Cr; FII still net short 1.54 lakh index futures (profit-lock pattern). PCR (OI) 0.76 post-expiry (niftytrader 04-Aug 14:34 snapshot - latest observable). India VIX prev close 12.19. RBI MPC decision TODAY 10:00 IST, consensus hold at 5.25 pct; presser 12:00. Weekly expiry 2026-08-11. Score +3 -> CALL entries in all four active books (v3-strong threshold 3 met). Next-50 spot 71,896.75 (04-Aug close, coindataflow, fresh) -> implied open ~72,317.",
-    "nifty_open": 24760.0,
+    "india_vix": 11.68,
+    "pcr": 0.67,
+    "fii_net_cash_cr": 2446.5,
+    "dii_net_cash_cr": -936.1,
+    "as_of": "2026-08-05 EVENING run (18:10 IST). NIFTY closed 24,624.65 +9.75 (+0.04 pct); open 24,669.20 (gap +0.22 pct, well below GIFT-implied 24,760), high 24,677.60, low 24,497.95 - RBI MPC held repo at 5.25 pct, neutral stance (consensus); Sensex +152 to 78,581. India VIX close ~11.68 (-4.2 pct). PCR (OI) 0.67 (15:05 snapshot, strong call writing). FII/DII 05-Aug provisional not yet published at run time; latest 04-Aug: FII +2,446.5 Cr, DII -936.1 Cr. Nifty Next 50 closed ~74,210.55 (-0.53 pct from prev close 74,608.7) - NOTE: confirms the morning run's Next-50 quote 71,896.75 (coindataflow) was stale by ~2,700 pts; see v3i-next50 notes. All four active books flat since 09:15 monitor exits (NIFTY CALLs stopped -35 pct on gap fade to 24,646; next50 exit flagged). No entries in evening runs; nothing to force-close (eod_exit books already flat).",
+    "nifty_open": 24669.2,
     "flows_as_of": "2026-08-04"
   },
   "pending_plan": {
@@ -34,7 +34,7 @@
     ],
     "written_at": "2026-07-28T21:58:00+05:30"
   },
-  "notes": "05-Aug MORNING: score +3 -> BUY NIFTY 24750 CE 2026-08-11 @ 173.1 (model 170.54 x1.015 +Rs100). RBI MPC 10:00 IST today - monitor guards the position. ",
+  "notes": "05-Aug EVENING: flat since 09:15 (monitor stop -35% on 24750 CE; open gap +0.22% faded vs GIFT-implied +0.59%, spot 24,646 by 09:15). No position, marked to close 24,624.65.",
   "morning_score_today": {
     "date": "2026-08-05",
     "score": 3
