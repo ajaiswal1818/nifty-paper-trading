@@ -2,14 +2,14 @@
   "sim_name": "Nifty Next 50 news-directional, same-day exit (v3i-next50)",
   "currency": "INR",
   "starting_capital": 100000,
-  "cash": 138265.66,
-  "total_equity": 138265.66,
-  "realized_pnl": 38265.66,
+  "cash": 100000.0,
+  "total_equity": 100000.0,
+  "realized_pnl": 0,
   "unrealized_pnl": 0,
   "open_positions": [],
   "last_run": "2026-08-05T18:10:00+05:30",
   "last_run_type": "evening",
-  "next_trade_id": 2,
+  "next_trade_id": 1,
   "morning_score_today": {
     "date": "2026-08-05",
     "score": 3
@@ -27,7 +27,7 @@
     ],
     "written_at": "2026-07-28T21:58:00+05:30"
   },
-  "notes": "05-Aug EVENING: flat since 09:15 (monitor exit 'target' on 72300 CE @2,583.93, realized +38,266). DATA-INTEGRITY FLAG: actual Next-50 close today ~74,210.55 (prev close 74,608.7 per Kotak/NSE), so the morning entry spot 71,896.75 (coindataflow '04-Aug close') was stale by ~2,700 pts. The trade effectively bought a ~2,300-pt ITM call priced as ATM; the +38,266 'win' is an entry-pricing artifact, not real edge. Trade log left untouched per runbook (evening runs never rewrite history) - recommend human review of trade 1 and of the Next-50 quote source (use ^NSMIDCP, add staleness cross-check) in a normal session.",
+  "notes": "05-Aug (corrected in user session, 18:45 IST): trade 1 VOIDED per the STRATEGY.md stale-quote guard. The 08:45 entry used coindataflow '04-Aug close' 71,896.75 as live spot; the real 04-Aug close was 74,608.7 (05-Aug OHLC 74,551.5/74,667.2/74,037.15/74,210.55), i.e. the quote was ~2,700 pts stale and no valid live quote was available -> the guard mandates NO entry (second stale-quote incident after 03-Aug). Trade rows removed, book restored to 1,00,000 with zero trades; morning equity row spot blanked per guard. See DECISIONS.md 2026-08-05.",
   "market_snapshot": {
     "nifty_spot": 24624.65,
     "nifty_prev_close": 24614.9,
@@ -38,7 +38,8 @@
     "as_of": "2026-08-05 EVENING run (18:10 IST). NIFTY closed 24,624.65 +9.75 (+0.04 pct); open 24,669.20 (gap +0.22 pct, well below GIFT-implied 24,760), high 24,677.60, low 24,497.95 - RBI MPC held repo at 5.25 pct, neutral stance (consensus); Sensex +152 to 78,581. India VIX close ~11.68 (-4.2 pct). PCR (OI) 0.67 (15:05 snapshot, strong call writing). FII/DII 05-Aug provisional not yet published at run time; latest 04-Aug: FII +2,446.5 Cr, DII -936.1 Cr. Nifty Next 50 closed ~74,210.55 (-0.53 pct from prev close 74,608.7) - NOTE: confirms the morning run's Next-50 quote 71,896.75 (coindataflow) was stale by ~2,700 pts; see v3i-next50 notes. All four active books flat since 09:15 monitor exits (NIFTY CALLs stopped -35 pct on gap fade to 24,646; next50 exit flagged). No entries in evening runs; nothing to force-close (eod_exit books already flat).",
     "nifty_open": 24669.2,
     "flows_as_of": "2026-08-04",
-    "next50_spot": 74210.55
+    "next50_spot": 74210.55,
+    "next50_prev_close": 74608.7
   },
   "last_monitor": "2026-08-05T09:15:03+05:30"
 }
