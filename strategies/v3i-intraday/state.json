@@ -7,19 +7,19 @@
   "realized_pnl": -19682.05,
   "unrealized_pnl": 0,
   "open_positions": [],
-  "last_run": "2026-08-05T18:10:00+05:30",
-  "last_run_type": "evening",
+  "last_run": "2026-08-06T08:45:00+05:30",
+  "last_run_type": "morning",
   "next_trade_id": 10,
   "market_snapshot": {
     "nifty_spot": 24624.65,
-    "nifty_prev_close": 24614.9,
+    "nifty_prev_close": 24624.65,
     "india_vix": 11.68,
     "pcr": 0.67,
-    "fii_net_cash_cr": 2446.5,
-    "dii_net_cash_cr": -936.1,
-    "as_of": "2026-08-05 EVENING run (18:10 IST). NIFTY closed 24,624.65 +9.75 (+0.04 pct); open 24,669.20 (gap +0.22 pct, well below GIFT-implied 24,760), high 24,677.60, low 24,497.95 - RBI MPC held repo at 5.25 pct, neutral stance (consensus); Sensex +152 to 78,581. India VIX close ~11.68 (-4.2 pct). PCR (OI) 0.67 (15:05 snapshot, strong call writing). FII/DII 05-Aug provisional not yet published at run time; latest 04-Aug: FII +2,446.5 Cr, DII -936.1 Cr. Nifty Next 50 closed ~74,210.55 (-0.53 pct from prev close 74,608.7) - NOTE: confirms the morning run's Next-50 quote 71,896.75 (coindataflow) was stale by ~2,700 pts; see v3i-next50 notes. All four active books flat since 09:15 monitor exits (NIFTY CALLs stopped -35 pct on gap fade to 24,646; next50 exit flagged). No entries in evening runs; nothing to force-close (eod_exit books already flat).",
-    "nifty_open": 24669.2,
-    "flows_as_of": "2026-08-04"
+    "fii_net_cash_cr": -943.4,
+    "dii_net_cash_cr": 2883.2,
+    "as_of": "2026-08-06 MORNING run (08:45 IST). GIFT Nifty 24,685 (+36; implied NIFTY open ~+0.2 pct vs prev close 24,624.65) - below the 0.3 pct gap threshold. US Wed close: S&P 500 -0.17 pct at 7,723.55 (snapped 4-day streak), Dow +0.49 pct record 54,349, Nasdaq -0.83 pct (AI/tech weak). Asia this morning: Nikkei -1.66 pct, Kospi -4 to -5 pct; US futures +0.2 pct on US-Iran Hormuz deal hopes; Brent ~$79.28 (-0.21 pct); gold 7-week high. FII 05-Aug cash -943.4 Cr, DII +2,883.2 Cr (provisional). PCR 0.67 (prev session 15:05, heavy call writing). India VIX prev close ~11.68 (one source shows 12.06); calm regime, VIX<16. Score: gap 0, US 0, FII 0, news 0 (mixed), PCR -1 => -1. No entry for any book (|score|<2; v3-strong needs 3). All four books flat; nothing to reprice or exit. Next-50: no live pre-open quote (prev close 74,210.55 verified); spot left blank per stale-quote guard - moot, no entry anyway.",
+    "flows_as_of": "2026-08-05",
+    "gift_nifty": 24685.0
   },
   "pending_plan": {
     "bias": "neutral",
@@ -34,10 +34,10 @@
     ],
     "written_at": "2026-07-28T21:58:00+05:30"
   },
-  "notes": "05-Aug EVENING: flat since 09:15 (monitor stop -35% on 24750 CE). eod_exit satisfied - nothing to force-close. Marked to close 24,624.65.",
+  "notes": "06-Aug MORNING: score -1 (PCR 0.67 the only signal; gap/US/FII/news all 0). No entry, book flat. Marked flat at prev close 24,624.65.",
   "morning_score_today": {
-    "date": "2026-08-05",
-    "score": 3
+    "date": "2026-08-06",
+    "score": -1
   },
   "last_monitor": "2026-08-05T09:15:03+05:30"
 }
